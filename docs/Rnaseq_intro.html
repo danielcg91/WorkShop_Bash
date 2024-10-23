@@ -166,8 +166,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Parte3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Buenas practicas en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Parte4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scripts en Bash</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Repaso</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">AWK</span></span></a>
   </div>
 </li>
     </ul>
@@ -322,7 +334,7 @@ Programas:
 <ol type="1">
 <li><p>@ ID del read + información de la corrida</p></li>
 <li><p>Secuencia</p></li>
-<li><p>Símbolo “+"</p></li>
+<li><p>Símbolo “+”</p></li>
 <li><p>Información de la calidad de secuenciación de cada base. Cada letra o símbolo representa a una base de la secuencia codificado en formato (Escala <em>Phred</em> y código <a href="https://www.drive5.com/usearch/manual/quality_score.html"><em>ASCII</em></a>)</p></li>
 </ol>
 </div></li>
@@ -373,9 +385,9 @@ Ejercicio 3
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Visualiza el contenido del archivo “_files/secuencias_bash.fastq” empleando head. <code>head _files/secuencias_bash.fastq</code></li>
-<li>Calcula el numero de lineas contenidas en este archivo. <code>wc -l``_files/secuencias_bash.fastq</code></li>
+<li>Calcula el numero de lineas contenidas en este archivo. <code>wc -l _files/secuencias_bash.fastq</code></li>
 <li>Imprime las lineas 4 a 8 del archivo. <code>sed -n '4,8p' _files/secuencias_bash.fastq</code></li>
-<li>Podemos utilizar la función <code>grep -c</code> para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos): <code>grep -c "^@SRR"``_files/secuencias_bash.fastq</code></li>
+<li>Podemos utilizar la función <code>grep -c</code> para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos): <code>grep -c "^@SRR" _files/secuencias_bash.fastq</code></li>
 </ol>
 </div>
 </div>

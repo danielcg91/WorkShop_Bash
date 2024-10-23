@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./Parte3.html" rel="next">
 <link href="./Rnaseq_intro.html" rel="prev">
 <link href="./ViernesBioinfo_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -200,8 +200,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Parte3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Buenas practicas en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Parte4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scripts en Bash</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Repaso</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">AWK</span></span></a>
   </div>
 </li>
     </ul>
@@ -217,11 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#caracteres-y-strings" id="toc-caracteres-y-strings" class="nav-link active" data-scroll-target="#caracteres-y-strings"><span class="header-section-number">5.1</span> Caracteres y strings</a></li>
   <li><a href="#wildcards" id="toc-wildcards" class="nav-link" data-scroll-target="#wildcards"><span class="header-section-number">5.2</span> Wildcards</a></li>
   <li><a href="#operadores-de-redirección-de-datos-io" id="toc-operadores-de-redirección-de-datos-io" class="nav-link" data-scroll-target="#operadores-de-redirección-de-datos-io"><span class="header-section-number">5.3</span> Operadores de redirección de datos I/O</a></li>
-  <li><a href="#scripts-en-bash" id="toc-scripts-en-bash" class="nav-link" data-scroll-target="#scripts-en-bash"><span class="header-section-number">6</span> Scripts en Bash</a>
-  <ul>
-  <li><a href="#actividad-grupal" id="toc-actividad-grupal" class="nav-link" data-scroll-target="#actividad-grupal"><span class="header-section-number">6.1</span> Actividad grupal</a></li>
-  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">6.2</span> Material suplementario</a></li>
-  </ul></li>
+  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">5.4</span> Material suplementario</a></li>
   </ul>
 </nav>
     </div>
@@ -247,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="sourceCode" id="cb1" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> _files/secuencias_bash.fastq</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 300   600 12934 secuencias_bash.fastq</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Esto nos dice que el archivo cuenta con 400 lineas, 500 palabras y 12934 caracteres.</p>
+<p>Esto nos dice que el archivo cuenta con 300 lineas, 600 palabras y 12934 caracteres.</p>
 <section id="caracteres-y-strings" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="caracteres-y-strings"><span class="header-section-number">5.1</span> Caracteres y strings</h2>
 <p>Los <code>caracteres</code> son unidades de información que se representan con símbolos. Pueden ser de varios tipos como alfanuméricos, números enteros, signos de puntuación. Varios caracteres son interpretados por la shell de manera especial. Estos se llaman <code>caracteres especiales</code>, claro, y permiten desarrollar alguna lógica, dependiendo del contexto. Por ejemplo, algunos caracteres: <code>@</code> <code>#</code> <code>.</code> <code>?</code> <code>!</code> <code>,</code> <code>/</code> <code>\</code> <code>&gt;</code> <code>~</code> <code>a</code> <code>µ</code> <code>g</code> <code>§</code> <code>R</code>.</p>
@@ -274,8 +282,8 @@ Note
 <p>Los <code>wildcards</code> o <code>wild characters</code> son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.</p>
 <table class="table">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
+<col style="width: 19%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -359,6 +367,19 @@ Solución
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejercicios de repaso
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Puedes seguir repasando y aprendiendo de las expresiones regulares en la pagina de <a href="https://regexone.com/">RegexOne</a>.</p>
+</div>
+</div>
 </section>
 <section id="operadores-de-redirección-de-datos-io" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="operadores-de-redirección-de-datos-io"><span class="header-section-number">5.3</span> Operadores de redirección de datos I/O</h2>
@@ -430,119 +451,8 @@ Advertencia
 </div>
 </div>
 </section>
-<section id="scripts-en-bash" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Scripts en Bash</h1>
-<p>Los <code>scripts</code> son archivos de texto que contienen instrucciones ejecutables por un intérprete de un lenguaje de programación para la ejecución de tareas. El formato <code>.sh</code> se utiliza para escribir <code>scripts ejecutables</code> por un intérprete como <strong>Bash</strong>. En esta sección crearemos varios scripts de Bash y usaremos varios comandos y operadores.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Los script de Bash contiene al inicio esta descripción <code>#!bin/bash</code> y la extensión <code>.sh</code></p>
-</div>
-</div>
-<section id="actividad-grupal" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="actividad-grupal"><span class="header-section-number">6.1</span> Actividad grupal</h2>
-<p><strong>Paso 1.</strong> Crear un script en Bash con el nombre demo.sh empleando nano.</p>
-<div class="sourceCode" id="cb9" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> demo.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Paso 2.</strong> Copia el siguiente código dentro del script <code>demo.sh</code> y guarda los cambios.</p>
-<div class="sourceCode" id="cb10" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># File: demo.sh</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Input de archivo</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Mostrar el archivo y número de argumentos</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Archivo a procesar &gt; </span><span class="va">$@</span><span class="st">"</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Numero de argumentos: </span><span class="va">$#</span><span class="st">"</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Conteo de secuencias y separación de malas lecturas</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="va">numero_secuencias</span><span class="op">=</span><span class="va">$(</span><span class="fu">grep</span> <span class="at">-c</span> <span class="st">'^@SRR098026'</span> <span class="va">$@)</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-B1</span> <span class="at">-A2</span> NNNNNNNNNN <span class="va">$@</span> <span class="op">&gt;</span> malas_lecturas.fastq</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="va">malas</span><span class="op">=</span><span class="va">$(</span><span class="fu">cat</span> malas_lecturas.fastq <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span><span class="va">)</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Número de malas lecturas: </span><span class="va">$malas</span><span class="st">"</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Búsqueda de patrones</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Desea buscar patrones (y/n): "</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="bu">read</span> <span class="va">d</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$d</span> <span class="ot">==</span> <span class="st">"y"</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"Los patrones se guardarán en: patrones.txt"</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-e</span> <span class="st">'ACTG\nCCCCC\nNNNCNNN\nNNNGNNN\nTTTT\nTATA\nAAA'</span> <span class="op">&gt;</span> patrones.txt</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">grep</span> <span class="at">-f</span> patrones.txt <span class="va">$@</span> <span class="op">&gt;</span> busqueda.txt</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"Búsqueda de patrones guardada en: busqueda.txt"</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"ok :P"</span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Mensaje final</span></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Fin :)"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Explicación del código
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>1. <strong>Comentarios y declaración de archivo</strong></p></li>
-<li><p><code>#!/bin/bash</code>: Indica que el script se ejecutará usando el intérprete de Bash.</p></li>
-<li><p><code># File: demo.sh</code>: Un comentario que indica el nombre del archivo del script.</p></li>
-<li><p>2. <strong>Mostrar el archivo y número de argumentos</strong></p></li>
-<li><p><code>echo "Archivo a procesar &gt; $@"</code>: Muestra el nombre del archivo que se pasará como argumento al script. <code>$@</code> representa todos los argumentos pasados al script.</p></li>
-<li><p><code>echo "Numero de argumentos: $#"</code>: Muestra cuántos argumentos ha recibido el script. <code>$#</code> indica el número de argumentos.</p></li>
-<li><p>3. <strong>Contar secuencias y separar malas lecturas</strong></p></li>
-<li><p><code>numero_secuencias=$(grep -c '^@SRR098026' $@)</code>: Usa <code>grep</code> para contar cuántas secuencias empiezan con <code>@SRR098026</code> en el archivo (probablemente sea un prefijo en un archivo FASTQ que identifica secuencias de interés). <code>-c</code> cuenta las coincidencias.</p></li>
-<li><p><code>grep -B1 -A2 NNNNNNNNNN $@ &gt; malas_lecturas.fastq</code>: Busca secuencias de calidad baja o problemáticas (que contengan 10 nucleótidos seguidos de <code>N</code>, que representan bases no determinadas).</p>
-<ul>
-<li><p><code>-B1</code>: Muestra 1 línea antes de cada coincidencia de <code>NNNNNNNNNN</code>.</p></li>
-<li><p><code>-A2</code>: Muestra 2 líneas después de la coincidencia.</p></li>
-<li><p>El resultado se guarda en un archivo llamado <code>malas_lecturas.fastq</code>.</p></li>
-</ul></li>
-<li><p><code>malas=$(cat malas_lecturas.fastq | wc -l)</code>: Cuenta el número total de líneas en <code>malas_lecturas.fastq</code> (esto indica la cantidad de malas lecturas encontradas).</p></li>
-<li><p><code>echo "Número de malas lecturas: $malas"</code>: Muestra la cantidad de malas lecturas encontradas</p></li>
-<li><p><code>echo "Numero de argumentos: $#"</code>: Muestra cuántos argumentos ha recibido el script. <code>$#</code> indica el número de argumentos.</p></li>
-<li><p>4. <strong>Búsqueda de patrones</strong></p></li>
-<li><p><code>echo "Desea buscar patrones (y/n): "</code>: Pregunta al usuario si desea buscar patrones específicos en el archivo.</p></li>
-<li><p><code>read d</code>: Lee la respuesta del usuario y la guarda en la variable <code>d</code>.</p></li>
-<li><p><code>if [[ $d == "y" ]]; then</code>: Si la respuesta es “y” (sí), el script procede a buscar los patrones.</p>
-<ul>
-<li><p><code>echo -e 'ACTG\nCCCCC\nNNNCNNN\nNNNGNNN\nTTTT\nTATA\nAAA' &gt; patrones.txt</code>: Crea un archivo <code>patrones.txt</code> que contiene una lista de secuencias de interés (patrones a buscar).</p></li>
-<li><p><code>grep -f patrones.txt $@ &gt; busqueda.txt</code>: Busca los patrones contenidos en <code>patrones.txt</code> dentro del archivo de entrada. El resultado de la búsqueda se guarda en <code>busqueda.txt</code>.</p></li>
-<li><p><code>echo "Búsqueda de patrones guardada en: busqueda.txt"</code>: Informa al usuario que los resultados de la búsqueda se guardaron en el archivo <code>busqueda.txt</code>.</p></li>
-</ul></li>
-<li><p><code>else</code>: Si la respuesta es “n” (no), simplemente muestra un mensaje.</p></li>
-</ul>
-</div>
-</div>
-</div>
-<p>Este código realizará las siguientes instrucciones:</p>
-<ol type="1">
-<li><p>Tomará como input el nombre del archivo <code>./_files/secuencias_bash.fastq</code> de secuencias fastq para analizar.</p></li>
-<li><p>Buscará dentro del archivo provisto por el usuario las secuencias con el string @SRR098026 y las contará.</p></li>
-<li><p>Exportará las malas secuencias a un archivo llamado <code>malas_lecturas.fastq</code>, usando el string "NNNNNNNNNN" como plantilla.</p></li>
-<li><p>Reportará el número de malas secuencias.</p></li>
-<li><p>Luego buscaremos patrones en el archivo <code>buenas_lecturas.fastq</code>, si es que el usuario lo desea.</p></li>
-</ol>
-<p><strong>Paso 3.</strong> Deberías correr el script así, una vez que hayas descargado el archivo&nbsp;<code>secuencias_bash.fastq</code>:</p>
-<div class="sourceCode" id="cb11" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> demo.sh secuencias_bash.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_avanzado/02_Bash/1_bash.html"><img src="https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/_images/b5.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</section>
-<section id="material-suplementario" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">6.2</span> Material suplementario</h2>
+<section id="material-suplementario" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">5.4</span> Material suplementario</h2>
 <ul>
 <li>RSG Ecuador. <a href="https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_avanzado/02_Bash/1_bash.html">Scripts en Bash</a></li>
 <li>RSG Ecuador. <a href="https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_basico/03_Manejo_terminal/5_wildcards.html">Wildcards y Streams</a></li>
@@ -551,7 +461,6 @@ Explicación del código
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -910,8 +819,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Repaso</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Parte3.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Buenas practicas en R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
