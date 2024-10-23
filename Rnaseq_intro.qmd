@@ -73,7 +73,7 @@ Es el conjunto de todas las moléculas de RNA producidos por el genoma bajo **co
 
         2.  Secuencia
 
-        3.  Símbolo "+\"
+        3.  Símbolo "+"
 
         4.  Información de la calidad de secuenciación de cada base. Cada letra o símbolo representa a una base de la secuencia codificado en formato (Escala *Phred* y código [*ASCII*](https://www.drive5.com/usearch/manual/quality_score.html))
 
@@ -105,9 +105,9 @@ Reporte de FastQC con [buena calidad](https://www.bioinformatics.babraham.ac.uk/
 ## Ejercicio 3
 
 1.  Visualiza el contenido del archivo "\_files/secuencias_bash.fastq" empleando head. `head _files/secuencias_bash.fastq`
-2.  Calcula el numero de lineas contenidas en este archivo. `wc -l``_files/secuencias_bash.fastq`
+2.  Calcula el numero de lineas contenidas en este archivo. `wc -l _files/secuencias_bash.fastq`
 3.  Imprime las lineas 4 a 8 del archivo. `sed -n '4,8p' _files/secuencias_bash.fastq`
-4.  Podemos utilizar la función `grep -c` para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos): `grep -c "^@SRR"``_files/secuencias_bash.fastq`
+4.  Podemos utilizar la función `grep -c` para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos): `grep -c "^@SRR" _files/secuencias_bash.fastq`
 :::
 
 ## Material suplementario

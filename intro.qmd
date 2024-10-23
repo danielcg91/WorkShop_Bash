@@ -7,7 +7,7 @@
 
 ## GNU/Linux
 
--   En 1983 **Richard Stallman** lideró la iniciativa [GNU](https://www.gnu.org/) (GNU\'s Not Unix), SO compatible con UNIX de libre distribución y acceso sin restricciones al código fuente.
+-   En 1983 **Richard Stallman** lideró la iniciativa [GNU](https://www.gnu.org/) (GNU's Not Unix), SO compatible con UNIX de libre distribución y acceso sin restricciones al código fuente.
 -   En 1991 **Linus Torvalds** creó su propio [kernel](https://linuxjourney.com/lesson/kernel-overview) (Linux), que es la parte del SO que permite la comunicación con los componentes de Hardware. Este kernel fue distribuido de forma libre y gratuita.
 -   Ambos proyectos se juntaron y se creó **GNU/Linux**
 
@@ -17,7 +17,7 @@
 
 -   Los usuarios son libres de **ejecutar, copiar, distribuir, estudiar, cambiar y mejorar** el software.
 -   El [software libre](https://www.gnu.org/philosophy/free-sw.html) se refiere a las libertades mencionadas, no al precio.
--   [\"open source\"](https://opensource.org/) vs [\"free software\"](https://www.gnu.org/philosophy/free-sw.html).
+-   ["open source"](https://opensource.org/) vs ["free software"](https://www.gnu.org/philosophy/free-sw.html).
 
 ## Ubuntu
 
@@ -31,7 +31,7 @@
 ## Shell / Bash / Bash Shell
 
 -   La [*shell*](https://en.wikipedia.org/wiki/Unix_shell) es el programa que provee una **interfaz de línea de comandos (CLI)**, que permite la comunicación entre el usuario y el SO.
--   La mayoría de distribuciones de Linux tienen por defecto [*bash*](https://www.gnu.org/software/bash/) (\"Bourne Again SHell\") como *shell*. Hay [otros tipos de shell](https://www.educba.com/types-of-shells-in-linux/) como **sh, csh, tcsh, ksh, zsh**, entre otras.
+-   La mayoría de distribuciones de Linux tienen por defecto [*bash*](https://www.gnu.org/software/bash/) ("Bourne Again SHell") como *shell*. Hay [otros tipos de shell](https://www.educba.com/types-of-shells-in-linux/) como **sh, csh, tcsh, ksh, zsh**, entre otras.
 
 ![](https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/_images/b.png){fig-align="center" width="400"}
 
