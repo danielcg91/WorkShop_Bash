@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 book:
-  title: "Workshop Bash 2024"
-  author: "Evelia Coss"
-  date: "10/21/2024"
+  title: "Workshop Bash 2025"
+  author: "Daniel Chavez"
+  date: "18/03/2025"
   page-navigation: true
   chapters:
     - index.qmd
@@ -18,7 +18,7 @@ book:
     - Parte4.qmd
     - summary.qmd
   # Information
-  repo-url: https://github.com/EveliaCoss/Workshop_Bash2024 # link de Github
+  repo-url: https://github.com/danielcg91/WorkShop2025 # link de Github
   sharing: [twitter, facebook, linkedin]
   favicon: "ViernesBioinfo_logo.png" # icono de la pagina en pestana
 
