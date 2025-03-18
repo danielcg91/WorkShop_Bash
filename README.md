@@ -30,3 +30,4 @@ Los datos del curso se pueden reutilizar y adaptar libremente con la debida atri
 - Debes tener contar con una terminal de Bash Shell en tu sistema operativo (Visita la ventana de Instalaciones y requerimientos previos)
 - Contar con una terminal con Git, en Windows puedes usar Git Bash.
   
+# WorkShop2025
