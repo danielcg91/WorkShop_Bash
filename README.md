@@ -3,8 +3,8 @@
 El contenido de este curso se realizó en base al material de un grupo de estudio realizado por el RSG Ecuador. La literatura adicional se especifica en cada tema de forma pertinente.
 
 -   Fechas: 28 y 29 marzo 2025
--   Duración del curso: 3 horas
--   Instructura: Evelia Lorena Coss-Navarrete - PostDoc, LIIGH-UNAM.
+-   Duración del curso: 16 horas
+-   Instructura: José Daniel Chávez González- Profesor Investigador Colaborador, UAGro.
 
 ## Resumen
 
