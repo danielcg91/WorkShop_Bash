@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="José Daniel Chavez">
-<meta name="dcterms.date" content="2026-06-03">
 
-<title>Workshop Bash 2025</title>
+<title>7&nbsp; Expresiones regulares – Workshop Bash 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./2_requisitos.html" rel="next">
+<link href="./8_FuncionesBasicas_pt2.html" rel="next">
+<link href="./7_ScriptBash.html" rel="prev">
 <link href="./ViernesBioinfo_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -85,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Información general</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./8_FuncionesBasicas_pt1.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expresiones regulares</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Información general</span></a>
   </div>
 </li>
@@ -175,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./8_FuncionesBasicas_pt1.html" class="sidebar-item-text sidebar-link">
+  <a href="./8_FuncionesBasicas_pt1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expresiones regulares</span></span></a>
   </div>
 </li>
@@ -207,7 +206,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#información-general" id="toc-información-general" class="nav-link active" data-scroll-target="#información-general">Información general</a></li>
+  <li><a href="#operadores" id="toc-operadores" class="nav-link active" data-scroll-target="#operadores"><span class="header-section-number">7.1</span> <strong>Operadores</strong></a></li>
+  <li><a href="#grep" id="toc-grep" class="nav-link" data-scroll-target="#grep"><span class="header-section-number">8</span> Grep</a>
+  <ul>
+  <li><a href="#archivo-para-este-tutorial" id="toc-archivo-para-este-tutorial" class="nav-link" data-scroll-target="#archivo-para-este-tutorial"><span class="header-section-number">8.1</span> Archivo para este tutorial</a></li>
+  <li><a href="#qué-es-grep" id="toc-qué-es-grep" class="nav-link" data-scroll-target="#qué-es-grep"><span class="header-section-number">8.2</span> ¿Qué es grep?</a></li>
+  <li><a href="#diferentes-versiones-de-grep--g--e--f--p" id="toc-diferentes-versiones-de-grep--g--e--f--p" class="nav-link" data-scroll-target="#diferentes-versiones-de-grep--g--e--f--p"><span class="header-section-number">8.3</span> Diferentes versiones de grep: <code>-G -E -F -P</code></a>
+  <ul class="collapse">
+  <li><a href="#flags--e--f--i--v--w--x" id="toc-flags--e--f--i--v--w--x" class="nav-link" data-scroll-target="#flags--e--f--i--v--w--x"><span class="header-section-number">8.3.1</span> Flags: <code>-e -f -i -v -w -x</code></a></li>
+  </ul></li>
+  <li><a href="#contar-el-número-de-secuencias-en-un-archivo-fasta" id="toc-contar-el-número-de-secuencias-en-un-archivo-fasta" class="nav-link" data-scroll-target="#contar-el-número-de-secuencias-en-un-archivo-fasta"><span class="header-section-number">8.4</span> <strong>Contar el número de secuencias en un archivo FASTA</strong></a></li>
+  </ul></li>
+  <li><a href="#sed" id="toc-sed" class="nav-link" data-scroll-target="#sed"><span class="header-section-number">9</span> Sed</a>
+  <ul>
+  <li><a href="#qué-es-sed" id="toc-qué-es-sed" class="nav-link" data-scroll-target="#qué-es-sed"><span class="header-section-number">9.1</span> ¿Qué es sed?</a></li>
+  <li><a href="#comando-más-común-de-sed-s" id="toc-comando-más-común-de-sed-s" class="nav-link" data-scroll-target="#comando-más-común-de-sed-s"><span class="header-section-number">9.2</span> Comando más común de sed: <code>s</code></a></li>
+  </ul></li>
+  <li><a href="#extraer-solo-los-encabezados" id="toc-extraer-solo-los-encabezados" class="nav-link" data-scroll-target="#extraer-solo-los-encabezados"><span class="header-section-number">10</span> <strong>Extraer solo los encabezados</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -216,26 +231,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workshop Bash 2025</h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expresiones regulares</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>José Daniel Chavez </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 3, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -245,205 +248,482 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/cropped-LogoRSG-MX.jpg" class="img-fluid"></p>
-</div>
-</div>
-</div>
-<section id="información-general" class="level1 unnumbered">
-<h1 class="unnumbered">Información general</h1>
-<ul>
-<li><div class="tabset-margin-container"></div><div class="panel-tabset" data-group="globalInfo">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Sobre el curso 📌</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Requisitos previos</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Agenda 📆</a></li></ul>
-<div class="tab-content" data-group="globalInfo">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>El contenido de este curso se realizó en base al <a href="https://github.com/RSG-Ecuador/Grupo-De-Estudio-Linux-Bash">material de un grupo de estudio</a> realizado por el <a href="https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/README.html">RSG Ecuador</a>, y del <a href="https://iscb-rsg-mexico.github.io/Workshop_Bash2024/">WorkShop2024</a> organizado por el RSG. La literatura adicional se especifica en cada tema de forma pertinente.</p>
-<ul>
-<li><p><strong>Fechas:</strong> 28 y 29 octubre 2025</p></li>
-<li><p><strong>Duración del curso:</strong> 12 horas</p></li>
-</ul>
-<h4 id="instructores" class="anchored"><strong>Instructores:</strong></h4>
-<p><strong>José Daniel Chávez González - UAGro</strong></p>
-<p><strong>Alberto Patricio Hernandez - UAH</strong></p>
-<h4 id="resumen" class="anchored"><strong>Resumen:</strong></h4>
-<p>Este tutorial te enseñará los conceptos fundamentales en el empleo y manejo de Bash Shell, incluyendo <strong>la creación de scripts de Bash, generación de programas con funcionalidades sencillas aplicables a bioinformática y a programación en general.</strong></p>
-<h4 id="objetivos" class="anchored"><strong>Objetivos:</strong></h4>
-<p>En esta guía rápida aprenderás a:</p>
-<ol type="1">
-<li><p>Conceptos UNIx y GNU/Linux</p></li>
-<li><p>Mis primeros pasos en bash.</p></li>
-<li><p>Consultar información sobre archivos y directorios.</p></li>
-<li><p>Wildcards y Streams</p></li>
-<li><p>Crear un script en Bash.</p></li>
-<li><p>Funciones basicas de Bash</p></li>
-<li><p>Buenas practicas de Bioinformática</p></li>
-</ol>
-<h2 id="citar-y-reutilizar-el-material-del-curso" class="anchored" data-anchor-id="información-general">Citar y reutilizar el material del curso</h2>
-<p>Los datos del curso se pueden reutilizar y adaptar libremente con la debida atribución. Todos los datos de los cursos de estos repositorios están sujetos a la licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>.</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<ul>
-<li><p>Debes tener contar con una <strong>terminal</strong> de Bash Shell en tu sistema operativo (Visita la ventana de Instalaciones y requerimientos previos)</p></li>
-<li><p>Contar con una terminal con Git, en Windows puedes usar <a href="https://miguel-mx.github.io/2024-01-24-ccm-unam-swc/">Git Bash.</a></p></li>
-</ul>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Una expresión regular es una cadena de caracteres (string) especial que describe patrones de búsqueda sobre otros strings. Para el procesamiento de las regex se utilizan diferentes <em>engines</em>, que tienen pequeñas variaciones de una aplicación a otra. Generalmente, se usan para extraer información de texto en muchos de lenguajes de programación, editores de texto y herramientas de procesamiento de texto de terminal como grep y sed (lo que veremos en temas posteriores).</p>
+<p>Ciertos comandos como grep permiten el uso de expresiones regulares para formar patrones de filtro / búsqueda, mucho más potentes que los meta-caracteres del Shell.</p>
+<p>Un ER está formada por caracteres combinados con operadores.</p>
+<section id="operadores" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="operadores"><span class="header-section-number">7.1</span> <strong>Operadores</strong></h2>
+<p>^ Principio de línea</p>
+<p>$ Final de linea</p>
+<p>\&lt; Principio de palabra</p>
+<p>\&gt; Final de palabra</p>
+<p>. Cualquier carácter excepto salto de línea</p>
+<p>[] Conjunto de caracteres</p>
+<p>[^] Cualquier carácter no contenido</p>
+<p>[-] Rango</p>
+<p>* Cero o más ocurrencias del elemento que lo precede</p>
+<p>+ Uno o más ocurrencias del elemento que lo precede</p>
+<p>? El elemento precedente es opcional</p>
+<p>() Agrupación</p>
+<p>| O uno u otro</p>
+<p>{n} El elemento precedente se repite n veces</p>
+<p>{n,} El elemento precedente se repite al menos n veces</p>
+<p>{n,m} El elemento precedente se repite al menos n y no más de m veces</p>
+<p>\ Escape {\t, \n,\., \*, …} se usa para tratar de forma normal un carácter especial</p>
+<p>Fijaros que aquí el significado del operador * no es el mismo que el comodín *, lo mismo pasa con el operador ? y el comodín ?.</p>
+<p>Si necesitamos utilizar en nuestro patrón uno de los caracteres especiales deberemos protegerlo para que se interprete como literal:</p>
+<p>\* es un asterisco, no cero o más ocurrencias de \ (eso sería \\* en todo caso)</p>
+<p><strong>Ejemplo</strong>: Sea el archivo texto.txt con el contenido siguiente:</p>
+<pre><code>123a
+a123
+a12b
+567</code></pre>
+<p>Las siguientes ER cogerían en cada caso las líneas:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 78%">
-<col style="width: 21%">
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>^[0-9] → 123a , 567</td>
+<td>que empiecen (^) por un dígito ([0-9])</td>
+</tr>
+<tr class="even">
+<td>^[0-9]*$ → 567</td>
+<td><p>que sólo contengan dígitos, a la anterior le añado el *, también funcionaría el +,</p>
+<p>y $ (final de linea), así fuerzo a que entre principio y final de linea haya 0 o más números.</p></td>
+</tr>
+<tr class="odd">
+<td>^[a-Z][0-9]*$ → a123</td>
+<td>que empiecen por letra y el resto sean números</td>
+</tr>
+<tr class="even">
+<td>^[a-Z][0-9]*[a-Z]$ → a12b</td>
+<td>que empiecen y terminen por letra y en medio todo números</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="grep" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Grep</h1>
+<p>En esta parte del curso estudiaremos la herramienta grep. Este tutorial tiene un enfoque general, sin aplicaciones en Bioinformática (lo que veremos más adelante).</p>
+<section id="archivo-para-este-tutorial" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="archivo-para-este-tutorial"><span class="header-section-number">8.1</span> Archivo para este tutorial</h2>
+<p>En este tutorial usaremos un archivo que tiene las proteínas caracterizadas de <em>S_clavuligerus</em> S_clavuligerus_proteome.fasta</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este documento se encuentra en la carpeta _files dentro del directorio raíz del repositorio de Github, y tiene el nombre</p>
+<p>S_clavuligerus_proteome.fasta</p>
+</div>
+</div>
+</section>
+<section id="qué-es-grep" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="qué-es-grep"><span class="header-section-number">8.2</span> ¿Qué es grep?</h2>
+<p>Grep es una herramienta de SO basados en UNIX, que permite hacer búsquedas de regex en archivos de texto o <a href="https://www.computerhope.com/jargon/s/stdin.htm">* input estándar stdin*</a> derivados de <em>piping</em> (que veremos en detalle una sección posterior), e imprimir la o las líneas que coincidan con el o los patrones buscados. Un aspecto que se debe considerar es que dado que el caracter de nueva línea <code>\n</code> es un separador de la lista de patrones, no hay forma de buscar los caracteres de nueva línea usando grep.</p>
+<p>La sintaxis general de esta herramienta es de la siguiente forma:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>grep [-opcion(es)…] [“patron(es)”…] [archivo(s)]</p>
+</div>
+</div>
+<p>Pueden existir cero o más opciones y archivos. Si no se provee ningún archivo grep busca en el directorio de trabajo actual si se le da una opción de línea de comandos que especifique la recursividad; de lo contrario, busca en el <a href="https://www.computerhope.com/jargon/s/stdin.htm"><em>(stdin)</em></a>. Además, se deben proveer uno o más patrones que son separados internamente por el programa por caracteres <code>\n</code>.</p>
+</section>
+<section id="diferentes-versiones-de-grep--g--e--f--p" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="diferentes-versiones-de-grep--g--e--f--p"><span class="header-section-number">8.3</span> Diferentes versiones de grep: <code>-G -E -F -P</code></h2>
+<p>En GNU grep existen cuatro versiones de la herramienta, que se eligen con diferentes opciones:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>xwTema <strong>Mis primeros pasos en bash</strong></th>
-<th style="text-align: center;">Tiempo</th>
+<th><strong>Versión</strong></th>
+<th><strong>Descripción</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>🔷 <strong>Sección</strong> <strong>1 - (10:00- 11:00 h) (28 de marzo)</strong></td>
-<td style="text-align: center;"></td>
+<td><code>-G</code> o <code>--basic-regexp</code></td>
+<td>Interpreta los patrones como regex básicas (BREs). Es las versión estándar de la herramienta</td>
 </tr>
 <tr class="even">
-<td><ul>
-<li>Conceptos Unix y GNU/Linux</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
+<td><code>-E</code> o <code>--extended-regexp</code></td>
+<td>Interpreta los patrones como regex extendidas (EREs)</td>
 </tr>
 <tr class="odd">
-<td><ul>
-<li>Mis primeros pasos en Bash</li>
-</ul></td>
-<td style="text-align: center;">15 min</td>
+<td><code>-F</code> o <code>--fixed-strings</code></td>
+<td>Interpreta los patrones como string fijos, no como regex</td>
 </tr>
 <tr class="even">
-<td><ul>
-<li><strong>Ejercicio 1. Ubicación en repositorios</strong></li>
-</ul></td>
-<td style="text-align: center;">5 min</td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li>Consultar información sobre archivos y directorios</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="even">
-<td><ul>
-<li>Comprimir y descomprimir archivos</li>
-</ul></td>
-<td style="text-align: center;">5 min</td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li><strong>Ejercicio 2.</strong> Descomprimir archivos</li>
-</ul></td>
-<td style="text-align: center;">5 min</td>
-</tr>
-<tr class="even">
-<td><ul>
-<li>Acceder al servidor Betterlab</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="odd">
-<td>☕ <em>Coffee break (15 min) - (11:15-11:30) ☕</em></td>
-<td style="text-align: center;">15 min</td>
-</tr>
-<tr class="even">
-<td>🔷&nbsp; <strong>Sección</strong> <strong>2 - (11:15 - 12:15 h)</strong></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li>Manejo de archivos y formatos</li>
-</ul></td>
-<td style="text-align: center;">30 min</td>
-</tr>
-<tr class="even">
-<td><ul>
-<li>Expresiones regulares</li>
-</ul></td>
-<td style="text-align: center;">20 min</td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li><strong>Ejercicio 3.</strong> Manejando datos</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="even">
-<td>🔷&nbsp; <strong>Sección 3 - (12:20 - 13:30 h) (28 de marzo)</strong></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li>Wildcards y Streams</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="even">
-<td><ul>
-<li><strong>Ejercicio 4.</strong> Wildcard</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li>Operadores de redirección de datos I/O</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="even">
-<td><ul>
-<li><strong>Ejercicio 5.</strong> Redirección de salidas</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li>Scripts en Bash</li>
-</ul></td>
-<td style="text-align: center;">10 min</td>
-</tr>
-<tr class="even">
-<td>☕ <em>Comida (1 hora) - (13:30-14:30)</em></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li><div class="tabset-margin-container"></div><div class="panel-tabset" data-group="globalInfo">
-<ul class="nav nav-tabs" role="tablist"></ul>
-<div class="tab-content" data-group="globalInfo">
-
-</div>
-</div></li>
-</ul></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td><ul>
-<li>Funciones Básica de Bash Parte 1</li>
-</ul></td>
-<td style="text-align: center;">50 min</td>
-</tr>
-<tr class="odd">
-<td><ul>
-<li>Funciones Básica de Bash Parte 2</li>
-</ul></td>
-<td style="text-align: center;">50 min</td>
+<td><code>-P</code> o <code>--perl-regexp</code></td>
+<td>Interpretar los patrones como expresiones regulares compatibles con Perl (PCREs)</td>
 </tr>
 </tbody>
 </table>
+<p>Por ejemplo, usemos el siguiente comando para buscar las líneas que tengan los caracteres <strong>a</strong> o <strong>e</strong> usando el metacaracter de alternancia <code>|</code> con la versión estándar:</p>
+<section id="flags--e--f--i--v--w--x" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="flags--e--f--i--v--w--x"><span class="header-section-number">8.3.1</span> Flags: <code>-e -f -i -v -w -x</code></h3>
+<p>En GNU grep existen los siguientes modos para controlar las coincidencias:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Flag</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-e "patron(es)"</code> o <code>--regexp="patron(es)"</code></td>
+<td>Busca los patrones especificados como argumento y los caracteres <code>\n</code> separan un patrón del siguiente</td>
+</tr>
+<tr class="even">
+<td><code>-f archivo</code> o <code>--file=archivo</code></td>
+<td>Busca los patrones de un archivo, uno por línea</td>
+</tr>
+<tr class="odd">
+<td><code>-i</code> o <code>--ignore-case</code></td>
+<td>Hace que la regex no sea sensible a mayúsculas o minúsnuclas. La regex “abc” coincide con el patrón “AbC”</td>
+</tr>
+<tr class="even">
+<td><code>-v</code> o <code>--invert-match</code></td>
+<td>Invierte el sentido de coincidencia, para seleccionar líneas que no coinciden con el patrón</td>
+</tr>
+<tr class="odd">
+<td><code>-w</code> o <code>--word-regexp</code></td>
+<td>Selecciona solo las líneas que contengan coincidencias que formen palabras completas</td>
+</tr>
+<tr class="even">
+<td><code>-x</code> o <code>--line-regexp</code></td>
+<td>Seleccione solo los patrones que coincidan exactamente con toda la línea</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="contar-el-número-de-secuencias-en-un-archivo-fasta" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="contar-el-número-de-secuencias-en-un-archivo-fasta"><span class="header-section-number">8.4</span> <strong>Contar el número de secuencias en un archivo FASTA</strong></h2>
+<ol type="1">
+<li><strong>¿Cuántas líneas tiene el archivo S_clavuligerus_proteome.fasta?</strong></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>cd ~/unix.bioinfo.rsgecuador-gh-pages/_files wc -l S_clavuligerus_proteome.fasta # 40739 lineas</p>
+</div>
+</div>
+<p>En archivos de formato FASTA o similares, el número de líneas no corresponde al número de secuencias. Esto se debe a la estructura del archivo:</p>
+<ul>
+<li><p><strong>Formato FASTA</strong>: Cada secuencia comienza con una línea que tiene el símbolo <code>&gt;</code>, seguido de un identificador o descripción de la secuencia.</p></li>
+<li><p>Las líneas siguientes contienen la secuencia de nucleótidos o aminoácidos, que pueden estar divididas en varias líneas.</p></li>
+</ul>
+<p>Por lo tanto, para contar el número de secuencias en un archivo FASTA, <strong>debes contar las líneas que comienzan con <code>&gt;</code></strong>. Aquí tienes un ejemplo práctico en Bash para lograrlo:</p>
+<ol start="2" type="1">
+<li><p><strong>¿Cuántas secuencias tiene el archivo S_clavuligerus_proteome.fasta?</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>grep -c “^&gt;” S_clavuligerus_proteome.fasta # 6439 secuencias</p>
 </div>
 </div></li>
+</ol>
+<!-- -->
+<ol start="3" type="1">
+<li><p><strong>¿Cuáles bases de datos detectaron estas secuencias?</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>grep “&gt;” S_clavuligerus_proteome.fasta | cut -d ‘|’ -f1 | sed ‘s/&gt;//’ | uniq # sp y tr</p>
+</div>
+</div></li>
+</ol>
+<p><strong>UniProtKB (Universal Protein Knowledgebase)</strong> tiene dos secciones principales:</p>
+<ul>
+<li><p><strong>Swiss-Prot (</strong><code>sp</code><strong>)</strong>: Contiene secuencias revisadas y anotadas manualmente.</p></li>
+<li><p><strong>TrEMBL (</strong><code>tr</code><strong>)</strong>: Contiene secuencias computacionalmente anotadas y aún no revisadas manualmente.</p></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explicación del código
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><code>grep "&gt;"</code>: Busca la línea con la cabecera.</p></li>
+<li><p><code>cut -d'|' -f1</code>: Divide por <code>|</code> y selecciona el primer campo.</p></li>
+<li><p><code>sed 's/&gt;//'</code>: Elimina el símbolo <code>&gt;</code> al inicio.</p></li>
+<li><p><code>uniq</code>: Nos da los valores únicos.</p></li>
+</ul>
+</div>
+</div>
+<ol start="4" type="1">
+<li><p><strong>Buscar proteínas anotadas con una palabra clave específica</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>grep “ribosomal” S_clavuligerus_proteome.fasta</p>
+</div>
+</div></li>
+<li><p><strong>¿Qué organismo produce esta proteína y cuál es su Taxonomy ID?</strong></p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>organism=$(grep “&gt;” S_clavuligerus_proteome.fasta | sed -n ‘s/.*OS=\([^ ]*\).*/\1/p’ | sort -u) taxonomy=$(grep “&gt;” S_clavuligerus_proteome.fasta | sed -n ‘s/.*OX=\([0-9]*\).*/\1/p’ | sort -u) echo “Organismo: $organism” echo “Taxonomy ID: $taxonomy”</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explicación del codigo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><code>sed -n 's/.*OS=\([^ ]*\).*/\1/p'</code>: Extrae el nombre del organismo entre <code>OS=</code> y el primer espacio.</p></li>
+<li><p><code>sed -n 's/.*OX=\([0-9]*\).*/\1/p'</code>: Extrae el número después de <code>OX=</code>.</p></li>
+<li><p><strong><code>sort -u</code></strong>: Ordena las líneas y elimina duplicados, asegurando que solo queden valores únicos.</p></li>
+<li><p>Se aplica después de extraer los valores con <code>sed</code>, por si existen múltiples cabeceras en el archivo.</p></li>
+</ul>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p><strong>¿Buscar proteínas que contengan dominios específicos (por ejemplo, “ABC transporter”)</strong></p>
+<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>grep “ABC transporter” S_clavuligerus_proteome.fasta</p>
+</div>
+</div></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>grep “ABC transporter” S_clavuligerus_proteome.fasta | head -n 10</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sed" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Sed</h1>
+<p>En esta parte del curso estudiaremos la herramienta sed. Al igual que las partes de grep y regex, este tutorial tiene un enfoque general, sin aplicaciones en Bioinformática (lo que veremos más adelante).</p>
+<section id="qué-es-sed" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="qué-es-sed"><span class="header-section-number">9.1</span> ¿Qué es sed?</h2>
+<p>Sed es un editor de flujos de datos (<em>streams</em>) que permite filtrar y transformar texto de flujos de entrada, que pueden ser archivos o <a href="https://www.computerhope.com/jargon/s/stdin.htm"><em>stdin</em></a> derivados de <em>piping</em> (que veremos en detalle en la siguiente sección), lo que lo distingue de otros tipos de editores de texto de CLI o GUI.</p>
+<p>La sintaxis general de esta herramienta es de la siguiente forma:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>sed [-opcion(es)…] [script] [archivo(s)]</p>
+</div>
+</div>
+</section>
+<section id="comando-más-común-de-sed-s" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="comando-más-común-de-sed-s"><span class="header-section-number">9.2</span> Comando más común de sed: <code>s</code></h2>
+<p>El comando de sustitución <code>s</code> es el más usado debido a que tiene muchas opciones y funcionalidades. La forma general de este comando es <code>s/REGEXP/REPLACEMENT/[FLAGS]</code>, en la que se busca la expresión regular <code>REGEXP</code> en el contenido del <em>espacio de patrones</em>. Si existe la coincidencia, se reemplaza el patrón con lo que se coloca en <code>REPLACEMENT</code>. Los caracteres <code>/</code> pueden ser reemplazados por cualquier otro carácter.</p>
+<p>Con este comando se pueden usar algunos <code>[FLAGS]</code>, y entre los más comunes se encuentran:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Flag</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>g</code></td>
+<td>Se aplica el reemplazo a todas las coincidencias con la regex, no solo a la primera</td>
+</tr>
+<tr class="even">
+<td><code>NUMBER</code></td>
+<td>Solo se reemplaza un el número especificado de coincidencias de la regex. Si <code>g</code> y <code>NUMBER</code> se combinan, se ignoran las coincidencias antes del <code>NUMBER</code>, y luego se reemplazan todas las coincidencias desde el número especificado en adelante</td>
+</tr>
+<tr class="odd">
+<td><code>w FILENAME</code></td>
+<td>Si se realizó la sustitución, se escribe el resultado en el archivo <code>FILENAME</code></td>
+</tr>
+<tr class="even">
+<td><code>i</code> o <code>I</code></td>
+<td>Hace que sed coincida con la regex de forma que no distinga entre mayúsculas y minúsculas</td>
+</tr>
+<tr class="odd">
+<td><code>m</code> o <code>M</code></td>
+<td>Activa el modo multilínea de regex, con lo que los símbolos <code>^</code> y <code>s</code> coinciden con el inicio y fin de línea respectivamente</td>
+</tr>
+</tbody>
+</table>
+<p>Además, el comando <code>s</code> permite realizar algunas operaciones para convertir texto a mayúsculas y minúsculas:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Código</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\L</code></td>
+<td>Convertir el texto a minúsculas hasta que se encuentre una <code>\U</code> o <code>\E</code></td>
+</tr>
+<tr class="even">
+<td><code>\l</code></td>
+<td>Convertir el siguiente caracter a minúscula</td>
+</tr>
+<tr class="odd">
+<td><code>\U</code></td>
+<td>Convertir el texto a mayúsculas hasta que se encuentre una <code>\L</code> o <code>\E</code></td>
+</tr>
+<tr class="even">
+<td><code>\u</code></td>
+<td>Convertir el siguiente caracter a mayúscula</td>
+</tr>
+<tr class="odd">
+<td><code>\E</code></td>
+<td>Detener la conversión de minúsculas y mayúsculas iniciada por <code>\L</code> o <code>\U</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="extraer-solo-los-encabezados" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> <strong>Extraer solo los encabezados</strong></h1>
+<p><strong>Objetivo:</strong> Obtener una lista de todos los encabezados de las secuencias.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>sed -n ‘/^&gt;/p’ S_clavuligerus_proteome.fasta &gt; headers.txt</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explicación
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>-n: Suprime la salida estándar.</p>
+<p>‘/^&gt;/p’: Imprime solo las líneas que comienzan con &gt;.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejercicio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Contesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta:</p>
+<ol type="1">
+<li><p>¿Cuántas proteínas tienen el identificador de taxonomía (<code>OX=443255</code>) específico?</p></li>
+<li><p>¿Cuántas variantes de secuencia (SV, sequence version) diferentes hay en el archivo FASTA?</p></li>
+</ol>
+</div>
+</div>
 
 
 </section>
@@ -1015,10 +1295,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./7_ScriptBash.html" class="pagination-link" aria-label="Scripts en Bash">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scripts en Bash</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./2_requisitos.html" class="pagination-link" aria-label="Instalaciones y requerimientos previos">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Instalaciones y requerimientos previos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./8_FuncionesBasicas_pt2.html" class="pagination-link" aria-label="Condicionales">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Condicionales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

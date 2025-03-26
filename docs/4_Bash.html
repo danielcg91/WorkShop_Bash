@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Análisis de datos de RNA-Seq – Workshop Bash 2025</title>
+<title>3&nbsp; Mis primeros pasos en Bash – Workshop Bash 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ScriptBash.html" rel="next">
-<link href="./Bash.html" rel="prev">
+<link href="./5_ServidorBetterlab.html" rel="next">
+<link href="./3_intro.html" rel="prev">
 <link href="./ViernesBioinfo_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -84,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Rnaseq_intro.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Análisis de datos de RNA-Seq</strong></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./4_Bash.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mis primeros pasos en Bash</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -105,12 +139,6 @@ ul.task-list li input[type="checkbox"] {
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-              <i class="bi bi-twitter pe-1"></i>
-            Twitter
-            </a>
-          </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
               <i class="bi bi-facebook pe-1"></i>
@@ -144,50 +172,62 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./requisitos.html" class="sidebar-item-text sidebar-link">
+  <a href="./2_requisitos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Instalaciones y requerimientos previos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="./3_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conceptos Unix y GNU/Linux</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Bash.html" class="sidebar-item-text sidebar-link">
+  <a href="./4_Bash.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mis primeros pasos en Bash</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Rnaseq_intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Análisis de datos de RNA-Seq</strong></span></span></a>
+  <a href="./5_ServidorBetterlab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cómo acceder al servidor Bettertab en RStudio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ScriptBash.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wildcards y Streams</span></span></a>
+  <a href="./6_ArchivosyformatosBioinformatica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Archivos y formatos comunes en Bioinformática</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Parte3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Buenas practicas en R</span></span></a>
+  <a href="./7_ScriptBash.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Scripts en Bash</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Parte4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scripts en Bash</span></span></a>
+  <a href="./8_FuncionesBasicas_pt1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expresiones regulares</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">AWK</span></span></a>
+  <a href="./8_FuncionesBasicas_pt2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Condicionales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./9_EjerciciosFinales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ejercicios finales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Buenaspracticas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Buenas practicas en Programación</span></span></a>
   </div>
 </li>
     </ul>
@@ -200,23 +240,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística" id="toc-bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística" class="nav-link active" data-scroll-target="#bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística"><span class="header-section-number">4.1</span> <strong>Bioinformática se conforma de la computación, biológica, matemáticas y estadística</strong></a></li>
-  <li><a href="#transcriptoma" id="toc-transcriptoma" class="nav-link" data-scroll-target="#transcriptoma"><span class="header-section-number">4.2</span> <strong>Transcriptoma</strong></a>
+  <li><a href="#entorno-de-bash" id="toc-entorno-de-bash" class="nav-link active" data-scroll-target="#entorno-de-bash"><span class="header-section-number">3.1</span> <strong>Entorno de Bash</strong></a></li>
+  <li><a href="#preparación-del-directorio-de-trabajo" id="toc-preparación-del-directorio-de-trabajo" class="nav-link" data-scroll-target="#preparación-del-directorio-de-trabajo"><span class="header-section-number">3.2</span> Preparación del directorio de trabajo</a></li>
+  <li><a href="#conocer-mi-dirección-ubicación" id="toc-conocer-mi-dirección-ubicación" class="nav-link" data-scroll-target="#conocer-mi-dirección-ubicación"><span class="header-section-number">3.3</span> Conocer mi dirección / ubicación</a></li>
+  <li><a href="#comandos-básicos" id="toc-comandos-básicos" class="nav-link" data-scroll-target="#comandos-básicos"><span class="header-section-number">3.4</span> <strong>Comandos básicos</strong></a></li>
+  <li><a href="#algunas-opciones-para-ls" id="toc-algunas-opciones-para-ls" class="nav-link" data-scroll-target="#algunas-opciones-para-ls"><span class="header-section-number">4</span> Algunas opciones para <u>ls</u></a>
   <ul>
-  <li><a href="#porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma" id="toc-porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma" class="nav-link" data-scroll-target="#porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma"><span class="header-section-number">4.2.1</span> <strong>¿Porque es importante medir los cambios en la expresión génica (transcriptoma)?</strong></a></li>
+  <li><a href="#consultar-información-sobre-archivos-y-directorios" id="toc-consultar-información-sobre-archivos-y-directorios" class="nav-link" data-scroll-target="#consultar-información-sobre-archivos-y-directorios"><span class="header-section-number">4.1</span> <strong>Consultar información sobre archivos y directorios</strong></a>
+  <ul class="collapse">
+  <li><a href="#información-contenida" id="toc-información-contenida" class="nav-link" data-scroll-target="#información-contenida"><span class="header-section-number">4.1.1</span> <strong>Información contenida</strong></a></li>
+  <li><a href="#permisos" id="toc-permisos" class="nav-link" data-scroll-target="#permisos"><span class="header-section-number">4.1.2</span> <strong>Permisos</strong></a></li>
   </ul></li>
-  <li><a href="#el-transcriptoma-varía-según" id="toc-el-transcriptoma-varía-según" class="nav-link" data-scroll-target="#el-transcriptoma-varía-según"><span class="header-section-number">4.3</span> <strong>El transcriptoma varía según:</strong></a></li>
-  <li><a href="#idea-principal-de-rna-seq" id="toc-idea-principal-de-rna-seq" class="nav-link" data-scroll-target="#idea-principal-de-rna-seq"><span class="header-section-number">4.4</span> <strong>Idea principal de RNA-Seq</strong></a>
-  <ul>
-  <li><a href="#relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada" id="toc-relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada" class="nav-link" data-scroll-target="#relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada"><span class="header-section-number">4.4.1</span> <strong>Relacionar un fenotipo con los cambios de expresión de los genes en una condición dada</strong></a></li>
-  </ul></li>
-  <li><a href="#pipeline-general" id="toc-pipeline-general" class="nav-link" data-scroll-target="#pipeline-general"><span class="header-section-number">4.5</span> Pipeline general</a></li>
-  <li><a href="#control-de-calidad-de-los-datos" id="toc-control-de-calidad-de-los-datos" class="nav-link" data-scroll-target="#control-de-calidad-de-los-datos"><span class="header-section-number">5</span> <strong>Control de calidad de los datos</strong></a>
-  <ul>
-  <li><a href="#quality-check-quality-control" id="toc-quality-check-quality-control" class="nav-link" data-scroll-target="#quality-check-quality-control"><span class="header-section-number">5.1</span> <strong>Quality Check / Quality Control</strong></a></li>
-  <li><a href="#archivos-fastq-fastq.gz-fq.gz" id="toc-archivos-fastq-fastq.gz-fq.gz" class="nav-link" data-scroll-target="#archivos-fastq-fastq.gz-fq.gz"><span class="header-section-number">5.2</span> <strong>Archivos fastq (fastq.gz / fq.gz)</strong></a></li>
-  <li><a href="#phred-quality-score-puntuación-de-calidad" id="toc-phred-quality-score-puntuación-de-calidad" class="nav-link" data-scroll-target="#phred-quality-score-puntuación-de-calidad"><span class="header-section-number">5.3</span> <strong>Phred Quality score / Puntuación de calidad</strong></a></li>
-  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">5.4</span> Material suplementario</a></li>
+  <li><a href="#chmod-cambiar-permisos" id="toc-chmod-cambiar-permisos" class="nav-link" data-scroll-target="#chmod-cambiar-permisos"><span class="header-section-number">4.2</span> <strong><code>chmod</code>: Cambiar permisos</strong></a></li>
+  <li><a href="#comprimir-y-descomprimir-archivos" id="toc-comprimir-y-descomprimir-archivos" class="nav-link" data-scroll-target="#comprimir-y-descomprimir-archivos"><span class="header-section-number">4.3</span> Comprimir y descomprimir archivos</a></li>
+  <li><a href="#material-suplementario" id="toc-material-suplementario" class="nav-link" data-scroll-target="#material-suplementario"><span class="header-section-number">4.4</span> Material suplementario</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -226,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><strong>Análisis de datos de RNA-Seq</strong></span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mis primeros pasos en Bash</span></h1>
 </div>
 
 
@@ -243,18 +280,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="bioinformática-se-conforma-de-la-computación-biológica-matemáticas-y-estadística"><span class="header-section-number">4.1</span> <strong>Bioinformática se conforma de la computación, biológica, matemáticas y estadística</strong></h2>
-<p>La bioinformática, en relación con la&nbsp;<strong>genética y la genómica</strong>, es una&nbsp;<strong>subdisciplina científica</strong>&nbsp;que implica el uso de&nbsp;<strong>ciencias informáticas</strong>&nbsp;para&nbsp;<em>recopilar, almacenar, analizar y diseminar datos biológicos</em>, como secuencias de ADN y aminoácidos o anotaciones sobre esas secuencias&nbsp;<a href="https://www.genome.gov/es/genetics-glossary/Bioinformatica">NIH, 2023</a>.</p>
+<section id="entorno-de-bash" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="entorno-de-bash"><span class="header-section-number">3.1</span> <strong>Entorno de Bash</strong></h2>
+<p><img src="img/entornoBash.png" class="img-fluid"></p>
+<p>El signo&nbsp;<code>$</code>&nbsp;es un&nbsp;<strong>prompt</strong>, que nos muestra que la terminal está esperando una entrada; tu terminal puede usar un carácter diferente como prompt y puede agregar información antes de él. Al teclear comandos, ya sea a partir de estas lecciones o de otras fuentes, no escribas el prompt (<em>$</em>), sólo los comandos que le siguen.</p>
 </section>
-<section id="transcriptoma" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="transcriptoma"><span class="header-section-number">4.2</span> <strong>Transcriptoma</strong></h2>
-<p>Es el conjunto de todas las moléculas de RNA producidos por el genoma bajo <strong>condiciones específicas</strong> o en <strong>una célula específica (scRNA-Seq)</strong> o en <strong>una población de células (bulk RNA-Seq)</strong>.</p>
-<section id="porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="porque-es-importante-medir-los-cambios-en-la-expresión-génica-transcriptoma"><span class="header-section-number">4.2.1</span> <strong>¿Porque es importante medir los cambios en la expresión génica (transcriptoma)?</strong></h3>
+<section id="preparación-del-directorio-de-trabajo" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="preparación-del-directorio-de-trabajo"><span class="header-section-number">3.2</span> Preparación del directorio de trabajo</h2>
 <ul>
-<li><p>Las variaciones en la expresión entre condiciones se puede relacionar con los cambios en los <strong>procesos biológicos</strong>.</p></li>
-<li><p>El transcriptoma nos da una aproximación de los cambios relativos en la expresión génica de los <strong>genes codificantes y no codificantes</strong>.</p></li>
+<li><p>Ruta / Camino absoluto</p>
+<div class="sourceCode" id="cb1" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /home/usuario/data/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Ruta / Camino relativo</p>
+<div class="sourceCode" id="cb2" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../ <span class="co"># Ir a la carpeta anterior</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -262,144 +299,437 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Palabras claves:
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>Genoma - Fijo</li>
-<li>Transcriptoma - Altamente variable</li>
-</ul>
+<p><strong>NOTA 1:</strong> Si das <code>cd</code> y no indicas una ruta absoluta, te llevara al Directorio Raiz (~).</p>
+<p><strong>NOTA 2:</strong> Puedes usar la tecla TAB para completar el nombre de la carpeta. En caso de que tengas más de dos carpetas que inicien igual, tendrás que terminar de completar el nombre.</p>
 </div>
 </div>
 </section>
-</section>
-<section id="el-transcriptoma-varía-según" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="el-transcriptoma-varía-según"><span class="header-section-number">4.3</span> <strong>El transcriptoma varía según:</strong></h2>
-<ul>
-<li>Tejido / Órgano</li>
-<li>Célula</li>
-<li>Ambiente (estrés)</li>
-<li>Medicamentos (tratamientos)</li>
-<li>Salud</li>
-<li>Edad</li>
-<li>Etapa del desarrollo</li>
-</ul>
-</section>
-<section id="idea-principal-de-rna-seq" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="idea-principal-de-rna-seq"><span class="header-section-number">4.4</span> <strong>Idea principal de RNA-Seq</strong></h2>
-<section id="relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="relacionar-un-fenotipo-con-los-cambios-de-expresión-de-los-genes-en-una-condición-dada"><span class="header-section-number">4.4.1</span> <strong>Relacionar un fenotipo con los cambios de expresión de los genes en una condición dada</strong></h3>
+<section id="conocer-mi-dirección-ubicación" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="conocer-mi-dirección-ubicación"><span class="header-section-number">3.3</span> Conocer mi dirección / ubicación</h2>
+<p>Averiguemos dónde estamos, ejecutando el comando&nbsp;<code>pwd</code>&nbsp;(que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro&nbsp;<strong>directorio actual</strong>&nbsp;es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es&nbsp;<code>/Users/nelle</code>, el cual es el directorio de inicio de Nelle, también conocido como su directorio&nbsp;<strong>home</strong>:</p>
+<div class="sourceCode" id="cb3" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># /c/Users/ecoss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>En la computadora de Daniel, el sistema de archivos se ve así:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.acobiom.com/en/rna-seq-en/"><img src="https://www.acobiom.com/wp-content/uploads/2022/09/cropped-cropped-RNA-Seq-Experiment-1.png" class="img-fluid figure-img" alt="Imagen tomada de: https://www.acobiom.com/en/rna-seq-en/"></a></p>
-<figcaption>Imagen tomada de: https://www.acobiom.com/en/rna-seq-en/</figcaption>
+<p><a href="https://swcarpentry.github.io/shell-novice-es/02-filedir.html"><img src="https://swcarpentry.github.io/shell-novice-es/fig/filesystem.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
-</section>
-</section>
-<section id="pipeline-general" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="pipeline-general"><span class="header-section-number">4.5</span> Pipeline general</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://biocorecrg.github.io/RNAseq_course_2019/workflow.html"><img src="https://biocorecrg.github.io/RNAseq_course_2019/images/RNAseq_workflow.png" class="img-fluid figure-img" alt="Imagen proveniente de mRNA-Seq data analysis workflow"></a></p>
-<figcaption>Imagen proveniente de mRNA-Seq data analysis workflow</figcaption>
-</figure>
-</div>
-</section>
-<section id="control-de-calidad-de-los-datos" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> <strong>Control de calidad de los datos</strong></h1>
-<section id="quality-check-quality-control" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="quality-check-quality-control"><span class="header-section-number">5.1</span> <strong>Quality Check / Quality Control</strong></h2>
-<ul>
-<li><p><strong>Uno de los pasos más importantes. Dedícale tiempo.</strong></p></li>
-<li><p>La calidad de tus datos importa, bibliotecas mal secuenciadas genera datos desconfiables.</p></li>
-<li><p>Debes analizar su calidad para poder reclamar en la secuenciación (~1 semana).</p></li>
-</ul>
+<p>En la parte superior está el <strong>directorio raíz</strong> o <strong>root</strong> que contiene todo lo demás. Nos referimos a este directorio usando un caracter de barra <code>/</code> por si solo; esta es la barra al inicio de <code>/Users/daniel_chavez</code>.</p>
+<p>Dentro de ese directorio hay otros directorios: <code>bin</code> (que es donde se almacenan algunos programas preinstalados), <code>data</code> (para archivos de datos diversos), <code>Users</code> (donde se encuentran los directorios personales de los usuarios), <code>tmp</code> (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Programas:
+Ejercicio 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li><p><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></p></li>
-<li><p><a href="https://multiqc.info/">MultiQC</a></p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="archivos-fastq-fastq.gz-fq.gz" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="archivos-fastq-fastq.gz-fq.gz"><span class="header-section-number">5.2</span> <strong>Archivos fastq (fastq.gz / fq.gz)</strong></h2>
-<ul>
-<li><p>Derivan del formato FASTA.</p></li>
-<li><p><strong>Muestra la calidad de cada nucleótido.</strong></p></li>
-<li><p>Cada secuencia está representada por 4 líneas:</p>
-<ul>
-<li><div>
+<p>A partir de&nbsp;<code>/Users/daniel_chavez/data/</code>, ¿Cuál de los siguientes comandos podría Amanda usar para navegar a su directorio de inicio, que es&nbsp;<code>/Users/daniel_chavez</code>?</p>
 <ol type="1">
-<li><p>@ ID del read + información de la corrida</p></li>
-<li><p>Secuencia</p></li>
-<li><p>Símbolo “+”</p></li>
-<li><p>Información de la calidad de secuenciación de cada base. Cada letra o símbolo representa a una base de la secuencia codificado en formato (Escala <em>Phred</em> y código <a href="https://www.drive5.com/usearch/manual/quality_score.html"><em>ASCII</em></a>)</p></li>
+<li><p><code>cd .</code></p></li>
+<li><p><code>cd /</code></p></li>
+<li><p><code>cd /home/amanda</code></p></li>
+<li><p><code>cd ../..</code></p></li>
+<li><p><code>cd ~</code></p></li>
+<li><p><code>cd home</code></p></li>
+<li><p><code>cd ~/data/..</code></p></li>
+<li><p><code>cd</code></p></li>
+<li><p><code>cd ..</code></p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>No: <code>.</code> significa el directorio actual.</p></li>
+<li><p>No: <code>/</code> significa el directorio raíz.</p></li>
+<li><p>No: El directorio <strong>home</strong> de Amanda es <code>/Users/amanda</code>.</p></li>
+<li><p>No: sube dos niveles, es decir termina en <code>/Users</code>.</p></li>
+<li><p>Sí: <code>~</code> significa el directorio <strong>home</strong> del usuario, en este caso <code>/Users/amanda</code>.</p></li>
+<li><p>No: esto navegaría a un directorio <code>home</code> en el directorio actual, si existe.</p></li>
+<li><p>Sí: innecesariamente complicado, pero correcto.</p></li>
+<li><p>Sí: un atajo para volver al directorio <strong>home</strong> del usuario.</p></li>
+<li><p>Sí: sube un nivel.</p></li>
 </ol>
+</div>
+</div>
 </div></li>
-</ul></li>
-</ul>
-<p><a href="https://eveliacoss.github.io/RNAseq_classFEB2024/Presentaciones/Dia1_AspectosGenerales.html#45"><img src="img/fastq_example.png" class="img-fluid"></a></p>
+</ol>
+</div>
+</div>
+<p>Ejemplo de rutas:</p>
+<p><a href="https://github.com/raynamharris/Shell_Intro_for_Transcriptomics/blob/master/lessons/02_Navigating_Dirs.md"><img src="https://github.com/raynamharris/Shell_Intro_for_Transcriptomics/raw/master/lessons/figures/nav_dirs.png" class="img-fluid"></a></p>
 </section>
-<section id="phred-quality-score-puntuación-de-calidad" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="phred-quality-score-puntuación-de-calidad"><span class="header-section-number">5.3</span> <strong>Phred Quality score / Puntuación de calidad</strong></h2>
-<p>Q = -10 x log10(P) # where P is the probability that a base call is erroneous</p>
-<ul>
-<li><p>Q = Phred Quality score</p></li>
-<li><p>P = Probability of incorrect base call</p></li>
-</ul>
-<p><img src="img/Phred_example.png" class="img-fluid"></p>
-<p>El valor máximo de calidad es = ~40 (zona verde) y los valores &lt; 20 se consideran de baja calidad.</p>
+<section id="comandos-básicos" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="comandos-básicos"><span class="header-section-number">3.4</span> <strong>Comandos básicos</strong></h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comandos</th>
+<th>Información</th>
+<th>Argumentos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ssh</code></td>
+<td>Conexión a servidores</td>
+<td>ssh usuario@servidor.mx</td>
+</tr>
+<tr class="even">
+<td><code>ls</code></td>
+<td>Observar el contenido de los archivos en una carpeta</td>
+<td>ls directorio/</td>
+</tr>
+<tr class="odd">
+<td><code>cd</code></td>
+<td>Moverse de directorios</td>
+<td>cd /home/usuario/data/</td>
+</tr>
+<tr class="even">
+<td><code>mkdir</code></td>
+<td>Crear un nuevo directorio</td>
+<td>mkdir data</td>
+</tr>
+<tr class="odd">
+<td><code>rmdir</code></td>
+<td>Eliminar el directorio</td>
+<td>rmkdir -rf data</td>
+</tr>
+<tr class="even">
+<td><code>nano</code>&nbsp;/&nbsp;<code>vim</code></td>
+<td>Editores de texto plano</td>
+<td>nano Archivo.txt / vim Archivo.txt</td>
+</tr>
+<tr class="odd">
+<td><code>cp</code></td>
+<td>Copiar archivos</td>
+<td>cp Archivo1.txt /home/usuario/data/</td>
+</tr>
+<tr class="even">
+<td><code>mv</code></td>
+<td>Mover/renombrar un archivo o carpeta</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>echo</code></td>
+<td>Para llamar y/o declarar variables</td>
+<td>echo “Hello world”</td>
+</tr>
+<tr class="even">
+<td><code>chmod</code></td>
+<td>Cambiar permisos del usuario</td>
+<td>chmod 777 data/</td>
+</tr>
+<tr class="odd">
+<td><code>rsync</code></td>
+<td>Descargar o subir archivos</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>scp</code></td>
+<td>Descargar o subir archivos</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>cat</code></td>
+<td>Visualizar contenido de un archivo. Escribe el contenido del archivo de manera secuencial a la salida estándar, a la ventana de Terminal.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>less</code></td>
+<td>Leer contenido de un archivo sin interrumpir la pantalla de Terminal. Similar a&nbsp;<code>Vim</code>&nbsp;pero sin opción para escribir.&nbsp;<strong>Se sale del modo visualización con</strong>&nbsp;q.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>find</code></td>
+<td>Busca archivos en un directorio específico.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>head</code></td>
+<td>Visualizar primeras líneas de un archivo.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>tail</code></td>
+<td>Visualizar últimas líneas de un archivo.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>which</code></td>
+<td>Indica el directorio donde se encuentra un particular comando o programa que se haya podido encontrar usando los directorios guardados en la variable de estado&nbsp;<code>PATH</code>.</td>
+<td>which bash</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Ejemplo de Buena calidad
+Ayuda de funciones
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Reporte de FastQC con <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html">buena calidad</a> de las lecturas en la zona verde.</p>
+<p>Puedes consultar mas información usando <code>ls --help</code></p>
 </div>
 </div>
-<p><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html"><img src="img/GoodQC.png" class="img-fluid"></a></p>
+</section>
+<section id="algunas-opciones-para-ls" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Algunas opciones para <u>ls</u></h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Comando</strong></th>
+<th><strong>Función</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ls</code></td>
+<td>enlista los archivos y carpetas en un directorio</td>
+</tr>
+<tr class="even">
+<td><code>ls -a</code></td>
+<td>Nos muestra los archivos y directorios dentro del directorio actual, incluyendo los archivos y directorios ocultos.</td>
+</tr>
+<tr class="odd">
+<td><code>ls -l</code></td>
+<td>Muestra toda la información de cada archivo en forma de lista: usuario, grupo, permisos, tamaño, fecha y hora de creación.</td>
+</tr>
+<tr class="even">
+<td><code>ls -la</code></td>
+<td>Opciones <code>-l</code> y <code>-a</code> combinadas.</td>
+</tr>
+<tr class="odd">
+<td><code>ls -lh</code></td>
+<td>Enlistar archivos y su uso de memoria.</td>
+</tr>
+<tr class="even">
+<td><code>ls -t</code></td>
+<td>Ordena los archivos por fecha de modificación.</td>
+</tr>
+<tr class="odd">
+<td><code>ls -X</code></td>
+<td>Ordena los archivos por extensión.</td>
+</tr>
+<tr class="even">
+<td><code>ls -R</code></td>
+<td>Muestra el contenido de todos lossubdirectorios de forma recursiva.</td>
+</tr>
+<tr class="odd">
+<td><code>ls -S</code></td>
+<td>Ordena los resultados por tamaño dearchivo.</td>
+</tr>
+<tr class="even">
+<td><code>ls *[patrón]</code></td>
+<td>Ver solo archivos con un patrón específico.</td>
+</tr>
+</tbody>
+</table>
+<section id="consultar-información-sobre-archivos-y-directorios" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="consultar-información-sobre-archivos-y-directorios"><span class="header-section-number">4.1</span> <strong>Consultar información sobre archivos y directorios</strong></h2>
+<section id="información-contenida" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="información-contenida"><span class="header-section-number">4.1.1</span> <strong>Información contenida</strong></h3>
+<p>Cada columna en la salida anterior tiene un significado:</p>
+<p><strong>Escribimos en la terminal ls -l</strong></p>
+<p><a href="https://eveliacoss.github.io/RNAseq_classFEB2024/Presentaciones/Dia1_AspectosGenerales.html#74"><img src="img/ejemplo_datos.png" class="img-fluid"></a></p>
+</section>
+<section id="permisos" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="permisos"><span class="header-section-number">4.1.2</span> <strong>Permisos</strong></h3>
+<p>Cada usuario tiene permisos diferentes cuando crea un archivo. Los permisos pueden modificarse con <code>chmod</code>.</p>
+<p>Los caracteres atribuidos a los permisos son:</p>
+<ul>
+<li><p><code>r</code> : escritura (Read)</p></li>
+<li><p><code>w</code> : lectura (Write)</p></li>
+<li><p><code>x</code> : ejecución (eXecute)</p></li>
+</ul>
+<p>En el siguiente ejemplo, el usuario cuenta con todos los permisos activos, mientras que el grupo y otros tienen solo permisos de lectura y ejecución.</p>
+<p><a href="https://eveliacoss.github.io/RNAseq_classFEB2024/Presentaciones/Dia1_AspectosGenerales.html#75"><img src="img/permisos.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="chmod-cambiar-permisos" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="chmod-cambiar-permisos"><span class="header-section-number">4.2</span> <strong><code>chmod</code>: Cambiar permisos</strong></h2>
+<p>La representación octal de chmod es muy sencilla</p>
+<ul>
+<li><p><code>r</code> = Lectura tiene el valor de 4</p></li>
+<li><p><code>w</code> = Escritura tiene el valor de 2</p></li>
+<li><p><code>x</code> = Ejecución tiene el valor de 1</p></li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Permisos</th>
+<th style="text-align: center;">Valor</th>
+<th style="text-align: left;">Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">rwx</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Lectura, escritura y ejecución</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">rw-</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Lectura, escritura</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">r-x</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Lectura y ejecución</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">r–</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Lectura</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">-wx</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Escritura y ejecución</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">-w-</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Escritura</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">–x</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Ejecución</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Sin permisos</td>
+</tr>
+</tbody>
+</table>
+<p>Por lo tanto:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Forma larga</th>
+<th>Forma Octal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>chmod u=rwx,g=rwx,o=rx</code></td>
+<td><code>chmod 775</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>chmod u=rwx,g=rx,o=</code></td>
+<td><code>chmod 760</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>chmod u=rw,g=r,o=r</code></td>
+<td><code>chmod 644</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>chmod u=rw,g=r,o=</code></td>
+<td><code>chmod 640</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>chmod u=rw,go=</code></td>
+<td><code>chmod 600</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>chmod u=rwx,go=</code></td>
+<td><code>chmod 700</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="comprimir-y-descomprimir-archivos" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="comprimir-y-descomprimir-archivos"><span class="header-section-number">4.3</span> Comprimir y descomprimir archivos</h2>
+<p>Los archivos pueden contener diversos tipos de extensiones, dependiendo del objetivo será necesario descomprimirlos y en otros dejarlos comprimidos para no abarcar tanto espacio en tu espacio de trabajo.&nbsp;</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de archivo</th>
+<th>Comprimir</th>
+<th>Descomprimir</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carpeta.tar</td>
+<td><code>tar -cvf carpeta.tar /dir/a/comprimir/carpeta</code></td>
+<td><code>tar -xvf carpeta.tar</code></td>
+</tr>
+<tr class="even">
+<td>Carpeta.tar.gz</td>
+<td><code>tar -czvf carpeta.tar.gz /carpeta/a/empaquetar/carpeta</code></td>
+<td><code>tar -zxvf carpeta.tar.gz</code></td>
+</tr>
+<tr class="odd">
+<td>Carpeta.gz</td>
+<td><code>gzip -9 carpeta.gz carpeta/a/empaquetar/carpeta</code></td>
+<td><code>gunzip -kd carpeta.gz</code></td>
+</tr>
+<tr class="even">
+<td>Carpeta.zip</td>
+<td><code>zip -r carpeta.zip carpeta</code></td>
+<td><code>unzip carpeta.zip</code></td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Ejercicio 3
+Ejercicio
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Visualiza el contenido del archivo “_files/secuencias_bash.fastq” empleando head. <code>head _files/secuencias_bash.fastq</code></li>
-<li>Calcula el numero de lineas contenidas en este archivo. <code>wc -l _files/secuencias_bash.fastq</code></li>
-<li>Imprime las lineas 4 a 8 del archivo. <code>sed -n '4,8p' _files/secuencias_bash.fastq</code></li>
-<li>Podemos utilizar la función <code>grep -c</code> para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos): <code>grep -c "^@SRR" _files/secuencias_bash.fastq</code></li>
+<li>Descarga todo el repositorio comprimido <a href="https://github.com/RSG-Ecuador/unix.bioinfo.rsgecuador/tree/gh-pages">unix.bioinfo.rsgecuador</a> en tu computadora. El archivo se almacenara con la extension (.ZIP).</li>
+<li>Colocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora: <code>cd "C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data"</code></li>
+<li>Descomprime el archivo ZIP. <code>unzip unix.bioinfo.rsgecuador-gh-pages.zip</code></li>
 </ol>
 </div>
 </div>
 </section>
-<section id="material-suplementario" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">5.4</span> Material suplementario</h2>
+<section id="material-suplementario" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="material-suplementario"><span class="header-section-number">4.4</span> Material suplementario</h2>
 <ul>
-<li><a href="https://biocorecrg.github.io/RNAseq_course_2019/workflow.html">mRNA-Seq data analysis workflow</a></li>
-<li><a href="https://hbctraining.github.io/Training-modules/planning_successful_rnaseq/lessons/QC_raw_data.html">Quality Control using FastQC</a></li>
-<li><a href="https://learnmetabarcoding.github.io/LearnMetabarcoding/processing/fastq.html">Fundamentals: FASTQ files</a></li>
+<li>Software Carpentry. <a href="https://swcarpentry.github.io/shell-novice-es/02-filedir.html">La terminal de Unix</a></li>
+<li>RSG Ecuador.<a href="https://rsg-ecuador.github.io/unix.bioinfo.rsgecuador/content/Curso_avanzado/02_Bash/1_bash.html">GNU/Linux para bioinfomatica</a></li>
+<li><a href="https://github.com/raynamharris/Shell_Intro_for_Transcriptomics/tree/master">Introduction to the Unix Shell for Transcriptomics</a> Tutorial.</li>
 </ul>
 
 
@@ -973,13 +1303,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Bash.html" class="pagination-link" aria-label="Mis primeros pasos en Bash">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mis primeros pasos en Bash</span></span>
+      <a href="./3_intro.html" class="pagination-link" aria-label="Conceptos Unix y GNU/Linux">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Conceptos Unix y GNU/Linux</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ScriptBash.html" class="pagination-link" aria-label="Wildcards y Streams">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wildcards y Streams</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./5_ServidorBetterlab.html" class="pagination-link" aria-label="Cómo acceder al servidor Bettertab en RStudio">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cómo acceder al servidor Bettertab en RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

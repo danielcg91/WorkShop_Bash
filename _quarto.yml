@@ -9,20 +9,22 @@ book:
   page-navigation: true
   chapters:
     - index.qmd
-    - requisitos.qmd
-    - intro.qmd
-    - Bash.qmd
-    - Rnaseq_intro.qmd
-    - ScriptBash.qmd
-    - Parte3.qmd
-    - Parte4.qmd
-    - summary.qmd
+    - 2_requisitos.qmd
+    - 3_intro.qmd
+    - 4_Bash.qmd
+    - 5_ServidorBetterlab.qmd
+    - 6_ArchivosyformatosBioinformatica.qmd
+    - 7_ScriptBash.qmd
+    - 8_FuncionesBasicas_pt1.qmd
+    - 8_FuncionesBasicas_pt2.qmd
+    - 9_EjerciciosFinales.qmd
+    - 10_Buenaspracticas.qmd
   # Information
   repo-url: https://github.com/danielcg91/WorkShop2025 # link de Github
-  sharing: [twitter, facebook, linkedin]
+  sharing: [facebook, linkedin]
   favicon: "ViernesBioinfo_logo.png" # icono de la pagina en pestana
 
-format:
+format: 
   html:
     toc-depth: 4
     number-depth: 3
