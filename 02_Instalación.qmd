@@ -1,4 +1,4 @@
-# Instalación de Git.
+# Instalación de Git
 
 Podemos consultar la documentación de Git.
 

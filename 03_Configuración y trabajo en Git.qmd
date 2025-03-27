@@ -1,4 +1,4 @@
-# Configuración y trabajo en Git.
+# Configuración y trabajo en Git
 
 Para comenzar con los trabajos necesitamos contar con un nombre de usuario y una dirección de correo electrónico, los cuales podemos crear utilizando:
 
