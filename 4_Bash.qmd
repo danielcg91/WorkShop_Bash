@@ -28,10 +28,10 @@ El signo `$` es un **prompt**, que nos muestra que la terminal está esperand
 
 ## Conocer mi dirección / ubicación
 
-Averiguemos dónde estamos, ejecutando el comando `pwd` (que significa "imprime directorio de trabajo" - "print working directory"). En cualquier momento, nuestro **directorio actual** es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es `/Users/nelle`, el cual es el directorio de inicio de Nelle, también conocido como su directorio **home**:
+Averiguemos dónde estamos, ejecutando el comando `pwd` (que significa "imprime directorio de trabajo" - "print working directory"). En cualquier momento, nuestro **directorio actual** es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es `/Users/danielchavez`, el cual es el directorio de inicio de Daniel, también conocido como su directorio **home**:
 
 ``` {.bash code-copy="true" eval="false"}
-pwd # /c/Users/ecoss
+pwd # /Users/danielchavez
 ```
 
 En la computadora de Daniel, el sistema de archivos se ve así:
@@ -42,10 +42,30 @@ En la parte superior está el **directorio raíz** o **root** que contiene todo 
 
 Dentro de ese directorio hay otros directorios: `bin` (que es donde se almacenan algunos programas preinstalados), `data` (para archivos de datos diversos), `Users` (donde se encuentran los directorios personales de los usuarios), `tmp` (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.
 
+| **Comando de navegación** | **Descripción**                    |
+|---------------------------|------------------------------------|
+| pwd                       | Muestra el directorio actual       |
+| ls                        | Lista archivos y carpetas          |
+| ls -l                     | Muestra detalles de los archivos   |
+| cd \<directorio\>         | Cambia de directorio               |
+| cd ..                     | Retrocede un nivel                 |
+| mkdir \<nombre\>          | Crea un directorio                 |
+| rmdir \<nombre\>          | Elimina un directorio vacío        |
+| rm -r \<directorio\>      | Borra un directorio y su contenido |
+
+|                                 |                            |
+|---------------------------------|----------------------------|
+| **Comandos manejo de archivos** | **Descripción**            |
+| touch \<archivo\>               | Crea un archivo vacío      |
+| cp \<origen\> \<destino\>       | Copia un archivo o carpeta |
+| mv \<origen\> \<destino\>       | Mueve o renombra archivos  |
+|                                 |                            |
+| rm \<archivo\>                  | Borra un archivo           |
+
 ::: callout-note
 ## Ejercicio 1
 
-A partir de `/Users/daniel_chavez/data/`, ¿Cuál de los siguientes comandos podría Amanda usar para navegar a su directorio de inicio, que es `/Users/daniel_chavez`?
+A partir de `/Users/daniel_chavez/Documents/`, ¿Cuál de los siguientes comandos debo usar para navegar a su directorio de inicio, que es `/Users/daniel_chavez`?
 
 1.  `cd .`
 
@@ -95,7 +115,7 @@ Ejemplo de rutas:
 ## **Comandos básicos**
 
 | Comandos | Información | Argumentos |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | `ssh` | Conexión a servidores | ssh usuario\@servidor.mx |
 | `ls` | Observar el contenido de los archivos en una carpeta | ls directorio/ |
 | `cd` | Moverse de directorios | cd /home/usuario/data/ |
@@ -124,7 +144,7 @@ Puedes consultar mas información usando `ls --help`
 # Algunas opciones para [ls]{.underline}
 
 | **Comando** | **Función** |
-|----|----|
+|------------------------------------|------------------------------------|
 | `ls` | enlista los archivos y carpetas en un directorio |
 | `ls -a` | Nos muestra los archivos y directorios dentro del directorio actual, incluyendo los archivos y directorios ocultos. |
 | `ls -l` | Muestra toda la información de cada archivo en forma de lista: usuario, grupo, permisos, tamaño, fecha y hora de creación. |
@@ -199,7 +219,7 @@ Por lo tanto:
 Los archivos pueden contener diversos tipos de extensiones, dependiendo del objetivo será necesario descomprimirlos y en otros dejarlos comprimidos para no abarcar tanto espacio en tu espacio de trabajo. 
 
 | Tipo de archivo | Comprimir | Descomprimir |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | Carpeta.tar | `tar -cvf carpeta.tar /dir/a/comprimir/carpeta` | `tar -xvf carpeta.tar` |
 | Carpeta.tar.gz | `tar -czvf carpeta.tar.gz /carpeta/a/empaquetar/carpeta` | `tar -zxvf carpeta.tar.gz` |
 | Carpeta.gz | `gzip -9 carpeta.gz carpeta/a/empaquetar/carpeta` | `gunzip -kd carpeta.gz` |
@@ -209,7 +229,7 @@ Los archivos pueden contener diversos tipos de extensiones, dependiendo del obje
 ## Ejercicio
 
 1.  Descarga todo el repositorio comprimido [unix.bioinfo.rsgecuador](https://github.com/RSG-Ecuador/unix.bioinfo.rsgecuador/tree/gh-pages) en tu computadora. El archivo se almacenara con la extension (.ZIP).
-2.  Colocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora: `cd "C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data"`
+2.  Colocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora:`cd/Users/danielchavez/Downloads`
 3.  Descomprime el archivo ZIP. `unzip unix.bioinfo.rsgecuador-gh-pages.zip`
 :::
 

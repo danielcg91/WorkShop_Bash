@@ -50,6 +50,8 @@ Bash es un intérprete de comandos que te da el poder de hacer tareas simples r�
 
     ![](images/Screenshot%202025-03-20%20at%2019.53.14.png){width="559"}
 
+![](images/PHOTO-2025-03-27-14-07-10.jpg)
+
 ## Material suplementario
 
 Si quieren aprender temas más sobre UNIX, GNU/Linux, bash, emulador de terminal y otros tema, pueden explorar los siguientes recursos, que son de acceso libre:
