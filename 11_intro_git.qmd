@@ -2,7 +2,7 @@
 
 ![](images/clipboard-803379517.png)
 
-# ¿Que es Git?
+## ¿Que es Git?
 
 Es un sistema de control de versiones gratuito y de código abierto diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.
 

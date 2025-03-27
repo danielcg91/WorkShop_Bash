@@ -1,6 +1,6 @@
 # Instalación de Git
 
-Podemos consultar la documentación de Git.
+Podemos consultar la documentación de Git
 
 <https://git-scm.com/>
 
