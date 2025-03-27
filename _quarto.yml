@@ -20,7 +20,7 @@ book:
     - 9_EjerciciosFinales.qmd
     - 10_Buenaspracticas.qmd
     - 11_intro_git.qmd
-    - 12_Instalacion.qmd
+    - 12_InstalacionGit.qmd
     - 13_Configuración y trabajo en Git.qmd
     - 14_Ramas en Git.qmd
     - 15_Intro_GitHub.qmd
