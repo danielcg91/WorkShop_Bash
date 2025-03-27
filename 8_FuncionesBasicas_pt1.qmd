@@ -1,0 +1,270 @@
+# Expresiones regulares
+
+Una expresión regular es una cadena de caracteres (string) especial que describe patrones de búsqueda sobre otros strings. Para el procesamiento de las regex se utilizan diferentes *engines*, que tienen pequeñas variaciones de una aplicación a otra. Generalmente, se usan para extraer información de texto en muchos de lenguajes de programación, editores de texto y herramientas de procesamiento de texto de terminal como grep y sed (lo que veremos en temas posteriores).
+
+Ciertos comandos como grep permiten el uso de expresiones regulares para formar patrones de filtro / búsqueda, mucho más potentes que los meta-caracteres del Shell.
+
+Un ER está formada por caracteres combinados con operadores.
+
+## **Operadores**
+
+\^ Principio de línea
+
+\$ Final de linea
+
+\\\< Principio de palabra
+
+\\\> Final de palabra
+
+. Cualquier carácter excepto salto de línea
+
+\[\] Conjunto de caracteres
+
+\[\^\] Cualquier carácter no contenido
+
+\[-\] Rango
+
+\* Cero o más ocurrencias del elemento que lo precede
+
+\+ Uno o más ocurrencias del elemento que lo precede
+
+? El elemento precedente es opcional
+
+() Agrupación
+
+\| O uno u otro
+
+{n} El elemento precedente se repite n veces
+
+{n,} El elemento precedente se repite al menos n veces
+
+{n,m} El elemento precedente se repite al menos n y no más de m veces
+
+\\ Escape {\\t, \\n,\\., \\\*, …} se usa para tratar de forma normal un carácter especial
+
+Fijaros que aquí el significado del operador \* no es el mismo que el comodín \*, lo mismo pasa con el operador ? y el comodín ?.
+
+Si necesitamos utilizar en nuestro patrón uno de los caracteres especiales deberemos protegerlo para que se interprete como literal:
+
+\\\* es un asterisco, no cero o más ocurrencias de \\ (eso sería \\\\\* en todo caso)
+
+**Ejemplo**: Sea el archivo texto.txt con el contenido siguiente:
+
+```         
+123a
+a123
+a12b
+567
+```
+
+Las siguientes ER cogerían en cada caso las líneas:
+
++------------------------------------+------------------------------------------------------------------------------------------------+
+| \^\[0-9\] → 123a , 567             | que empiecen (\^) por un dígito (\[0-9\])                                                      |
++------------------------------------+------------------------------------------------------------------------------------------------+
+| \^\[0-9\]\*\$ → 567                | que sólo contengan dígitos, a la anterior le añado el \*, también funcionaría el +,            |
+|                                    |                                                                                                |
+|                                    | y \$ (final de linea), así fuerzo a que entre principio y final de linea haya 0 o más números. |
++------------------------------------+------------------------------------------------------------------------------------------------+
+| \^\[a-Z\]\[0-9\]\*\$ → a123        | que empiecen por letra y el resto sean números                                                 |
++------------------------------------+------------------------------------------------------------------------------------------------+
+| \^\[a-Z\]\[0-9\]\*\[a-Z\]\$ → a12b | que empiecen y terminen por letra y en medio todo números                                      |
++------------------------------------+------------------------------------------------------------------------------------------------+
+
+# Grep
+
+En esta parte del curso estudiaremos la herramienta grep. Este tutorial tiene un enfoque general, sin aplicaciones en Bioinformática (lo que veremos más adelante).
+
+## Archivo para este tutorial
+
+En este tutorial usaremos un archivo que tiene las proteínas caracterizadas de *S_clavuligerus* S_clavuligerus_proteome.fasta
+
+::: callout-note
+Este documento se encuentra en la carpeta \_files dentro del directorio raíz del repositorio de Github, y tiene el nombre
+
+S_clavuligerus_proteome.fasta
+:::
+
+## ¿Qué es grep?
+
+Grep es una herramienta de SO basados en UNIX, que permite hacer búsquedas de regex en archivos de texto o [\* input estándar stdin\*](https://www.computerhope.com/jargon/s/stdin.htm) derivados de *piping* (que veremos en detalle una sección posterior), e imprimir la o las líneas que coincidan con el o los patrones buscados. Un aspecto que se debe considerar es que dado que el caracter de nueva línea `\n` es un separador de la lista de patrones, no hay forma de buscar los caracteres de nueva línea usando grep.
+
+La sintaxis general de esta herramienta es de la siguiente forma:
+
+::: callout-note
+grep \[-opcion(es)...\] \["patron(es)"...\] \[archivo(s)\]
+:::
+
+Pueden existir cero o más opciones y archivos. Si no se provee ningún archivo grep busca en el directorio de trabajo actual si se le da una opción de línea de comandos que especifique la recursividad; de lo contrario, busca en el [*(stdin)*](https://www.computerhope.com/jargon/s/stdin.htm). Además, se deben proveer uno o más patrones que son separados internamente por el programa por caracteres `\n`.
+
+## Diferentes versiones de grep: `-G -E -F -P`
+
+En GNU grep existen cuatro versiones de la herramienta, que se eligen con diferentes opciones:
+
+| **Versión** | **Descripción** |
+|----|----|
+| `-G` o `--basic-regexp` | Interpreta los patrones como regex básicas (BREs). Es las versión estándar de la herramienta |
+| `-E` o `--extended-regexp` | Interpreta los patrones como regex extendidas (EREs) |
+| `-F` o `--fixed-strings` | Interpreta los patrones como string fijos, no como regex |
+| `-P` o `--perl-regexp` | Interpretar los patrones como expresiones regulares compatibles con Perl (PCREs) |
+
+Por ejemplo, usemos el siguiente comando para buscar las líneas que tengan los caracteres **a** o **e** usando el metacaracter de alternancia `|` con la versión estándar:
+
+### Flags: `-e -f -i -v -w -x`
+
+En GNU grep existen los siguientes modos para controlar las coincidencias:
+
+| **Flag** | **Descripción** |
+|----|----|
+| `-e "patron(es)"` o `--regexp="patron(es)"` | Busca los patrones especificados como argumento y los caracteres `\n` separan un patrón del siguiente |
+| `-f archivo` o `--file=archivo` | Busca los patrones de un archivo, uno por línea |
+| `-i` o `--ignore-case` | Hace que la regex no sea sensible a mayúsculas o minúsnuclas. La regex “abc” coincide con el patrón “AbC” |
+| `-v` o `--invert-match` | Invierte el sentido de coincidencia, para seleccionar líneas que no coinciden con el patrón |
+| `-w` o `--word-regexp` | Selecciona solo las líneas que contengan coincidencias que formen palabras completas |
+| `-x` o `--line-regexp` | Seleccione solo los patrones que coincidan exactamente con toda la línea |
+
+## **Contar el número de secuencias en un archivo FASTA**
+
+1.  **¿Cuántas líneas tiene el archivo S_clavuligerus_proteome.fasta?**
+
+::: callout-note
+cd \~/unix.bioinfo.rsgecuador-gh-pages/\_files wc -l S_clavuligerus_proteome.fasta \# 40739 lineas
+:::
+
+En archivos de formato FASTA o similares, el número de líneas no corresponde al número de secuencias. Esto se debe a la estructura del archivo:
+
+-   **Formato FASTA**: Cada secuencia comienza con una línea que tiene el símbolo `>`, seguido de un identificador o descripción de la secuencia.
+
+-   Las líneas siguientes contienen la secuencia de nucleótidos o aminoácidos, que pueden estar divididas en varias líneas.
+
+Por lo tanto, para contar el número de secuencias en un archivo FASTA, **debes contar las líneas que comienzan con `>`**. Aquí tienes un ejemplo práctico en Bash para lograrlo:
+
+2.  **¿Cuántas secuencias tiene el archivo S_clavuligerus_proteome.fasta?**
+
+    ::: {.callout-note code-copy="true" eval="false"}
+    grep -c "\^\>" S_clavuligerus_proteome.fasta \# 6439 secuencias
+    :::
+
+<!-- -->
+
+3.  **¿Cuáles bases de datos detectaron estas secuencias?**
+
+    ::: {.callout-note code-copy="true" eval="false"}
+    grep "\>" S_clavuligerus_proteome.fasta \| cut -d '\|' -f1 \| sed 's/\>//' \| uniq \# sp y tr
+    :::
+
+**UniProtKB (Universal Protein Knowledgebase)** tiene dos secciones principales:
+
+-   **Swiss-Prot (**`sp`**)**: Contiene secuencias revisadas y anotadas manualmente.
+
+-   **TrEMBL (**`tr`**)**: Contiene secuencias computacionalmente anotadas y aún no revisadas manualmente.
+
+::: callout-note
+## Explicación del código
+
+-   `grep ">"`: Busca la línea con la cabecera.
+
+-   `cut -d'|' -f1`: Divide por `|` y selecciona el primer campo.
+
+-   `sed 's/>//'`: Elimina el símbolo `>` al inicio.
+
+-   `uniq`: Nos da los valores únicos.
+:::
+
+4.  **Buscar proteínas anotadas con una palabra clave específica**
+
+    ::: {.callout-note code-copy="true" eval="false"}
+    grep "ribosomal" S_clavuligerus_proteome.fasta
+    :::
+
+5.  **¿Qué organismo produce esta proteína y cuál es su Taxonomy ID?**
+
+::: {.callout-note code-copy="true" eval="false"}
+organism=\$(grep "\>" S_clavuligerus_proteome.fasta \| sed -n 's/.\*OS=\\(\[\^ \]\*\\).\*/\\1/p' \| sort -u) taxonomy=\$(grep "\>" S_clavuligerus_proteome.fasta \| sed -n 's/.\*OX=\\(\[0-9\]\*\\).\*/\\1/p' \| sort -u) echo "Organismo: \$organism" echo "Taxonomy ID: \$taxonomy"
+:::
+
+::: callout-note
+## Explicación del codigo
+
+-   `sed -n 's/.*OS=\([^ ]*\).*/\1/p'`: Extrae el nombre del organismo entre `OS=` y el primer espacio.
+
+-   `sed -n 's/.*OX=\([0-9]*\).*/\1/p'`: Extrae el número después de `OX=`.
+
+-   **`sort -u`**: Ordena las líneas y elimina duplicados, asegurando que solo queden valores únicos.
+
+-   Se aplica después de extraer los valores con `sed`, por si existen múltiples cabeceras en el archivo.
+:::
+
+5.  **¿Buscar proteínas que contengan dominios específicos (por ejemplo, “ABC transporter”)**
+
+    ::: {.callout-note code-copy="true" eval="false"}
+    grep "ABC transporter" S_clavuligerus_proteome.fasta
+    :::
+
+::: {.callout-note code-copy="true" eval="false"}
+grep "ABC transporter" S_clavuligerus_proteome.fasta \| head -n 10
+:::
+
+# Sed
+
+En esta parte del curso estudiaremos la herramienta sed. Al igual que las partes de grep y regex, este tutorial tiene un enfoque general, sin aplicaciones en Bioinformática (lo que veremos más adelante).
+
+## ¿Qué es sed?
+
+Sed es un editor de flujos de datos (*streams*) que permite filtrar y transformar texto de flujos de entrada, que pueden ser archivos o [*stdin*](https://www.computerhope.com/jargon/s/stdin.htm) derivados de *piping* (que veremos en detalle en la siguiente sección), lo que lo distingue de otros tipos de editores de texto de CLI o GUI.
+
+La sintaxis general de esta herramienta es de la siguiente forma:
+
+::: callout-note
+sed \[-opcion(es)...\] \[script\] \[archivo(s)\]
+:::
+
+## Comando más común de sed: `s`
+
+El comando de sustitución `s` es el más usado debido a que tiene muchas opciones y funcionalidades. La forma general de este comando es `s/REGEXP/REPLACEMENT/[FLAGS]`, en la que se busca la expresión regular `REGEXP` en el contenido del *espacio de patrones*. Si existe la coincidencia, se reemplaza el patrón con lo que se coloca en `REPLACEMENT`. Los caracteres `/` pueden ser reemplazados por cualquier otro carácter.
+
+Con este comando se pueden usar algunos `[FLAGS]`, y entre los más comunes se encuentran:
+
+| **Flag** | **Descripción** |
+|----|----|
+| `g` | Se aplica el reemplazo a todas las coincidencias con la regex, no solo a la primera |
+| `NUMBER` | Solo se reemplaza un el número especificado de coincidencias de la regex. Si `g` y `NUMBER` se combinan, se ignoran las coincidencias antes del `NUMBER`, y luego se reemplazan todas las coincidencias desde el número especificado en adelante |
+| `w FILENAME` | Si se realizó la sustitución, se escribe el resultado en el archivo `FILENAME` |
+| `i` o `I` | Hace que sed coincida con la regex de forma que no distinga entre mayúsculas y minúsculas |
+| `m` o `M` | Activa el modo multilínea de regex, con lo que los símbolos `^` y `s` coinciden con el inicio y fin de línea respectivamente |
+
+Además, el comando `s` permite realizar algunas operaciones para convertir texto a mayúsculas y minúsculas:
+
+| **Código** | **Descripción** |
+|----|----|
+| `\L` | Convertir el texto a minúsculas hasta que se encuentre una `\U` o `\E` |
+| `\l` | Convertir el siguiente caracter a minúscula |
+| `\U` | Convertir el texto a mayúsculas hasta que se encuentre una `\L` o `\E` |
+| `\u` | Convertir el siguiente caracter a mayúscula |
+| `\E` | Detener la conversión de minúsculas y mayúsculas iniciada por `\L` o `\U` |
+
+# **Extraer solo los encabezados**
+
+**Objetivo:** Obtener una lista de todos los encabezados de las secuencias.
+
+::: callout-note
+sed -n '/\^\>/p' S_clavuligerus_proteome.fasta \> headers.txt
+:::
+
+::: callout-note
+## Explicación
+
+-n: Suprime la salida estándar.
+
+'/\^\>/p': Imprime solo las líneas que comienzan con \>.
+:::
+
+::: callout-note
+## Ejercicio
+
+Contesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.fasta:
+
+1.  ¿Cuántas proteínas tienen el identificador de taxonomía (`OX=443255`) específico?
+
+2.  ¿Cuántas variantes de secuencia (SV, sequence version) diferentes hay en el archivo FASTA?
+:::

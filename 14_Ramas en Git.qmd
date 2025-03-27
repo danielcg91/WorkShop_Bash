@@ -1,0 +1,22 @@
+# Ramas en Git
+
+Las **ramas (branches)** en Git son versiones independientes de tu código que permiten trabajar en paralelo sin afectar la versión principal del proyecto.
+
+![](images/clipboard-3462346199.png)
+
+# **¿Por qué usar ramas en Git?**
+
+-   Facilitan el trabajo en equipo.
+
+-   Permiten desarrollar nuevas funciones sin afectar el código principal.
+
+-   Facilitan la corrección de errores sin interrumpir el desarrollo.
+
+**Para trabajar con ramas tenemos las siguientes opciones.**
+
+``` bash
+git branch    #Para visualizar todas las ramas existentes
+git branch nueva-rama     #Crear una rama nueva
+git switch nombre_de_la_rama     #Cambiarse a una rama
+git merge nueva-rama   # Fusiona los cambios de `nueva-rama`
+```

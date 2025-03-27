@@ -1,0 +1,61 @@
+# Configuración y trabajo en Git.
+
+Para comenzar con los trabajos necesitamos contar con un nombre de usuario y una dirección de correo electrónico, los cuales podemos crear utilizando:
+
+``` {.bash code-copy="true" eval="false"}
+git config --global user.name "tu usuario"
+git config --global user.email "tu correo"
+```
+
+Podemos verificar los usuarios creados usando:
+
+``` {.bash code-copy="true" eval="false"}
+git config --list
+```
+
+Una vez teniendo creado y verificado el usuario podemos comenzar a trabajar en Git.
+
+Iniciaremos creando un directorio de trabajo.
+
+``` {.bash code-copy="true" eval="false"}
+mkdir git && cd git
+```
+
+En el cual debemos generar un archivo (proyecto), que nos ayudara explorar todas funciones que ofrece git.
+
+ejemplo:
+
+``` {.bash code-copy="true" eval="false"}
+nano proyecto.py
+```
+
+Una vez que contamos con un directorio de trabajo y proyectos en el mismo, debemos indicar a git donde queremos trabajar
+
+``` {.bash code-copy="true" eval="false"}
+git init
+ls -a
+```
+
+verificación de entorno Git nos perite mantenernos al tanto de las modificaciones en el lugar de trabajo, sin embargo para observar estas, debemos agregar nuestros ficheros o archivos a git.
+
+``` {.bash code-copy="true" eval="false"}
+git add "nombre de tu fichero"
+```
+
+``` {.bash code-copy="true" eval="false"}
+git status
+```
+
+# ¿Que es un commit?
+
+Un commit es un registro de cambios en el repositorio. Actúa como una "foto" del estado del proyecto en un momento específico, permitiendo hacer un seguimiento del historial de modificaciones.
+
+![](images/clipboard-3667741492.png)
+
+para agregar nuestro primer commit en git, realizamos lo siguiente:
+
+``` {.bash code-copy="true" eval="false"}
+git commit -m "agregar un mensaje"
+
+git status
+```

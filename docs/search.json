@@ -1,0 +1,682 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Workshop Bash 2025",
+    "section": "",
+    "text": "Información general\n\n\nSobre el curso 📌Requisitos previosAgenda 📆\n\n\nEl contenido de este curso se realizó en base al material de un grupo de estudio realizado por el RSG Ecuador, y del WorkShop2024 organizado por el RSG. La literatura adicional se especifica en cada tema de forma pertinente.\n\nFechas: 28 y 29 octubre 2025\nDuración del curso: 12 horas\n\nInstructores:\nJosé Daniel Chávez González - UAGro\nAlberto Patricio Hernandez - UAH\nHelpers\nJohanna Castelán Camarillo\nMariana Devon Lopez\nResumen:\nEste tutorial te enseñará los conceptos fundamentales en el empleo y manejo de Bash Shell, incluyendo la creación de scripts de Bash, generación de programas con funcionalidades sencillas aplicables a bioinformática y a programación en general.\nObjetivos:\nEn esta guía rápida aprenderás a:\n\nConceptos UNIx y GNU/Linux\nMis primeros pasos en bash.\nConsultar información sobre archivos y directorios.\nWildcards y Streams\nCrear un script en Bash.\nFunciones basicas de Bash\nBuenas practicas de Bioinformática\n\nCitar y reutilizar el material del curso\nLos datos del curso se pueden reutilizar y adaptar libremente con la debida atribución. Todos los datos de los cursos de estos repositorios están sujetos a la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).\n\n\n\nDebes tener contar con una terminal de Bash Shell en tu sistema operativo (Visita la ventana de Instalaciones y requerimientos previos)\nContar con una terminal con Git, en Windows puedes usar Git Bash.\n\n\n\n\n\n\n\n\n\n\nTema\nMis primeros pasos en bash\nTiempo\n\n\n\n\n🔷 Sección 1 - (10:00- 11:00 h) (28 de marzo)\n\n\n\n\nConceptos Unix y GNU/Linux\n\n10 min\n\n\n\nMis primeros pasos en Bash\n\n15 min\n\n\n\nEjercicio 1. Ubicación en repositorios\n\n5 min\n\n\n\nConsultar información sobre archivos y directorios\n\n10 min\n\n\n\nComprimir y descomprimir archivos\n\n5 min\n\n\n\nEjercicio 2. Descomprimir archivos\n\n5 min\n\n\n\nAcceder al servidor Betterlab\n\n10 min\n\n\n☕ Coffee break (15 min) - (11:15-11:30) ☕\n15 min\n\n\n🔷  Sección 2 - (11:15 - 12:15 h)\n\n\n\n\nManejo de archivos y formatos\n\n30 min\n\n\n\nExpresiones regulares\n\n20 min\n\n\n\nEjercicio 3. Manejando datos\n\n10 min\n\n\n🔷  Sección 3 - (12:20 - 13:30 h) (28 de marzo)\n\n\n\n\nWildcards y Streams\n\n10 min\n\n\n\nEjercicio 4. Wildcard\n\n10 min\n\n\n\nOperadores de redirección de datos I/O\n\n10 min\n\n\n\nEjercicio 5. Redirección de salidas\n\n10 min\n\n\n\nScripts en Bash\n\n10 min\n\n\n☕ Comida (1 hora) - (13:30-14:30)\n\n\n\n🔷  Sección 4 - (14:30 - 16:30 h) (28 de marzo)\n\n\n\n\nFunciones Básica de Bash Parte 1\n\n50 min\n\n\n\nFunciones Básica de Bash Parte 2\n\n50 min",
+    "crumbs": [
+      "Información general"
+    ]
+  },
+  {
+    "objectID": "2_requisitos.html",
+    "href": "2_requisitos.html",
+    "title": "1  Instalaciones y requerimientos previos",
+    "section": "",
+    "text": "1.1 Windows\nVideo Tutorial\nEsto te dará ambos Git y Bash en el programa Git Bash.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalaciones y requerimientos previos</span>"
+    ]
+  },
+  {
+    "objectID": "2_requisitos.html#windows",
+    "href": "2_requisitos.html#windows",
+    "title": "1  Instalaciones y requerimientos previos",
+    "section": "",
+    "text": "Baja para windows el instalador de git.\nCorre el instalador y sigue los siguientes pasos:\n\nClick en “Next”.\nClick en “Next”.\nManten el “Use Git from the Windows Command Prompt” seleccioinado y click en “Next”. Si se te olvida hacer esto algunos programas que necesitarás no funcionaran correctamente. Si esto te pasa regrésate al paso anterior del instalador y selecciona la opción correcta.\nClick en “Next”.\nMantén “Checkout Windows-style, commit Unix-style line endings” seleccionado y click en “Next”.\nMantén “Use Windows’ default console window” seleccionado y click en “Next”.\nClick en “Install”.\nClick en “Finish”.\n\nsi tu variable de ambiente “HOME” no está lista (o no sabes qué es esto):\n\nAbre el prompt (Abre el menu start, escribe cmd y presiona enter [Enter])\nEscribe la siguiente línea en la ventana del promt exactamente como se muestra:\nsetx HOME \"%USERPROFILE%\"\nPresiona [Enter], debes de ver SUCCESS: Specified value was saved.\nPara salir del prompr escribe exit y presiona enter [Enter]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalaciones y requerimientos previos</span>"
+    ]
+  },
+  {
+    "objectID": "2_requisitos.html#macos",
+    "href": "2_requisitos.html#macos",
+    "title": "1  Instalaciones y requerimientos previos",
+    "section": "1.2 macOS",
+    "text": "1.2 macOS\nEl shell por default en todas las versiones de macOS es Bash, asi que no debes instalar nada. Podrás accesar a Bash desde la Terminal (que se encuentra en /Applications/Utilities). Para la instalación de Git aqui tenemos un video tutorial for an example on how to open the Terminal. Tal vez quieras mantener la Terminal en tu dock para este taller.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalaciones y requerimientos previos</span>"
+    ]
+  },
+  {
+    "objectID": "2_requisitos.html#linux",
+    "href": "2_requisitos.html#linux",
+    "title": "1  Instalaciones y requerimientos previos",
+    "section": "1.3 Linux",
+    "text": "1.3 Linux\nEl shell es usualmente Bash, pero si tu máquina es diferente puedes abrir una terminal y escribir bash. No se necesita intalar nada.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalaciones y requerimientos previos</span>"
+    ]
+  },
+  {
+    "objectID": "2_requisitos.html#material-suplementario",
+    "href": "2_requisitos.html#material-suplementario",
+    "title": "1  Instalaciones y requerimientos previos",
+    "section": "1.4 Material suplementario",
+    "text": "1.4 Material suplementario\n\nNelly Selem Tutorial - Bioinformática\nEn Windows puedes usar Git Bash.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalaciones y requerimientos previos</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html",
+    "href": "3_intro.html",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "",
+    "text": "2.1 ¿Qué es UNIX?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html#qué-es-unix",
+    "href": "3_intro.html#qué-es-unix",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "",
+    "text": "Sistema operativo (SO) creado por Ken Thompson y Dennis Ritchie de la empresa Bell Laboratories en 1969.\nSO multitarea y multiusuario.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html#gnulinux",
+    "href": "3_intro.html#gnulinux",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.2 GNU/Linux",
+    "text": "2.2 GNU/Linux\n\nEn 1983 Richard Stallman lideró la iniciativa GNU (GNU’s Not Unix), SO compatible con UNIX de libre distribución y acceso sin restricciones al código fuente.\nEn 1991 Linus Torvalds creó su propio kernel (Linux), que es la parte del SO que permite la comunicación con los componentes de Hardware. Este kernel fue distribuido de forma libre y gratuita.\nAmbos proyectos se juntaron y se creó GNU/Linux",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html#filosofía-gnulinux",
+    "href": "3_intro.html#filosofía-gnulinux",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.3 Filosofía GNU/Linux",
+    "text": "2.3 Filosofía GNU/Linux\n\nLos usuarios son libres de ejecutar, copiar, distribuir, estudiar, cambiar y mejorar el software.\nEl software libre se refiere a las libertades mencionadas, no al precio.\n“open source” vs “free software”.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html#ubuntu",
+    "href": "3_intro.html#ubuntu",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.4 Ubuntu",
+    "text": "2.4 Ubuntu\n\nUna de las distribuciones de GNU/Linux más populares.\nEstá basada en Debian y fue desarrollada por la empresa Canonical\nFacilidad de uso e instalación.\nInterfaz de usuario amigable.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html#shell-bash-bash-shell",
+    "href": "3_intro.html#shell-bash-bash-shell",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.5 Shell / Bash / Bash Shell",
+    "text": "2.5 Shell / Bash / Bash Shell\n\nLa shell es el programa que provee una interfaz de línea de comandos (CLI), que permite la comunicación entre el usuario y el SO.\nLa mayoría de distribuciones de Linux tienen por defecto bash (“Bourne Again SHell”) como shell. Hay otros tipos de shell como sh, csh, tcsh, ksh, zsh, entre otras.\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nBash es un intérprete de comandos que te da el poder de hacer tareas simples rápidamente.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html#emuladores-de-terminal",
+    "href": "3_intro.html#emuladores-de-terminal",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.6 EMULADORES DE TERMINAL",
+    "text": "2.6 EMULADORES DE TERMINAL\n\nUn emulador de terminal es un programa que permite interactuar con la shell. De forma general, se le llama terminal.\nLos sistemas Operativos de Linux y MACOS traen por defecto una terminal integrada",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "3_intro.html#material-suplementario",
+    "href": "3_intro.html#material-suplementario",
+    "title": "2  Conceptos Unix y GNU/Linux",
+    "section": "2.7 Material suplementario",
+    "text": "2.7 Material suplementario\nSi quieren aprender temas más sobre UNIX, GNU/Linux, bash, emulador de terminal y otros tema, pueden explorar los siguientes recursos, que son de acceso libre:\n\nKross, S. (2017). The unix workbench. Leanpub. https://leanpub.com/unix\nRoss, A. (2019). The Ultimate Linux Newbie Guide. https://linuxnewbieguide.org/\nShotts, W. (2019). The Linux command line: a complete introduction. No Starch Press. http://www.linuxcommand.org/tlcl.php/index.php\nLinux Journey. (2020). Linux Journey. https://linuxjourney.com/\nGNU. (2020). GNU. https://www.gnu.org/\nGNU/Linux para bioinformatica",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Conceptos Unix y GNU/Linux</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html",
+    "href": "4_Bash.html",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "",
+    "text": "3.1 Entorno de Bash\nEl signo $ es un prompt, que nos muestra que la terminal está esperando una entrada; tu terminal puede usar un carácter diferente como prompt y puede agregar información antes de él. Al teclear comandos, ya sea a partir de estas lecciones o de otras fuentes, no escribas el prompt ($), sólo los comandos que le siguen.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html#preparación-del-directorio-de-trabajo",
+    "href": "4_Bash.html#preparación-del-directorio-de-trabajo",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "3.2 Preparación del directorio de trabajo",
+    "text": "3.2 Preparación del directorio de trabajo\n\nRuta / Camino absoluto\ncd /home/usuario/data/\nRuta / Camino relativo\ncd ../ # Ir a la carpeta anterior\n\n\n\n\n\n\n\nNote\n\n\n\nNOTA 1: Si das cd y no indicas una ruta absoluta, te llevara al Directorio Raiz (~).\nNOTA 2: Puedes usar la tecla TAB para completar el nombre de la carpeta. En caso de que tengas más de dos carpetas que inicien igual, tendrás que terminar de completar el nombre.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html#conocer-mi-dirección-ubicación",
+    "href": "4_Bash.html#conocer-mi-dirección-ubicación",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "3.3 Conocer mi dirección / ubicación",
+    "text": "3.3 Conocer mi dirección / ubicación\nAveriguemos dónde estamos, ejecutando el comando pwd (que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro directorio actual es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es /Users/danielchavez, el cual es el directorio de inicio de Daniel, también conocido como su directorio home:\npwd # /Users/danielchavez\nEn la computadora de Daniel, el sistema de archivos se ve así:\n\n\n\n\n\nEn la parte superior está el directorio raíz o root que contiene todo lo demás. Nos referimos a este directorio usando un caracter de barra / por si solo; esta es la barra al inicio de /Users/daniel_chavez.\nDentro de ese directorio hay otros directorios: bin (que es donde se almacenan algunos programas preinstalados), data (para archivos de datos diversos), Users (donde se encuentran los directorios personales de los usuarios), tmp (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.\n\n\n\nComando de navegación\nDescripción\n\n\n\n\npwd\nMuestra el directorio actual\n\n\nls\nLista archivos y carpetas\n\n\nls -l\nMuestra detalles de los archivos\n\n\ncd &lt;directorio&gt;\nCambia de directorio\n\n\ncd ..\nRetrocede un nivel\n\n\nmkdir &lt;nombre&gt;\nCrea un directorio\n\n\nrmdir &lt;nombre&gt;\nElimina un directorio vacío\n\n\nrm -r &lt;directorio&gt;\nBorra un directorio y su contenido\n\n\n\n\n\n\nComandos manejo de archivos\nDescripción\n\n\ntouch &lt;archivo&gt;\nCrea un archivo vacío\n\n\ncp &lt;origen&gt; &lt;destino&gt;\nCopia un archivo o carpeta\n\n\nmv &lt;origen&gt; &lt;destino&gt;\nMueve o renombra archivos\n\n\n\n\n\n\nrm &lt;archivo&gt;\nBorra un archivo\n\n\n\n\n\n\n\n\n\nEjercicio 1\n\n\n\nA partir de /Users/daniel_chavez/Documents/, ¿Cuál de los siguientes comandos debo usar para navegar a su directorio de inicio, que es /Users/daniel_chavez?\n\ncd .\ncd /\ncd /home/amanda\ncd ../..\ncd ~\ncd home\ncd ~/data/..\ncd\ncd ..\n\n\n\n\n\n\nSolución\n\n\n\n\n\n\nNo: . significa el directorio actual.\nNo: / significa el directorio raíz.\nNo: El directorio home de Amanda es /Users/amanda.\nNo: sube dos niveles, es decir termina en /Users.\nSí: ~ significa el directorio home del usuario, en este caso /Users/amanda.\nNo: esto navegaría a un directorio home en el directorio actual, si existe.\nSí: innecesariamente complicado, pero correcto.\nSí: un atajo para volver al directorio home del usuario.\nSí: sube un nivel.\n\n\n\n\n\n\n\nEjemplo de rutas:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html#comandos-básicos",
+    "href": "4_Bash.html#comandos-básicos",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "3.4 Comandos básicos",
+    "text": "3.4 Comandos básicos\n\n\n\n\n\n\n\n\nComandos\nInformación\nArgumentos\n\n\n\n\nssh\nConexión a servidores\nssh usuario@servidor.mx\n\n\nls\nObservar el contenido de los archivos en una carpeta\nls directorio/\n\n\ncd\nMoverse de directorios\ncd /home/usuario/data/\n\n\nmkdir\nCrear un nuevo directorio\nmkdir data\n\n\nrmdir\nEliminar el directorio\nrmkdir -rf data\n\n\nnano / vim\nEditores de texto plano\nnano Archivo.txt / vim Archivo.txt\n\n\ncp\nCopiar archivos\ncp Archivo1.txt /home/usuario/data/\n\n\nmv\nMover/renombrar un archivo o carpeta\n\n\n\necho\nPara llamar y/o declarar variables\necho “Hello world”\n\n\nchmod\nCambiar permisos del usuario\nchmod 777 data/\n\n\nrsync\nDescargar o subir archivos\n\n\n\nscp\nDescargar o subir archivos\n\n\n\ncat\nVisualizar contenido de un archivo. Escribe el contenido del archivo de manera secuencial a la salida estándar, a la ventana de Terminal.\n\n\n\nless\nLeer contenido de un archivo sin interrumpir la pantalla de Terminal. Similar a Vim pero sin opción para escribir. Se sale del modo visualización con q.\n\n\n\nfind\nBusca archivos en un directorio específico.\n\n\n\nhead\nVisualizar primeras líneas de un archivo.\n\n\n\ntail\nVisualizar últimas líneas de un archivo.\n\n\n\nwhich\nIndica el directorio donde se encuentra un particular comando o programa que se haya podido encontrar usando los directorios guardados en la variable de estado PATH.\nwhich bash\n\n\n\n\n\n\n\n\n\nAyuda de funciones\n\n\n\nPuedes consultar mas información usando ls --help",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html#consultar-información-sobre-archivos-y-directorios",
+    "href": "4_Bash.html#consultar-información-sobre-archivos-y-directorios",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "4.1 Consultar información sobre archivos y directorios",
+    "text": "4.1 Consultar información sobre archivos y directorios\n\n4.1.1 Información contenida\nCada columna en la salida anterior tiene un significado:\nEscribimos en la terminal ls -l\n\n\n\n4.1.2 Permisos\nCada usuario tiene permisos diferentes cuando crea un archivo. Los permisos pueden modificarse con chmod.\nLos caracteres atribuidos a los permisos son:\n\nr : escritura (Read)\nw : lectura (Write)\nx : ejecución (eXecute)\n\nEn el siguiente ejemplo, el usuario cuenta con todos los permisos activos, mientras que el grupo y otros tienen solo permisos de lectura y ejecución.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html#chmod-cambiar-permisos",
+    "href": "4_Bash.html#chmod-cambiar-permisos",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "4.2 chmod: Cambiar permisos",
+    "text": "4.2 chmod: Cambiar permisos\nLa representación octal de chmod es muy sencilla\n\nr = Lectura tiene el valor de 4\nw = Escritura tiene el valor de 2\nx = Ejecución tiene el valor de 1\n\n\n\n\nPermisos\nValor\nSignificado\n\n\n\n\nrwx\n7\nLectura, escritura y ejecución\n\n\nrw-\n6\nLectura, escritura\n\n\nr-x\n5\nLectura y ejecución\n\n\nr–\n4\nLectura\n\n\n-wx\n3\nEscritura y ejecución\n\n\n-w-\n2\nEscritura\n\n\n–x\n1\nEjecución\n\n\n—\n0\nSin permisos\n\n\n\nPor lo tanto:\n\n\n\nForma larga\nForma Octal\n\n\n\n\nchmod u=rwx,g=rwx,o=rx\nchmod 775\n\n\nchmod u=rwx,g=rx,o=\nchmod 760\n\n\nchmod u=rw,g=r,o=r\nchmod 644\n\n\nchmod u=rw,g=r,o=\nchmod 640\n\n\nchmod u=rw,go=\nchmod 600\n\n\nchmod u=rwx,go=\nchmod 700",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html#comprimir-y-descomprimir-archivos",
+    "href": "4_Bash.html#comprimir-y-descomprimir-archivos",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "4.3 Comprimir y descomprimir archivos",
+    "text": "4.3 Comprimir y descomprimir archivos\nLos archivos pueden contener diversos tipos de extensiones, dependiendo del objetivo será necesario descomprimirlos y en otros dejarlos comprimidos para no abarcar tanto espacio en tu espacio de trabajo. \n\n\n\n\n\n\n\n\nTipo de archivo\nComprimir\nDescomprimir\n\n\n\n\nCarpeta.tar\ntar -cvf carpeta.tar /dir/a/comprimir/carpeta\ntar -xvf carpeta.tar\n\n\nCarpeta.tar.gz\ntar -czvf carpeta.tar.gz /carpeta/a/empaquetar/carpeta\ntar -zxvf carpeta.tar.gz\n\n\nCarpeta.gz\ngzip -9 carpeta.gz carpeta/a/empaquetar/carpeta\ngunzip -kd carpeta.gz\n\n\nCarpeta.zip\nzip -r carpeta.zip carpeta\nunzip carpeta.zip\n\n\n\n\n\n\n\n\n\nEjercicio\n\n\n\n\nDescarga todo el repositorio comprimido unix.bioinfo.rsgecuador en tu computadora. El archivo se almacenara con la extension (.ZIP).\nColocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora:cd/Users/danielchavez/Downloads\nDescomprime el archivo ZIP. unzip unix.bioinfo.rsgecuador-gh-pages.zip",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "4_Bash.html#material-suplementario",
+    "href": "4_Bash.html#material-suplementario",
+    "title": "3  Mis primeros pasos en Bash",
+    "section": "4.4 Material suplementario",
+    "text": "4.4 Material suplementario\n\nSoftware Carpentry. La terminal de Unix\nRSG Ecuador.GNU/Linux para bioinfomatica\nIntroduction to the Unix Shell for Transcriptomics Tutorial.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html",
+    "href": "5_ServidorBetterlab.html",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "",
+    "text": "4.1 Paso 1: Verifica los requisitos previos\nAntes de comenzar, asegúrate de contar con lo siguiente:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html#paso-1-verifica-los-requisitos-previos",
+    "href": "5_ServidorBetterlab.html#paso-1-verifica-los-requisitos-previos",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "",
+    "text": "Un navegador web actualizado (Chrome, Firefox o Edge).\nCredenciales de acceso: nombre de usuario y contraseña, proporcionados por el administrador del servidor.\nEl enlace de acceso al servidor Betterlab: https://bioinformatica.matmor.unam.mx/rstudio/auth-sign-in?appUri=%2F\n\n\n\n\n\n\n\nNote\n\n\n\nLos instructores te han proporcionado la lista de usuarios de Betterlab.\n\nEscribe tu nombre en alguno de los usuarios disponibles y toma nota de tu usuario y contraseña.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html#paso-2-accede-al-enlace",
+    "href": "5_ServidorBetterlab.html#paso-2-accede-al-enlace",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "4.2 Paso 2: Accede al enlace",
+    "text": "4.2 Paso 2: Accede al enlace\n\nAbre tu navegador web e ingresa el siguiente URL en la barra de direcciones (copia y pega o da clic al link): https://bioinformatica.matmor.unam.mx/rstudio/auth-sign-in?appUri=%2F\nPresiona Enter para cargar la página.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html#paso-3-inicia-sesión",
+    "href": "5_ServidorBetterlab.html#paso-3-inicia-sesión",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "4.3 Paso 3: Inicia sesión",
+    "text": "4.3 Paso 3: Inicia sesión\nEn la pantalla de inicio de sesión, introduce tus credenciales, por ejemplo:\n\nUsuario: alumno10.\nContraseña: (Escribe la contraseña correspondiente de la hoja de usuarios)\nHaz clic en Iniciar sesión o presiona Enter.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html#paso-4-explora-rstudio-en-bettertab",
+    "href": "5_ServidorBetterlab.html#paso-4-explora-rstudio-en-bettertab",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "4.4 Paso 4: Explora RStudio en Bettertab",
+    "text": "4.4 Paso 4: Explora RStudio en Bettertab\nUna vez que hayas iniciado sesión, se abrirá la interfaz de usuario de RStudio. Aquí puedes:\n\nCrear, cargar y ejecutar scripts en R.\nGestionar tus proyectos.\nAcceder a datos y recursos alojados en el servidor Bettertab.\nCuando entramos veremos cuatro ventanas:\n\n\n\n\n\n\n\n4.4.1 Script o Editor de Código (Ventana superior izquierda)\n\nUso: Aquí escribes, editas y guardas tus scripts de R.\nCaracterísticas principales:\nPuedes abrir varios archivos a la vez en pestañas.\nPermite ejecutar líneas o bloques de código presionando Ctrl+Enter (o Cmd+Enter en Mac).\nPrueba: Haz el comando getwd() para saber cual es tu directorio de trabajo\n\n\n\n4.4.2 Consola (Console) (Ventana inferior izquierda)\n\nUso: Aquí se ejecuta el código de manera directa.\nMuestra los resultados y mensajes de salida.\nCaracterísticas:\nPuedes escribir comandos directamente para probar ideas rápidas.\nRepite el mismo ejercicio anterior.\n\n\n\n4.4.3 Entorno y/o Historial (Ventana superior derecha)\n\nPestaña Entorno: Muestra los objetos que has creado (como variables, funciones, y datos cargados).\nPestaña Historial: Muestra todos los comandos ejecutados en la sesión.\nTip: Puedes hacer clic en los objetos para inspeccionarlos o eliminarlos (botón de escoba).\n\n\n\n4.4.4 Archivos, Gráficos, Paquetes, y Ayuda (Ventana inferior derecha)\nUso:\n\nArchivos: Explora las carpetas y archivos en tu directorio de trabajo.\nGráficos: Muestra los gráficos generados con tu código.\nPaquetes: Administra e instala paquetes de R.\nAyuda: Busca documentación sobre funciones y comandos de R.\n\n\n\n\n\n\n\n\n4.4.5 Terminal (Bash)\n\n\n\n\n\n\nNote\n\n\n\nPestaña en la ventana inferior izquierda, junto a la Consola.\n\n\nUso:\n\nEs un terminal de línea de comandos para ejecutar comandos en Bash directamente desde RStudio.\nÚtil para tareas del sistema, como mover archivos, instalar software o trabajar con Git.\nEjemplo: Puedes usar ls para listar archivos.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html#paso-5-conocer-el-sistema",
+    "href": "5_ServidorBetterlab.html#paso-5-conocer-el-sistema",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "4.5 Paso 5: Conocer el sistema",
+    "text": "4.5 Paso 5: Conocer el sistema\n\n\n\n\n\n\nNote\n\n\n\necho Hola Mundo!\nid=128932\necho $id\n\n\n\n\n\n\n\n\nNote\n\n\n\nhostname\n\n\n\n\n\n\n\n\nNote\n\n\n\nuname\nuname -a\nuname -srm\n\n\nEl comando top debería mostrar una pantalla que cambia de vez en cuando su contenido.\n\n\n\n\n\n\nNote\n\n\n\n top",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html#paso-6-cerrar-sesión",
+    "href": "5_ServidorBetterlab.html#paso-6-cerrar-sesión",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "4.6 Paso 6: Cerrar sesión",
+    "text": "4.6 Paso 6: Cerrar sesión\nCuando termines de trabajar:\n\nHaz clic en el botón Cerrar sesión ubicado en la esquina superior derecha.\nCierra la pestaña del navegador para garantizar que tu sesión quede cerrada.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "5_ServidorBetterlab.html#material-suplementario",
+    "href": "5_ServidorBetterlab.html#material-suplementario",
+    "title": "4  Cómo acceder al servidor Bettertab en RStudio",
+    "section": "4.7 3.6 Material suplementario",
+    "text": "4.7 3.6 Material suplementario\n\nNelly Selem Tutorial - Bioinformática\nEn Windows puedes usar Git Bash.\nEntrar a un servidor desde SSH",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cómo acceder al servidor Bettertab en RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "6_ArchivosyformatosBioinformatica.html",
+    "href": "6_ArchivosyformatosBioinformatica.html",
+    "title": "5  Archivos y formatos comunes en Bioinformática",
+    "section": "",
+    "text": "5.1 Bioinformática se conforma de la computación, biológica, matemáticas y estadística\nLa bioinformática, en relación con la genética y la genómica, es una subdisciplina científica que implica el uso de ciencias informáticas para recopilar, almacenar, analizar y diseminar datos biológicos, como secuencias de ADN y aminoácidos o anotaciones sobre esas secuencias NIH, 2023.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Archivos y formatos comunes en Bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "6_ArchivosyformatosBioinformatica.html#qué-es-un-archivo-de-texto",
+    "href": "6_ArchivosyformatosBioinformatica.html#qué-es-un-archivo-de-texto",
+    "title": "5  Archivos y formatos comunes en Bioinformática",
+    "section": "5.2 ¿Qué es un archivo de texto?",
+    "text": "5.2 ¿Qué es un archivo de texto?\nSon documentos de texto plano o sin formato, ya que solmente contienen caracteres de tipo alfanuméricos que carecen de un formato tipográfico.\nUn archivo de texto contiene información que puede ser tan simple como letras, palabras y oraciones; o más compleja como un registro de coordenadas de una estructura proteica o los resultados de secuenciación de varias muestras biológicas, en los que la información estará en diferentes columnas divididas por caracteres de separación o delimitadores.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Archivos y formatos comunes en Bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "6_ArchivosyformatosBioinformatica.html#section",
+    "href": "6_ArchivosyformatosBioinformatica.html#section",
+    "title": "5  Archivos y formatos comunes en Bioinformática",
+    "section": "5.3 ",
+    "text": "5.3",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Archivos y formatos comunes en Bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "6_ArchivosyformatosBioinformatica.html#formatos-de-archivos-de-texto-comunes-en-bioinformática",
+    "href": "6_ArchivosyformatosBioinformatica.html#formatos-de-archivos-de-texto-comunes-en-bioinformática",
+    "title": "5  Archivos y formatos comunes en Bioinformática",
+    "section": "5.4 Formatos de archivos de texto comunes en Bioinformática",
+    "text": "5.4 Formatos de archivos de texto comunes en Bioinformática\nExisten muchos archivos de texto que se utilizan en Bioinformática, en este caso veremos algunos de los más comunes.\n\n5.4.1 2.2.1. FASTA\n\nEs un archivo de texto plano que contiene información de secuencias de DNA, RNA o proteínas\nPuede contener una o más secuencias (multifasta)\nEste archivo consiste de:\n\nUna o varias líneas que empiezan con el símbolo “&gt;” y es seguido por un código de identificación de la secuencia.\nUna o más líneas que contienen la secuencia, cada línea debe contener menos de 80 caracteres.\n\n\nEjemplo de un archivo FASTA de secuencias de proteínas:\n\n\n\n\n\n\n\n5.4.2 BED\n\nArchivo de texto plano tabular\nContiene información de contexto genómico: coordenadas y características asociadas al genoma\nExisten varias versiones: BED3, BED6, BED12\nActualmente se usan otros formatos como el GFF\n\nEjemplo de un archivo BED y su interpretación:\n\n\n\n\n\n\n\n5.4.3 FASTQ\n\nArchivo de texto plano que contiene información relacionada a la secuenciación de nucleótidos con su score de calidad\nEste score corresponde a un carácter ASCII e indica qué tan confiable es que la base haya sido secuenciada e identificada correctamente, lo que se conoce como Phred score\nEl formato consiste en:\n\nLínea 1 inicia con “@” seguido por la identificación de la secuencia\nLínea 2 es la secuencia.\nLínea 3 contiene el símbolo “+” que indica el término de la secuencia\nLínea 4 la codificación para el score de calidad, debe contener el mismo número de símbolos que de letras en la secuencia.\n\n\nEjemplo de un archivo Fastq y su interpretación:\n\n\n\n\n\n\n\n5.4.4 PDB\n\nEs un archivo de texto plano que contiene las coordenadas atómicas de los aminoácidos que componen una proteína, ADN, ARN, u otra biomolécula.\nEstas coordenadas se obtienen a partir de experimentos de resonancia magnética nuclear, cristalografía de rayos X, Cryo-EM, u otros métodos.\n\nEjemplo de un archivo PDB y su interpretación:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Archivos y formatos comunes en Bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "6_ArchivosyformatosBioinformatica.html#editores-de-texto-de-cli",
+    "href": "6_ArchivosyformatosBioinformatica.html#editores-de-texto-de-cli",
+    "title": "5  Archivos y formatos comunes en Bioinformática",
+    "section": "7.1 3.2. Editores de texto de CLI",
+    "text": "7.1 3.2. Editores de texto de CLI\n\n7.1.1 3.2.1. GNU Nano\n\n\n7.1.2 GNU nano es un editor de texto de CLI pequeño y amigable disponible para SO basados en UNIX. Además de la edición básica de texto, tiene funciones de deshacer/rehacer, colorear por sintaxis, búsqueda y reemplazo interactivos, sangría automática, números de línea, entre otras características.\nPara llamar al programa desde la terminal se debe escribir la palabra nano seguida del nombre del archivo que se quiere visualizar o modificar. Como ejemplo, crearemos un archivo de texto escribiendo cualquier texto.\n\n\n\n\n\n\nNote\n\n\n\nnano miprimerarchivo\n\n\n\n\n\n\n\nEn este programa se puede añadir o eliminar texto de forma predeterminada, a diferencia de otros programas que tienen diferentes modos de uso como vi. Además, dentro del programa hay algunas opciones útiles para la lectura y modificación de archivos de texto. Para utilizar estas opciones se deben usar shorchuts de teclado, en las que el símbolo ^ significa la tecla Control o Command y la M es la tecla Alt. De esta forma, si queremos buscar la palabra primer en este archivo usamos el shorcut Control-W, añadimos la palabra y presionamos enter y el cursor se dirige al inicio de la palabra buscada, como se muestra a continuación:\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nEjercicio. Edición de archivos con nano\n\nCrea un archivo nano con el nombre “mi-archivo-nano.txt”. nano mi-archivo-nano.txt\nAgrega la siguiente información a tu archivo. Hola mi nombre es NOMBRE y este es mi primer archivo nano.\nUtiliza ctrl + x para salir y guardar la información, presiona Enter para cerrar el editor.\n\n\n\nPara guardar los cambios en el archivo presionamos control + x, el programa nos desplegará un mensaje para guardar el archivo. Presionamos enter y ahora podemos verificar el contenido.\n\n\n\n\n\n\nNote\n\n\n\ncat mi-archivo-nano.txt",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Archivos y formatos comunes en Bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "6_ArchivosyformatosBioinformatica.html#material-suplementario",
+    "href": "6_ArchivosyformatosBioinformatica.html#material-suplementario",
+    "title": "5  Archivos y formatos comunes en Bioinformática",
+    "section": "7.2 Material suplementario",
+    "text": "7.2 Material suplementario\nExisten otros formatos de archivos de texto usandos en Bioinformática, que son específicos de cada área. En los siguientes links hay una revisión más detallada sobre el tema:\n\nhttps://bioinformatics.uconn.edu/resources-and-events/tutorials-2/file-formats-tutorial/\nhttps://www.ncbi.nlm.nih.gov/sra/docs/submitformats/\nhttps://lorenzogatti.me/2017-ACGT-Tutorials/docs/howto_Format_Data/",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Archivos y formatos comunes en Bioinformática</span>"
+    ]
+  },
+  {
+    "objectID": "7_ScriptBash.html",
+    "href": "7_ScriptBash.html",
+    "title": "6  Scripts en Bash",
+    "section": "",
+    "text": "6.1 Wildcards y Streams\nEsto nos dice que el archivo cuenta con 300 lineas, 600 palabras y 12934 caracteres.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "7_ScriptBash.html#wildcards-y-streams",
+    "href": "7_ScriptBash.html#wildcards-y-streams",
+    "title": "6  Scripts en Bash",
+    "section": "",
+    "text": "wc _files/secuencias_bash.fastq\n# 300   600 12934 secuencias_bash.fastq",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "7_ScriptBash.html#caracteres-y-strings",
+    "href": "7_ScriptBash.html#caracteres-y-strings",
+    "title": "6  Scripts en Bash",
+    "section": "6.2 Caracteres y strings",
+    "text": "6.2 Caracteres y strings\nLos caracteres son unidades de información que se representan con símbolos. Pueden ser de varios tipos como alfanuméricos, números enteros, signos de puntuación. Varios caracteres son interpretados por la shell de manera especial. Estos se llaman caracteres especiales, claro, y permiten desarrollar alguna lógica, dependiendo del contexto. Por ejemplo, algunos caracteres: @ # . ? ! , / \\ &gt; ~ a µ g § R.\n\n\n\n\n\n\nNote\n\n\n\nCada caracter se asocia a una combinación diferente de teclas en el teclado del computador.\n\n\nLos strings son arreglos de caracteres. Esto quiere decir que son caracteres en conjunto y con un orden en particular. Por ejemplo el string pizza tiene 4 diferentes caracteres: i, p, z, a. Diferentes combinaciones de caracteres pueden formar diferentes strings.\nCreemos un string y luego imprimámoslo en la pantalla del Terminal. Escribe los siguientes comandos:\nmi_primer_string=\"Taller de bioinformática\"\necho $mi_primer_string",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "7_ScriptBash.html#wildcards",
+    "href": "7_ScriptBash.html#wildcards",
+    "title": "6  Scripts en Bash",
+    "section": "6.3 Wildcards",
+    "text": "6.3 Wildcards\nLos wildcards o wild characters son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.\n\n\n\n\n\n\n\nWildcard\nFunción\n\n\n\n\n*\nAsocia uno o más caracteres especificados por el usuario, con caracteres en un string con el que se opera.\n\n\n?\nAsocia solo un caracter a la vez en un string.\n\n\n[ ]\nAsocia cuaquiera de los caracteres dentro en un string.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nEl wildcard más usado es * porque es muy versátil.\n\n\n\n\n\n\n\n\nEjercicio\n\n\n\nEl wildcard * me permitiría encontrar todos los archivos en una carpeta que tengan la palabra TESIS en ellos. Primero generemos estos archivos:\ncd ~/taller_unix/3_manejo_terminal \ntouch MI_TESIS.tex MI_TESIS_tutor2.tex TESIS.tex TESIS_YA_ACABATE.tex TESIS_finaaaaal.tex TESIS_final.tex TESIS_tutor1.tex TESIS_tutor2.tex a_reporte_01.txt b_reporte_02.txt c_reporte_03.txt z_reporte_30.txt \n\nEnlista todos los archivos que comiencen con “TESIS”.\nEnlista todos los archivos que terminen con el string “.tex”\nBuscar todos los archivos contengan la palabra “TESIS\" pero con 3 caracteres desconocidos antes.\nBuscar los archivos que terminen con el número 1 o 2 en su nombre antes de la extensión del archivo.\nEncontrar los archivos que terminen en dos números del 1 al 3 y del 0 al 2 antes del formato del archivo.\nEncontrar todos los archivos con este formato ?_reporte_[0-3][0-3].txt\nEncontrar todos los archivos que contengan por a o z.\nBorramos todos estor archivos que terminen en “.txt” y “.tex”\n\n\n\n\n\n\n\nSolución\n\n\n\n\n\n1. ls -l TESIS*\n2. ls -l *.tex\n3. ls -l ???TESIS*\n4. ls -l *[1-2].tex\n5. ls -l *[0-3][0-2].txt\n6. ls -l ?_reporte_[0-3][0-3].txt\n7. ls -l *[az]*\n8. rm *.tex *.txt\n\n\n\n\n\n\n\n\n\n\n\nEjercicios de repaso\n\n\n\nPuedes seguir repasando y aprendiendo de las expresiones regulares en la pagina de RegexOne.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "7_ScriptBash.html#operadores-de-redirección-de-datos-io",
+    "href": "7_ScriptBash.html#operadores-de-redirección-de-datos-io",
+    "title": "6  Scripts en Bash",
+    "section": "6.4 Operadores de redirección de datos I/O",
+    "text": "6.4 Operadores de redirección de datos I/O\nUsualmente cuando trabajamos con datos, es necesario pasar el resultado de un comando a otro para hacer un procesamiento de datos apilado, como en un algortimo. Un stream o corriente esta hecha de datos. Es una corriente de datos. Un ejemplo muy familiar es el teclado y la pantalla. El teclado tiene una interfaz en donde por cada tecla presionada, un caracter se guarda en un archivo. Se dice entonces que es una corriente de entrada. Cuando la pantalla nos muestra lo que estamos escribiendo entonces la data sale hacia nosotros y eso convierte a la pantalla en una corriente de salida. Los dispositivos que hacen este tipo de transmisión de datos se llaman dispositivos I/O (input y output). Los operadores que se encargan de esto se conocen como operadores de redirección. Tres importantes son:\n\n\n\n\n\n\n\nComando\nFunción\n\n\n\n\n&gt;\nStream de salida de datos. Sobre escribre sobre un archivo.\n\n\n&gt;&gt;\nStream de salida de datos. Adjunta nueva salida a datos preexistentes en un archivo.\n\n\n&lt;\nStream de entrada de datos. Recibe datos para procesamiento con algun comando.\n\n\n\n\n\n\n\n\n\nEjercicio\n\n\n\n\nCrea el archivo bacterias_generos.txt e imprime su contenido empleando los siguientes comandos:\n\necho -e \"\\nRickettsia\\nOrientia\\nWolbachia\\nAegyptianella\\nAnaplasma\\nCowdria\\nEhrlichia\\nNeorickettsia\\nCaedibacter\\nHolospora\\nLyticum\\nOdyssella\\nSymbiotes\\nTectibacter\" &gt; bacterias_generos.txt\ncat bacterias_generos.txt\n\nAgrega una nueva especie en la ultima fila empleando “&gt;&gt;”.\necho -e \"\\nEscherichia\\n:D\" &gt;&gt; bacterias_generos.txt\ncat bacterias_generos.txt\nAhora usaremos el comando sort para reordenar todos los géneros. Sin embargo notamos que el archivo original no cambia nunca.\nsort &lt; bacterias_generos.txt\nPara hacer un cambio sobte bacterias_generos.txt, usamos este comando. Notamos que ahora no usamos &gt;&gt; sino solo &gt;. Esto va a borrar el contenido previo con géneros desordenados y ahora los va a ordenar. El cambio no se puede deshacer, así que ten cuidado con el operador &gt; para que no pierdas datos.\n(sort &lt; bacterias_generos.txt) &gt; bacterias_generos_sorted.txt\ncat bacterias_generos_sorted.txt\n\n\n\n\n\n\n\n\n\nAdvertencia\n\n\n\nEl operador &gt; sobre escribe archivos. Ten cuidado al usarlo para que no pierdas datos.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "7_ScriptBash.html#material-suplementario",
+    "href": "7_ScriptBash.html#material-suplementario",
+    "title": "6  Scripts en Bash",
+    "section": "6.5 Material suplementario",
+    "text": "6.5 Material suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Scripts en Bash</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html",
+    "href": "8_FuncionesBasicas_pt1.html",
+    "title": "7  Expresiones regulares",
+    "section": "",
+    "text": "7.1 Operadores\n^ Principio de línea\n$ Final de linea\n\\&lt; Principio de palabra\n\\&gt; Final de palabra\n. Cualquier carácter excepto salto de línea\n[] Conjunto de caracteres\n[^] Cualquier carácter no contenido\n[-] Rango\n* Cero o más ocurrencias del elemento que lo precede\n+ Uno o más ocurrencias del elemento que lo precede\n? El elemento precedente es opcional\n() Agrupación\n| O uno u otro\n{n} El elemento precedente se repite n veces\n{n,} El elemento precedente se repite al menos n veces\n{n,m} El elemento precedente se repite al menos n y no más de m veces\n\\ Escape {\\t, \\n,\\., \\*, …} se usa para tratar de forma normal un carácter especial\nFijaros que aquí el significado del operador * no es el mismo que el comodín *, lo mismo pasa con el operador ? y el comodín ?.\nSi necesitamos utilizar en nuestro patrón uno de los caracteres especiales deberemos protegerlo para que se interprete como literal:\n\\* es un asterisco, no cero o más ocurrencias de \\ (eso sería \\\\* en todo caso)\nEjemplo: Sea el archivo texto.txt con el contenido siguiente:\nLas siguientes ER cogerían en cada caso las líneas:",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html#operadores",
+    "href": "8_FuncionesBasicas_pt1.html#operadores",
+    "title": "7  Expresiones regulares",
+    "section": "",
+    "text": "123a\na123\na12b\n567\n\n\n\n\n\n\n\n\n^[0-9] → 123a , 567\nque empiecen (^) por un dígito ([0-9])\n\n\n^[0-9]*$ → 567\nque sólo contengan dígitos, a la anterior le añado el *, también funcionaría el +,\ny $ (final de linea), así fuerzo a que entre principio y final de linea haya 0 o más números.\n\n\n^[a-Z][0-9]*$ → a123\nque empiecen por letra y el resto sean números\n\n\n^[a-Z][0-9]*[a-Z]$ → a12b\nque empiecen y terminen por letra y en medio todo números",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html#archivo-para-este-tutorial",
+    "href": "8_FuncionesBasicas_pt1.html#archivo-para-este-tutorial",
+    "title": "7  Expresiones regulares",
+    "section": "8.1 Archivo para este tutorial",
+    "text": "8.1 Archivo para este tutorial\nEn este tutorial usaremos un archivo que tiene las proteínas caracterizadas de S_clavuligerus S_clavuligerus_proteome.fasta\n\n\n\n\n\n\nNote\n\n\n\nEste documento se encuentra en la carpeta _files dentro del directorio raíz del repositorio de Github, y tiene el nombre\nS_clavuligerus_proteome.fasta",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html#qué-es-grep",
+    "href": "8_FuncionesBasicas_pt1.html#qué-es-grep",
+    "title": "7  Expresiones regulares",
+    "section": "8.2 ¿Qué es grep?",
+    "text": "8.2 ¿Qué es grep?\nGrep es una herramienta de SO basados en UNIX, que permite hacer búsquedas de regex en archivos de texto o * input estándar stdin* derivados de piping (que veremos en detalle una sección posterior), e imprimir la o las líneas que coincidan con el o los patrones buscados. Un aspecto que se debe considerar es que dado que el caracter de nueva línea \\n es un separador de la lista de patrones, no hay forma de buscar los caracteres de nueva línea usando grep.\nLa sintaxis general de esta herramienta es de la siguiente forma:\n\n\n\n\n\n\nNote\n\n\n\ngrep [-opcion(es)…] [“patron(es)”…] [archivo(s)]\n\n\nPueden existir cero o más opciones y archivos. Si no se provee ningún archivo grep busca en el directorio de trabajo actual si se le da una opción de línea de comandos que especifique la recursividad; de lo contrario, busca en el (stdin). Además, se deben proveer uno o más patrones que son separados internamente por el programa por caracteres \\n.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html#diferentes-versiones-de-grep--g--e--f--p",
+    "href": "8_FuncionesBasicas_pt1.html#diferentes-versiones-de-grep--g--e--f--p",
+    "title": "7  Expresiones regulares",
+    "section": "8.3 Diferentes versiones de grep: -G -E -F -P",
+    "text": "8.3 Diferentes versiones de grep: -G -E -F -P\nEn GNU grep existen cuatro versiones de la herramienta, que se eligen con diferentes opciones:\n\n\n\n\n\n\n\nVersión\nDescripción\n\n\n\n\n-G o --basic-regexp\nInterpreta los patrones como regex básicas (BREs). Es las versión estándar de la herramienta\n\n\n-E o --extended-regexp\nInterpreta los patrones como regex extendidas (EREs)\n\n\n-F o --fixed-strings\nInterpreta los patrones como string fijos, no como regex\n\n\n-P o --perl-regexp\nInterpretar los patrones como expresiones regulares compatibles con Perl (PCREs)\n\n\n\nPor ejemplo, usemos el siguiente comando para buscar las líneas que tengan los caracteres a o e usando el metacaracter de alternancia | con la versión estándar:\n\n8.3.1 Flags: -e -f -i -v -w -x\nEn GNU grep existen los siguientes modos para controlar las coincidencias:\n\n\n\n\n\n\n\nFlag\nDescripción\n\n\n\n\n-e \"patron(es)\" o --regexp=\"patron(es)\"\nBusca los patrones especificados como argumento y los caracteres \\n separan un patrón del siguiente\n\n\n-f archivo o --file=archivo\nBusca los patrones de un archivo, uno por línea\n\n\n-i o --ignore-case\nHace que la regex no sea sensible a mayúsculas o minúsnuclas. La regex “abc” coincide con el patrón “AbC”\n\n\n-v o --invert-match\nInvierte el sentido de coincidencia, para seleccionar líneas que no coinciden con el patrón\n\n\n-w o --word-regexp\nSelecciona solo las líneas que contengan coincidencias que formen palabras completas\n\n\n-x o --line-regexp\nSeleccione solo los patrones que coincidan exactamente con toda la línea",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html#contar-el-número-de-secuencias-en-un-archivo-fasta",
+    "href": "8_FuncionesBasicas_pt1.html#contar-el-número-de-secuencias-en-un-archivo-fasta",
+    "title": "7  Expresiones regulares",
+    "section": "8.4 Contar el número de secuencias en un archivo FASTA",
+    "text": "8.4 Contar el número de secuencias en un archivo FASTA\n\n¿Cuántas líneas tiene el archivo S_clavuligerus_proteome.fasta?\n\n\n\n\n\n\n\nNote\n\n\n\ncd ~/unix.bioinfo.rsgecuador-gh-pages/_files wc -l S_clavuligerus_proteome.fasta # 40739 lineas\n\n\nEn archivos de formato FASTA o similares, el número de líneas no corresponde al número de secuencias. Esto se debe a la estructura del archivo:\n\nFormato FASTA: Cada secuencia comienza con una línea que tiene el símbolo &gt;, seguido de un identificador o descripción de la secuencia.\nLas líneas siguientes contienen la secuencia de nucleótidos o aminoácidos, que pueden estar divididas en varias líneas.\n\nPor lo tanto, para contar el número de secuencias en un archivo FASTA, debes contar las líneas que comienzan con &gt;. Aquí tienes un ejemplo práctico en Bash para lograrlo:\n\n¿Cuántas secuencias tiene el archivo S_clavuligerus_proteome.fasta?\n\n\n\n\n\n\nNote\n\n\n\ngrep -c “^&gt;” S_clavuligerus_proteome.fasta # 6439 secuencias\n\n\n\n\n\n¿Cuáles bases de datos detectaron estas secuencias?\n\n\n\n\n\n\nNote\n\n\n\ngrep “&gt;” S_clavuligerus_proteome.fasta | cut -d ‘|’ -f1 | sed ‘s/&gt;//’ | uniq # sp y tr\n\n\n\nUniProtKB (Universal Protein Knowledgebase) tiene dos secciones principales:\n\nSwiss-Prot (sp): Contiene secuencias revisadas y anotadas manualmente.\nTrEMBL (tr): Contiene secuencias computacionalmente anotadas y aún no revisadas manualmente.\n\n\n\n\n\n\n\nExplicación del código\n\n\n\n\ngrep \"&gt;\": Busca la línea con la cabecera.\ncut -d'|' -f1: Divide por | y selecciona el primer campo.\nsed 's/&gt;//': Elimina el símbolo &gt; al inicio.\nuniq: Nos da los valores únicos.\n\n\n\n\nBuscar proteínas anotadas con una palabra clave específica\n\n\n\n\n\n\nNote\n\n\n\ngrep “ribosomal” S_clavuligerus_proteome.fasta\n\n\n¿Qué organismo produce esta proteína y cuál es su Taxonomy ID?\n\n\n\n\n\n\n\nNote\n\n\n\norganism=$(grep “&gt;” S_clavuligerus_proteome.fasta | sed -n ‘s/.*OS=\\([^ ]*\\).*/\\1/p’ | sort -u) taxonomy=$(grep “&gt;” S_clavuligerus_proteome.fasta | sed -n ‘s/.*OX=\\([0-9]*\\).*/\\1/p’ | sort -u) echo “Organismo: $organism” echo “Taxonomy ID: $taxonomy”\n\n\n\n\n\n\n\n\nExplicación del codigo\n\n\n\n\nsed -n 's/.*OS=\\([^ ]*\\).*/\\1/p': Extrae el nombre del organismo entre OS= y el primer espacio.\nsed -n 's/.*OX=\\([0-9]*\\).*/\\1/p': Extrae el número después de OX=.\nsort -u: Ordena las líneas y elimina duplicados, asegurando que solo queden valores únicos.\nSe aplica después de extraer los valores con sed, por si existen múltiples cabeceras en el archivo.\n\n\n\n\n¿Buscar proteínas que contengan dominios específicos (por ejemplo, “ABC transporter”)\n\n\n\n\n\n\nNote\n\n\n\ngrep “ABC transporter” S_clavuligerus_proteome.fasta\n\n\n\n\n\n\n\n\n\nNote\n\n\n\ngrep “ABC transporter” S_clavuligerus_proteome.fasta | head -n 10",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html#qué-es-sed",
+    "href": "8_FuncionesBasicas_pt1.html#qué-es-sed",
+    "title": "7  Expresiones regulares",
+    "section": "9.1 ¿Qué es sed?",
+    "text": "9.1 ¿Qué es sed?\nSed es un editor de flujos de datos (streams) que permite filtrar y transformar texto de flujos de entrada, que pueden ser archivos o stdin derivados de piping (que veremos en detalle en la siguiente sección), lo que lo distingue de otros tipos de editores de texto de CLI o GUI.\nLa sintaxis general de esta herramienta es de la siguiente forma:\n\n\n\n\n\n\nNote\n\n\n\nsed [-opcion(es)…] [script] [archivo(s)]",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt1.html#comando-más-común-de-sed-s",
+    "href": "8_FuncionesBasicas_pt1.html#comando-más-común-de-sed-s",
+    "title": "7  Expresiones regulares",
+    "section": "9.2 Comando más común de sed: s",
+    "text": "9.2 Comando más común de sed: s\nEl comando de sustitución s es el más usado debido a que tiene muchas opciones y funcionalidades. La forma general de este comando es s/REGEXP/REPLACEMENT/[FLAGS], en la que se busca la expresión regular REGEXP en el contenido del espacio de patrones. Si existe la coincidencia, se reemplaza el patrón con lo que se coloca en REPLACEMENT. Los caracteres / pueden ser reemplazados por cualquier otro carácter.\nCon este comando se pueden usar algunos [FLAGS], y entre los más comunes se encuentran:\n\n\n\n\n\n\n\nFlag\nDescripción\n\n\n\n\ng\nSe aplica el reemplazo a todas las coincidencias con la regex, no solo a la primera\n\n\nNUMBER\nSolo se reemplaza un el número especificado de coincidencias de la regex. Si g y NUMBER se combinan, se ignoran las coincidencias antes del NUMBER, y luego se reemplazan todas las coincidencias desde el número especificado en adelante\n\n\nw FILENAME\nSi se realizó la sustitución, se escribe el resultado en el archivo FILENAME\n\n\ni o I\nHace que sed coincida con la regex de forma que no distinga entre mayúsculas y minúsculas\n\n\nm o M\nActiva el modo multilínea de regex, con lo que los símbolos ^ y s coinciden con el inicio y fin de línea respectivamente\n\n\n\nAdemás, el comando s permite realizar algunas operaciones para convertir texto a mayúsculas y minúsculas:\n\n\n\n\n\n\n\nCódigo\nDescripción\n\n\n\n\n\\L\nConvertir el texto a minúsculas hasta que se encuentre una \\U o \\E\n\n\n\\l\nConvertir el siguiente caracter a minúscula\n\n\n\\U\nConvertir el texto a mayúsculas hasta que se encuentre una \\L o \\E\n\n\n\\u\nConvertir el siguiente caracter a mayúscula\n\n\n\\E\nDetener la conversión de minúsculas y mayúsculas iniciada por \\L o \\U",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Expresiones regulares</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt2.html",
+    "href": "8_FuncionesBasicas_pt2.html",
+    "title": "8  Condicionales",
+    "section": "",
+    "text": "9 Bucles (for loops)\nImagina que quieres realizar una misma tarea para 3 archivos distintos, ¿no sería nada molesto escribir el mismo código 3 veces, cierto?\n¿Y qué pasa si tengo que analizar y procesar docenas o cientos de archivos? Para ello puedes escribir bucles. Un bucle es una estructura de control que permite ejecutar un bloque de código rápidamente mientras se cumpla una determinada condición. En bash los bucles más comunes son for y while.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Condicionales</span>"
+    ]
+  },
+  {
+    "objectID": "8_FuncionesBasicas_pt2.html#actividad-grupal",
+    "href": "8_FuncionesBasicas_pt2.html#actividad-grupal",
+    "title": "8  Condicionales",
+    "section": "9.1 Actividad grupal",
+    "text": "9.1 Actividad grupal\nRetomando el ejercicio anterior, modifiquemos el código para crear un bucle para procesar los tres archivos fastq (secuencias1.fastq, secuencias2.fastq, secuencias3.fastq ) que tenemos.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Condicionales</span>"
+    ]
+  },
+  {
+    "objectID": "9_EjerciciosFinales.html",
+    "href": "9_EjerciciosFinales.html",
+    "title": "9  Ejercicios finales",
+    "section": "",
+    "text": "9.1 Extracción de información de archivos fastq\nEn este ejercicio se obtendrá información de archivos fastq, que cotienen secuencias de nucleótidos y la calidad de su proceso de secuenciación. Para esto usaremos los archivos secuencias1.fastq, secuencias2.fastq y secuencias3.fastq que se encuentra en la carpeta _files dentro del directorio raíz del repositorio de GitHub unix.bioinfo.rsgecuador .",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Ejercicios finales</span>"
+    ]
+  },
+  {
+    "objectID": "9_EjerciciosFinales.html#búsqueda-de-motivos-en-archivo-fasta-de-una-secuencia-de-nucleótidos",
+    "href": "9_EjerciciosFinales.html#búsqueda-de-motivos-en-archivo-fasta-de-una-secuencia-de-nucleótidos",
+    "title": "9  Ejercicios finales",
+    "section": "9.2 Búsqueda de motivos en archivo fasta de una secuencia de nucleótidos",
+    "text": "9.2 Búsqueda de motivos en archivo fasta de una secuencia de nucleótidos\n1.- En este ejercicio se obtendrá información de un archivo fasta, que contiene la secuencia de nucleótidos de un gen de un microorganismo. Para esto usaremos el archivo secuencia1.fasta que se encuentra en la carpeta _files dentro del directorio raíz del repositorio de GitHub\nEn las secuencias de ADN se encuentran varios motivos (secuencias pequeñas muy conservadas) como los que dan inicio y término a los procesos de replicación, transcripción y traducción. La señal para el inicio de la transcripción es dada por la presencia de la TATA box (TATAAA o TATAAT) y la señal para el término de la transcripción es la presencia de varias Adeninas (5 o más), con lo que se obtiene un transcrito (ARN mensajero). Determinar el número de señales de inicio y de terminación del archivo secuencia1.fasta y establecer si hay igual número de señales de inicio y terminación.\n\n\n\n\n\n\nNote\n\n\n\n\n\n# Opción 1\n# Señales de inicio \ngrep -E -c \"TATAAA|TATAAT\"  secuencia1.fasta\n# Señales de terminación \ngrep -E -c \"A{5,}\"  secuencia1.fasta",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Ejercicios finales</span>"
+    ]
+  },
+  {
+    "objectID": "9_EjerciciosFinales.html#extracción-de-información-de-archivos-fastq-1",
+    "href": "9_EjerciciosFinales.html#extracción-de-información-de-archivos-fastq-1",
+    "title": "9  Ejercicios finales",
+    "section": "10.1 Extracción de información de archivos fastq",
+    "text": "10.1 Extracción de información de archivos fastq\nEn este ejercicio se obtendrá información de archivos fastq, que cotienen secuencias de nucleótidos y la calidad de su proceso de secuenciación. Para esto usaremos los archivos secuencias1.fastq, secuencias2.fastq y secuencias3.fastq que se encuentra en la carpeta _files dentro del directorio raíz del repositorio de GitHub unix.bioinfo.rsgecuador .\nEjercicio La letra N representa un nucleótido que no pudo ser leído correctamente, y se reporta como ninguno, o missing data. Imprime el número de secuencias que tenga diez N seguidas por cada uno de los archivos fastq de la carpeta _files.\n\n\n\n\n\n\nNote\n\n\n\nEs posible realizar esto con un comando de una sola línea, intenta resolverlo de esta forma.\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\ngrep -E -c \"NNNNNNNNNN\"  *.fastq\n\n\n\nAunque tambien puedes crear un script mas diseñado\n\n\n\n\n\n\nNote\n\n\n\ncrea un archivo que se llame countsseq.sh y pega el siguiente codigo\n\n\n\n\n\n\nNote\n\n\n\n\n\n#!/bin/bash # File: countseq.sh\n\n11 Ruta a la carpeta que contiene los archivos .fastq\nFOLDER=“_files”\n\n\n12 Iterar sobre cada archivo .fastq en la carpeta\nfor file in “$FOLDER”/*[1-3].fastq; do # Imprimir el nombre del archivo echo “Archivo: $file”\n# Usar grep para buscar secuencias que contengan 10 ‘N’ seguidas y contar cuántas veces aparecen count=$(grep -c ‘NNNNNNNNNN’ $file )\n# Imprimir el número de secuencias encontradas echo “Número de secuencias con 10 N seguidas: $count” echo “—————————————” done\n\n\n\n\nRecuerda para ejecutar este codigo deberas encontrarte dentro de la carpeta descomprimida unix.bioinfo.rsgecuador-gh-pages/y ejecutar: bash countseq.sh\nSalida:\n\nsecuencias1.fastq - 1\nsecuencias2.fastq - 58\nsecuencias3.fastq - 75\n\n\n\n4.- Cuenta cuántas secuencias únicas hay en cada archivo.\nDetermina cuántas secuencias únicas (sin repeticiones) existen en cada archivo. Asegúrate de ignorar las líneas que comienzan con @ o +, ya que no forman parte de las secuencias.\n\n\n\n\n\n\npista\n\n\n\nUsa grep para extraer solo las líneas correspondientes a las secuencias y después sort y uniq para contarlas.\n\n\nRecuerda que los archivos se encuentran en unix.bioinfo.rsgecuador-gh-pages/_files/\n\n\n\n\n\n\nExtraer solo las secuencias (segunda línea de cada entrada)\n\n\n\n\n\ngrep -A 3 “^@” *.fastq | grep -v “^@” | grep -v “+” | grep -v “^–$” &gt; sequences_only.txt\n\n13 Contar las secuencias únicas\necho “Número de secuencias únicas: $(sort sequences_only.txt | uniq | wc -l)”\n\n\n\n\n5.- Encontrar la longitud de la secuencia más larga\nDetermina la longitud de la secuencia más larga entre los archivos FASTQ.\n\n\n\n\n\n\nNote\n\n\n\n\n\ngrep -A 1 “^@” *.fastq | grep -v “^@” | grep -v “^–$” | wc -L\n\n\n\nMaterial suplementario\n\nRSG Ecuador. Scripts en Bash\nRSG Ecuador. Wildcards y Streams\nRSG Ecuador. Expresiones regulares (regex)\nWildcard Selection in Bash",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Ejercicios finales</span>"
+    ]
+  },
+  {
+    "objectID": "10_Buenaspracticas.html",
+    "href": "10_Buenaspracticas.html",
+    "title": "10  Buenas practicas en Programación",
+    "section": "",
+    "text": "10.1 Materiales informativos",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
+    ]
+  },
+  {
+    "objectID": "10_Buenaspracticas.html#materiales-informativos",
+    "href": "10_Buenaspracticas.html#materiales-informativos",
+    "title": "10  Buenas practicas en Programación",
+    "section": "",
+    "text": "Curso de Joselyn Cristina Chávez Fuentes\nMe ayudo mucho este Video\nDocumentación de funciones de Andrés Arredondo Cruz",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
+    ]
+  },
+  {
+    "objectID": "10_Buenaspracticas.html#un-algoritmo-nos-permite-resolver-un-problema",
+    "href": "10_Buenaspracticas.html#un-algoritmo-nos-permite-resolver-un-problema",
+    "title": "10  Buenas practicas en Programación",
+    "section": "10.2 Un algoritmo nos permite resolver un problema ⭐",
+    "text": "10.2 Un algoritmo nos permite resolver un problema ⭐\nUn algoritmo es un método para resolver un problema mediante una serie de pasos definidos, precisos y finitos.\n\nDefinido: si se sigue dos veces, se obtiene el mismo resultado. Es reproducible.\nPreciso: implica el orden de realización de cada uno de los pasos.\nFinito: Tiene un numero determinado de pasos, implica que tiene un fin.\n\n\nUn algoritmo podemos definirlo como un programa o software.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
+    ]
+  },
+  {
+    "objectID": "10_Buenaspracticas.html#para-escribir-un-buen-software-necesitas",
+    "href": "10_Buenaspracticas.html#para-escribir-un-buen-software-necesitas",
+    "title": "10  Buenas practicas en Programación",
+    "section": "10.3 Para escribir un buen software necesitas:",
+    "text": "10.3 Para escribir un buen software necesitas:\n\nEscribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\nCon el fin de previnir retracciones.\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
+    ]
+  },
+  {
+    "objectID": "10_Buenaspracticas.html#paso-7-documentación",
+    "href": "10_Buenaspracticas.html#paso-7-documentación",
+    "title": "10  Buenas practicas en Programación",
+    "section": "10.4 Paso 7: Documentación",
+    "text": "10.4 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
+    ]
+  },
+  {
+    "objectID": "10_Buenaspracticas.html#puntos-claves-para-buenas-practicas-en-bioinfo",
+    "href": "10_Buenaspracticas.html#puntos-claves-para-buenas-practicas-en-bioinfo",
+    "title": "10  Buenas practicas en Programación",
+    "section": "10.5 Puntos claves para buenas practicas en bioinfo ⭐",
+    "text": "10.5 Puntos claves para buenas practicas en bioinfo ⭐\n\nEscriba programas para personas, no para computadoras (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.\nDivide los programas en funciones cortas de un solo propósito. 💻 📚\nNo repitas tu código. Crea pasos reproducibles o que se repitan por si solas. ➰\nPlanifique los errores (Programacion defensiva) 🚩\nOptimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.\nColaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥\n\n\n\n\n\n\n\nEjemplo de como puedes realizar tus documentos💜\n\n\n\nAqui les dejo el script que les doy a mis alumnos VisualizacionDatos.R del curso de Análisis de datos de RNA-Seq.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
+    ]
+  },
+  {
+    "objectID": "10_Buenaspracticas.html#referencias",
+    "href": "10_Buenaspracticas.html#referencias",
+    "title": "10  Buenas practicas en Programación",
+    "section": "10.6 Referencias",
+    "text": "10.6 Referencias\n\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
+    ]
+  },
+  {
+    "objectID": "11_intro_git.html",
+    "href": "11_intro_git.html",
+    "title": "11  Introducción a Git y GitHub.",
+    "section": "",
+    "text": "12 ¿Que es Git?\nEs un sistema de control de versiones gratuito y de código abierto diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.\n\n\n\n13 Un poco de historia…",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Introducción a Git y GitHub.</span>"
+    ]
+  },
+  {
+    "objectID": "12_Instalación.html",
+    "href": "12_Instalación.html",
+    "title": "12  Instalación de Git.",
+    "section": "",
+    "text": "Podemos consultar la documentación de Git.\nhttps://git-scm.com/\n\nPara instalar Git en un sistema operativo con base linux, utilizaremos las siguientes instrucciones\nsudo apt update\nsudo apt install git\nAhora podemos verificar la instalación de git y sus opciones de trabajo utilizando\ngit --version\ngit --help",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Instalación de Git.</span>"
+    ]
+  },
+  {
+    "objectID": "13_Configuración y trabajo en Git.html",
+    "href": "13_Configuración y trabajo en Git.html",
+    "title": "13  Configuración y trabajo en Git.",
+    "section": "",
+    "text": "Para comenzar con los trabajos necesitamos contar con un nombre de usuario y una dirección de correo electrónico, los cuales podemos crear utilizando:\ngit config --global user.name \"tu usuario\"\ngit config --global user.email \"tu correo\"\nPodemos verificar los usuarios creados usando:\ngit config --list\nUna vez teniendo creado y verificado el usuario podemos comenzar a trabajar en Git.\nIniciaremos creando un directorio de trabajo.\nmkdir git && cd git\nEn el cual debemos generar un archivo (proyecto), que nos ayudara explorar todas funciones que ofrece git.\nejemplo:\nnano proyecto.py\nUna vez que contamos con un directorio de trabajo y proyectos en el mismo, debemos indicar a git donde queremos trabajar\ngit init\nls -a\nverificación de entorno Git nos perite mantenernos al tanto de las modificaciones en el lugar de trabajo, sin embargo para observar estas, debemos agregar nuestros ficheros o archivos a git.\ngit add \"nombre de tu fichero\"\ngit status\n\n14 ¿Que es un commit?\nUn commit es un registro de cambios en el repositorio. Actúa como una “foto” del estado del proyecto en un momento específico, permitiendo hacer un seguimiento del historial de modificaciones.\n\npara agregar nuestro primer commit en git, realizamos lo siguiente:\ngit commit -m \"agregar un mensaje\"\n\ngit status",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Configuración y trabajo en Git.</span>"
+    ]
+  },
+  {
+    "objectID": "14_Ramas en Git.html",
+    "href": "14_Ramas en Git.html",
+    "title": "14  Ramas en Git",
+    "section": "",
+    "text": "Las ramas (branches) en Git son versiones independientes de tu código que permiten trabajar en paralelo sin afectar la versión principal del proyecto.\n\n\n15 ¿Por qué usar ramas en Git?\n\nFacilitan el trabajo en equipo.\nPermiten desarrollar nuevas funciones sin afectar el código principal.\nFacilitan la corrección de errores sin interrumpir el desarrollo.\n\nPara trabajar con ramas tenemos las siguientes opciones.\ngit branch    #Para visualizar todas las ramas existentes\ngit branch nueva-rama     #Crear una rama nueva\ngit switch nombre_de_la_rama     #Cambiarse a una rama\ngit merge nueva-rama   # Fusiona los cambios de `nueva-rama`",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Ramas en Git</span>"
+    ]
+  },
+  {
+    "objectID": "15_Intro_GitHub.html",
+    "href": "15_Intro_GitHub.html",
+    "title": "15  ¿Que es GitHub?",
+    "section": "",
+    "text": "GitHub es una plataforma de alojamiento de código basada en la nube que permite el almacenamiento, gestión y colaboración en proyectos de software mediante Git.\nPara conocer sus aplicaciones mas a detalle, sugerimos consultar el sitio oficial.\n\n\n\n\n\n\nNote\n\n\n\nhttps://github.com/\nhttps://docs.github.com/es\n\n\n\n16 Creación de cuenta.\nPara crear una cuenta en el portal de GitHub, te recomendamos seguir los siguientes pasos:\n\n\nHaz clic en Sign up (Registrarse).\nLlena los campos con:\n\nUsername (Nombre de usuario único).\nEmail (Correo electrónico válido).\nPassword (Contraseña segura).\n\nHaz clic en Continue.\n\n\n\nRevisa tu bandeja de entrada y busca un correo de GitHub.\nHaz clic en el enlace para verificar tu cuenta.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>¿Que es GitHub?</span>"
+    ]
+  },
+  {
+    "objectID": "16_Manejo_de_repositorios.html",
+    "href": "16_Manejo_de_repositorios.html",
+    "title": "16  Creación de un nuevo repositorio",
+    "section": "",
+    "text": "16.1 Actividad guiada.",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Creación de un nuevo repositorio</span>"
+    ]
+  }
+]
