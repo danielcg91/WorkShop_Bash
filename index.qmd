@@ -19,6 +19,12 @@
 
     **Alberto Patricio Hernandez - UAH**
 
+    #### Helpers
+
+    Johanna Castelán Camarillo
+
+    Mariana Devon Lopez
+
     #### **Resumen:**
 
     Este tutorial te enseñará los conceptos fundamentales en el empleo y manejo de Bash Shell, incluyendo **la creación de scripts de Bash, generación de programas con funcionalidades sencillas aplicables a bioinformática y a programación en general.**
