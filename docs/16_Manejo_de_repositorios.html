@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Git y Github – Workshop Bash 2025</title>
+<title>16&nbsp; Creación de un nuevo repositorio – Workshop Bash 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./10_Buenaspracticas.html" rel="prev">
+<link href="./15_Intro_GitHub.html" rel="prev">
 <link href="./ViernesBioinfo_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11_Github.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Git y Github</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./16_Manejo_de_repositorios.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Creación de un nuevo repositorio</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -197,8 +197,38 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11_Github.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Git y Github</span></span></a>
+  <a href="./11_intro_git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Instalación.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Instalación de Git.</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Configuración y trabajo en Git..html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Configuración y trabajo en Git.</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14_Ramas en Git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ramas en Git</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15_Intro_GitHub.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16_Manejo_de_repositorios.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Creación de un nuevo repositorio</span></span></a>
   </div>
 </li>
     </ul>
@@ -211,10 +241,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#para-escribir-un-buen-software-necesitas" id="toc-para-escribir-un-buen-software-necesitas" class="nav-link active" data-scroll-target="#para-escribir-un-buen-software-necesitas"><span class="header-section-number">11.1</span> <strong>Para escribir un buen software necesitas:</strong></a></li>
-  <li><a href="#paso-7-documentación" id="toc-paso-7-documentación" class="nav-link" data-scroll-target="#paso-7-documentación"><span class="header-section-number">11.2</span> <strong>Paso 7: Documentación</strong></a></li>
-  <li><a href="#puntos-claves-para-buenas-practicas-en-bioinfo" id="toc-puntos-claves-para-buenas-practicas-en-bioinfo" class="nav-link" data-scroll-target="#puntos-claves-para-buenas-practicas-en-bioinfo"><span class="header-section-number">11.3</span> Puntos claves para buenas practicas en bioinfo ⭐</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">11.4</span> Referencias</a></li>
+  <li><a href="#actividad-guiada." id="toc-actividad-guiada." class="nav-link active" data-scroll-target="#actividad-guiada."><span class="header-section-number">16.1</span> Actividad guiada.</a></li>
   </ul>
 </nav>
     </div>
@@ -223,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Git y Github</span></h1>
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Creación de un nuevo repositorio</span></h1>
 </div>
 
 
@@ -240,132 +267,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Es un sistema de control de versiones gratuito y de código abierto diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Screenshot 2025-03-26 at 19.24.22.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Screenshot 2025-03-26 at 19.28.30.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p><strong>Un algoritmo nos permite resolver un problema ⭐</strong></p>
-<p>Un algoritmo es un método para resolver un problema mediante una serie de pasos <strong>definidos, precisos</strong> y <strong>finitos</strong>.</p>
-<ul>
-<li><p><strong>Definido</strong>: si se sigue dos veces, se obtiene el mismo resultado. Es reproducible.</p></li>
-<li><p><strong>Preciso</strong>: implica el orden de realización de cada uno de los pasos.</p></li>
-<li><p><strong>Finito</strong>: Tiene un numero determinado de pasos, implica que tiene un fin.</p></li>
-</ul>
-<blockquote class="blockquote">
-<p>Un algoritmo podemos definirlo como un <strong>programa o software</strong>.</p>
-</blockquote>
-<section id="para-escribir-un-buen-software-necesitas" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="para-escribir-un-buen-software-necesitas"><span class="header-section-number">11.1</span> <strong>Para escribir un buen software necesitas:</strong></h2>
-<blockquote class="blockquote">
-<p>Escribir <strong>código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation)</strong>.</p>
-<p>Wilson, et al.&nbsp;2014. PLOS Biology</p>
-</blockquote>
-<p>Con el fin de <em>previnir retracciones</em>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Pasos para escribir un buen software
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li><p>Análisis del problema / Definir el problema</p></li>
-<li><p>Diseño del algoritmo / Diseño del programa</p></li>
-<li><p>Codificación / Escribir el código</p></li>
-<li><p>Compilación y ejecución del programa</p></li>
-<li><p>Verificación / Realizar pruebas</p></li>
-<li><p>Depuración / Detectar los errores y corregirlos</p></li>
-</ol>
-<blockquote class="blockquote">
-<p>Programacion defensiva</p>
-</blockquote>
-<ol start="7" type="1">
-<li>Documentación</li>
-</ol>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://eveliacoss.github.io/Buenaspracticas_R_Mayo2024/BestPractices/figures/homersapien.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</section>
-<section id="paso-7-documentación" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="paso-7-documentación"><span class="header-section-number">11.2</span> <strong>Paso 7: Documentación</strong></h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p><em>Autor (author)</em>: Su nombre</p></li>
-<li><p><em>Dia (date)</em>: Fecha de creación</p></li>
-<li><p><em>Paquetes (packages)</em></p></li>
-<li><p><em>Directorio de trabajo (Working directory)</em>: En que carpeta se encuentra tu datos y programa.</p></li>
-<li><p><em>Información descriptiva del programa (Description)</em>: ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.</p></li>
-<li><p><em>Usage</em> ¿Cómo se utiliza?</p></li>
-<li><p><em>Argumentos (Arguments)</em></p>
-<ul>
-<li><p><em>Información de entrada (Data Inputs)</em>: Ej: Solo numeros enteros (sin decimales).</p></li>
-<li><p><em>Información de salida (Outpus)</em>: Graficas, figuras, tablas, etc.</p></li>
-</ul></li>
-</ul>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://eveliacoss.github.io/Buenaspracticas_R_Mayo2024/BestPractices/figures/meme_documentacion.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</section>
-<section id="puntos-claves-para-buenas-practicas-en-bioinfo" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="puntos-claves-para-buenas-practicas-en-bioinfo"><span class="header-section-number">11.3</span> Puntos claves para buenas practicas en bioinfo ⭐</h2>
-<ol type="1">
-<li><p>Escriba <strong>programas para personas, no para computadoras</strong> (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.</p></li>
-<li><p>Divide los programas en <em>funciones cortas de un solo propósito.</em> 💻 📚</p></li>
-<li><p><strong>No repitas tu código</strong>. Crea pasos reproducibles o que se repitan por si solas. ➰</p></li>
-<li><p>Planifique los errores (<strong>Programacion defensiva</strong>) 🚩</p></li>
-<li><p>Optimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.</p></li>
-<li><p>Colaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥</p></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Ejemplo de como puedes realizar tus documentos💜
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Aqui les dejo el script que les doy a mis alumnos <a href="https://github.com/EveliaCoss/RNAseq_classFEB2024/blob/main/Practica_Dia3/scripts/VisualizacionDatos.R">VisualizacionDatos.R</a> del curso de <a href="https://github.com/EveliaCoss/RNAseq_classFEB2024">Análisis de datos de RNA-Seq</a>.</p>
-</div>
-</div>
-</section>
-<section id="referencias" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="referencias"><span class="header-section-number">11.4</span> Referencias</h2>
-<ul>
-<li>Haydee tutorial: <a href="https://haydeeperuyero.github.io/Computo_Cientifico/">Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos</a></li>
-<li>Alejandra Medina tutorial: <a href="https://comunidadbioinfo.github.io/cdsb2023/control-de-versiones-con-github-y-rstudio.html">Control de versiones con GitHub y RStudio</a></li>
-<li>Wilson, et al.&nbsp;2014. <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>. PLOS Biology</li>
-<li>Evelia Coss - tutorial <a href="https://github.com/EveliaCoss/Buenaspracticas_R_Mayo2024">Buenas practicas en R</a></li>
-<li>Evelia Coss - <a href="https://github.com/EveliaCoss/Make_yourCV">Make your CV tutorial</a></li>
-</ul>
+<p><img src="images/clipboard-3043900849.png" class="img-fluid"></p>
+<section id="actividad-guiada." class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="actividad-guiada."><span class="header-section-number">16.1</span> Actividad guiada.</h2>
+<p><img src="images/clipboard-4272274666.png" class="img-fluid"></p>
 
 
 </section>
@@ -937,8 +842,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./10_Buenaspracticas.html" class="pagination-link" aria-label="Buenas practicas en Programación">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Buenas practicas en Programación</span></span>
+      <a href="./15_Intro_GitHub.html" class="pagination-link" aria-label="¿Que es GitHub?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

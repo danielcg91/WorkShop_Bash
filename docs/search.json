@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Workshop Bash 2025",
     "section": "",
-    "text": "Información general\n\n\nSobre el curso 📌Requisitos previosAgenda 📆\n\n\nEl contenido de este curso se realizó en base al material de un grupo de estudio realizado por el RSG Ecuador, y del WorkShop2024 organizado por el RSG. La literatura adicional se especifica en cada tema de forma pertinente.\n\nFechas: 28 y 29 octubre 2025\nDuración del curso: 12 horas\n\nInstructores:\nJosé Daniel Chávez González - UAGro\nAlberto Patricio Hernandez - UAH\nHelpers\nJohanna Castelán Camarillo\nMariana Devon Lopez\nResumen:\nEste tutorial te enseñará los conceptos fundamentales en el empleo y manejo de Bash Shell, incluyendo la creación de scripts de Bash, generación de programas con funcionalidades sencillas aplicables a bioinformática y a programación en general.\nObjetivos:\nEn esta guía rápida aprenderás a:\n\nConceptos UNIx y GNU/Linux\nMis primeros pasos en bash.\nConsultar información sobre archivos y directorios.\nWildcards y Streams\nCrear un script en Bash.\nFunciones basicas de Bash\nBuenas practicas de Bioinformática\n\nCitar y reutilizar el material del curso\nLos datos del curso se pueden reutilizar y adaptar libremente con la debida atribución. Todos los datos de los cursos de estos repositorios están sujetos a la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).\n\n\n\nDebes tener contar con una terminal de Bash Shell en tu sistema operativo (Visita la ventana de Instalaciones y requerimientos previos)\nContar con una terminal con Git, en Windows puedes usar Git Bash.\n\n\n\n\n\n\n\n\n\n\nTema Mis primeros pasos en bash\nTiempo\n\n\n\n\n🔷 Sección 1 - (10:00- 11:00 h) (28 de marzo)\n\n\n\n\nConceptos Unix y GNU/Linux\n\n10 min\n\n\n\nMis primeros pasos en Bash\n\n15 min\n\n\n\nEjercicio 1. Ubicación en repositorios\n\n5 min\n\n\n\nConsultar información sobre archivos y directorios\n\n10 min\n\n\n\nComprimir y descomprimir archivos\n\n5 min\n\n\n\nEjercicio 2. Descomprimir archivos\n\n5 min\n\n\n\nAcceder al servidor Betterlab\n\n10 min\n\n\n☕ Coffee break (15 min) - (11:15-11:30) ☕\n15 min\n\n\n🔷  Sección 2 - (11:15 - 12:15 h)\n\n\n\n\nManejo de archivos y formatos\n\n30 min\n\n\n\nExpresiones regulares\n\n20 min\n\n\n\nEjercicio 3. Manejando datos\n\n10 min\n\n\n🔷  Sección 3 - (12:20 - 13:30 h) (28 de marzo)\n\n\n\n\nWildcards y Streams\n\n10 min\n\n\n\nEjercicio 4. Wildcard\n\n10 min\n\n\n\nOperadores de redirección de datos I/O\n\n10 min\n\n\n\nEjercicio 5. Redirección de salidas\n\n10 min\n\n\n\nScripts en Bash\n\n10 min\n\n\n☕ Comida (1 hora) - (13:30-14:30)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones Básica de Bash Parte 1\n\n50 min\n\n\n\nFunciones Básica de Bash Parte 2\n\n50 min",
+    "text": "Información general\n\n\nSobre el curso 📌Requisitos previosAgenda 📆\n\n\nEl contenido de este curso se realizó en base al material de un grupo de estudio realizado por el RSG Ecuador, y del WorkShop2024 organizado por el RSG. La literatura adicional se especifica en cada tema de forma pertinente.\n\nFechas: 28 y 29 octubre 2025\nDuración del curso: 12 horas\n\nInstructores:\nJosé Daniel Chávez González - UAGro\nAlberto Patricio Hernandez - UAH\nHelpers\nJohanna Castelán Camarillo\nMariana Devon Lopez\nResumen:\nEste tutorial te enseñará los conceptos fundamentales en el empleo y manejo de Bash Shell, incluyendo la creación de scripts de Bash, generación de programas con funcionalidades sencillas aplicables a bioinformática y a programación en general.\nObjetivos:\nEn esta guía rápida aprenderás a:\n\nConceptos UNIx y GNU/Linux\nMis primeros pasos en bash.\nConsultar información sobre archivos y directorios.\nWildcards y Streams\nCrear un script en Bash.\nFunciones basicas de Bash\nBuenas practicas de Bioinformática\n\nCitar y reutilizar el material del curso\nLos datos del curso se pueden reutilizar y adaptar libremente con la debida atribución. Todos los datos de los cursos de estos repositorios están sujetos a la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).\n\n\n\nDebes tener contar con una terminal de Bash Shell en tu sistema operativo (Visita la ventana de Instalaciones y requerimientos previos)\nContar con una terminal con Git, en Windows puedes usar Git Bash.\n\n\n\n\n\n\n\n\n\n\nTema\nMis primeros pasos en bash\nTiempo\n\n\n\n\n🔷 Sección 1 - (10:00- 11:00 h) (28 de marzo)\n\n\n\n\nConceptos Unix y GNU/Linux\n\n10 min\n\n\n\nMis primeros pasos en Bash\n\n15 min\n\n\n\nEjercicio 1. Ubicación en repositorios\n\n5 min\n\n\n\nConsultar información sobre archivos y directorios\n\n10 min\n\n\n\nComprimir y descomprimir archivos\n\n5 min\n\n\n\nEjercicio 2. Descomprimir archivos\n\n5 min\n\n\n\nAcceder al servidor Betterlab\n\n10 min\n\n\n☕ Coffee break (15 min) - (11:15-11:30) ☕\n15 min\n\n\n🔷  Sección 2 - (11:15 - 12:15 h)\n\n\n\n\nManejo de archivos y formatos\n\n30 min\n\n\n\nExpresiones regulares\n\n20 min\n\n\n\nEjercicio 3. Manejando datos\n\n10 min\n\n\n🔷  Sección 3 - (12:20 - 13:30 h) (28 de marzo)\n\n\n\n\nWildcards y Streams\n\n10 min\n\n\n\nEjercicio 4. Wildcard\n\n10 min\n\n\n\nOperadores de redirección de datos I/O\n\n10 min\n\n\n\nEjercicio 5. Redirección de salidas\n\n10 min\n\n\n\nScripts en Bash\n\n10 min\n\n\n☕ Comida (1 hora) - (13:30-14:30)\n\n\n\n🔷  Sección 3 - (14:30 - 16:30 h) (28 de marzo)\n\n\n\n\nFunciones Básica de Bash Parte 1\n\n50 min\n\n\n\nFunciones Básica de Bash Parte 2\n\n50 min",
     "crumbs": [
       "Información general"
     ]
@@ -164,7 +164,7 @@
     "href": "4_Bash.html#conocer-mi-dirección-ubicación",
     "title": "3  Mis primeros pasos en Bash",
     "section": "3.3 Conocer mi dirección / ubicación",
-    "text": "3.3 Conocer mi dirección / ubicación\nAveriguemos dónde estamos, ejecutando el comando pwd (que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro directorio actual es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es /Users/nelle, el cual es el directorio de inicio de Nelle, también conocido como su directorio home:\npwd # /c/Users/ecoss\nEn la computadora de Daniel, el sistema de archivos se ve así:\n\n\n\n\n\nEn la parte superior está el directorio raíz o root que contiene todo lo demás. Nos referimos a este directorio usando un caracter de barra / por si solo; esta es la barra al inicio de /Users/daniel_chavez.\nDentro de ese directorio hay otros directorios: bin (que es donde se almacenan algunos programas preinstalados), data (para archivos de datos diversos), Users (donde se encuentran los directorios personales de los usuarios), tmp (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.\n\n\n\n\n\n\nEjercicio 1\n\n\n\nA partir de /Users/daniel_chavez/data/, ¿Cuál de los siguientes comandos podría Amanda usar para navegar a su directorio de inicio, que es /Users/daniel_chavez?\n\ncd .\ncd /\ncd /home/amanda\ncd ../..\ncd ~\ncd home\ncd ~/data/..\ncd\ncd ..\n\n\n\n\n\n\nSolución\n\n\n\n\n\n\nNo: . significa el directorio actual.\nNo: / significa el directorio raíz.\nNo: El directorio home de Amanda es /Users/amanda.\nNo: sube dos niveles, es decir termina en /Users.\nSí: ~ significa el directorio home del usuario, en este caso /Users/amanda.\nNo: esto navegaría a un directorio home en el directorio actual, si existe.\nSí: innecesariamente complicado, pero correcto.\nSí: un atajo para volver al directorio home del usuario.\nSí: sube un nivel.\n\n\n\n\n\n\n\nEjemplo de rutas:",
+    "text": "3.3 Conocer mi dirección / ubicación\nAveriguemos dónde estamos, ejecutando el comando pwd (que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro directorio actual es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es /Users/danielchavez, el cual es el directorio de inicio de Daniel, también conocido como su directorio home:\npwd # /Users/danielchavez\nEn la computadora de Daniel, el sistema de archivos se ve así:\n\n\n\n\n\nEn la parte superior está el directorio raíz o root que contiene todo lo demás. Nos referimos a este directorio usando un caracter de barra / por si solo; esta es la barra al inicio de /Users/daniel_chavez.\nDentro de ese directorio hay otros directorios: bin (que es donde se almacenan algunos programas preinstalados), data (para archivos de datos diversos), Users (donde se encuentran los directorios personales de los usuarios), tmp (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.\n\n\n\nComando de navegación\nDescripción\n\n\n\n\npwd\nMuestra el directorio actual\n\n\nls\nLista archivos y carpetas\n\n\nls -l\nMuestra detalles de los archivos\n\n\ncd &lt;directorio&gt;\nCambia de directorio\n\n\ncd ..\nRetrocede un nivel\n\n\nmkdir &lt;nombre&gt;\nCrea un directorio\n\n\nrmdir &lt;nombre&gt;\nElimina un directorio vacío\n\n\nrm -r &lt;directorio&gt;\nBorra un directorio y su contenido\n\n\n\n\n\n\nComandos manejo de archivos\nDescripción\n\n\ntouch &lt;archivo&gt;\nCrea un archivo vacío\n\n\ncp &lt;origen&gt; &lt;destino&gt;\nCopia un archivo o carpeta\n\n\nmv &lt;origen&gt; &lt;destino&gt;\nMueve o renombra archivos\n\n\n\n\n\n\nrm &lt;archivo&gt;\nBorra un archivo\n\n\n\n\n\n\n\n\n\nEjercicio 1\n\n\n\nA partir de /Users/daniel_chavez/Documents/, ¿Cuál de los siguientes comandos debo usar para navegar a su directorio de inicio, que es /Users/daniel_chavez?\n\ncd .\ncd /\ncd /home/amanda\ncd ../..\ncd ~\ncd home\ncd ~/data/..\ncd\ncd ..\n\n\n\n\n\n\nSolución\n\n\n\n\n\n\nNo: . significa el directorio actual.\nNo: / significa el directorio raíz.\nNo: El directorio home de Amanda es /Users/amanda.\nNo: sube dos niveles, es decir termina en /Users.\nSí: ~ significa el directorio home del usuario, en este caso /Users/amanda.\nNo: esto navegaría a un directorio home en el directorio actual, si existe.\nSí: innecesariamente complicado, pero correcto.\nSí: un atajo para volver al directorio home del usuario.\nSí: sube un nivel.\n\n\n\n\n\n\n\nEjemplo de rutas:",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "4_Bash.html#comprimir-y-descomprimir-archivos",
     "title": "3  Mis primeros pasos en Bash",
     "section": "4.3 Comprimir y descomprimir archivos",
-    "text": "4.3 Comprimir y descomprimir archivos\nLos archivos pueden contener diversos tipos de extensiones, dependiendo del objetivo será necesario descomprimirlos y en otros dejarlos comprimidos para no abarcar tanto espacio en tu espacio de trabajo. \n\n\n\n\n\n\n\n\nTipo de archivo\nComprimir\nDescomprimir\n\n\n\n\nCarpeta.tar\ntar -cvf carpeta.tar /dir/a/comprimir/carpeta\ntar -xvf carpeta.tar\n\n\nCarpeta.tar.gz\ntar -czvf carpeta.tar.gz /carpeta/a/empaquetar/carpeta\ntar -zxvf carpeta.tar.gz\n\n\nCarpeta.gz\ngzip -9 carpeta.gz carpeta/a/empaquetar/carpeta\ngunzip -kd carpeta.gz\n\n\nCarpeta.zip\nzip -r carpeta.zip carpeta\nunzip carpeta.zip\n\n\n\n\n\n\n\n\n\nEjercicio\n\n\n\n\nDescarga todo el repositorio comprimido unix.bioinfo.rsgecuador en tu computadora. El archivo se almacenara con la extension (.ZIP).\nColocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora: cd \"C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data\"\nDescomprime el archivo ZIP. unzip unix.bioinfo.rsgecuador-gh-pages.zip",
+    "text": "4.3 Comprimir y descomprimir archivos\nLos archivos pueden contener diversos tipos de extensiones, dependiendo del objetivo será necesario descomprimirlos y en otros dejarlos comprimidos para no abarcar tanto espacio en tu espacio de trabajo. \n\n\n\n\n\n\n\n\nTipo de archivo\nComprimir\nDescomprimir\n\n\n\n\nCarpeta.tar\ntar -cvf carpeta.tar /dir/a/comprimir/carpeta\ntar -xvf carpeta.tar\n\n\nCarpeta.tar.gz\ntar -czvf carpeta.tar.gz /carpeta/a/empaquetar/carpeta\ntar -zxvf carpeta.tar.gz\n\n\nCarpeta.gz\ngzip -9 carpeta.gz carpeta/a/empaquetar/carpeta\ngunzip -kd carpeta.gz\n\n\nCarpeta.zip\nzip -r carpeta.zip carpeta\nunzip carpeta.zip\n\n\n\n\n\n\n\n\n\nEjercicio\n\n\n\n\nDescarga todo el repositorio comprimido unix.bioinfo.rsgecuador en tu computadora. El archivo se almacenara con la extension (.ZIP).\nColocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora:cd/Users/danielchavez/Downloads\nDescomprime el archivo ZIP. unzip unix.bioinfo.rsgecuador-gh-pages.zip",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Mis primeros pasos en Bash</span>"
     ]
@@ -620,53 +620,63 @@
     ]
   },
   {
-    "objectID": "11_Github.html",
-    "href": "11_Github.html",
-    "title": "11  Git y Github",
+    "objectID": "11_intro_git.html",
+    "href": "11_intro_git.html",
+    "title": "11  Introducción a Git y GitHub.",
     "section": "",
-    "text": "11.1 Para escribir un buen software necesitas:\nCon el fin de previnir retracciones.",
+    "text": "12 ¿Que es Git?\nEs un sistema de control de versiones gratuito y de código abierto diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.\n\n\n\n13 Un poco de historia…",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Introducción a Git y GitHub.</span>"
     ]
   },
   {
-    "objectID": "11_Github.html#para-escribir-un-buen-software-necesitas",
-    "href": "11_Github.html#para-escribir-un-buen-software-necesitas",
-    "title": "11  Git y Github",
+    "objectID": "12_Instalación.html",
+    "href": "12_Instalación.html",
+    "title": "12  Instalación de Git.",
     "section": "",
-    "text": "Escribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\n\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
+    "text": "Podemos consultar la documentación de Git.\nhttps://git-scm.com/\n\nPara instalar Git en un sistema operativo con base linux, utilizaremos las siguientes instrucciones\nsudo apt update\nsudo apt install git\nAhora podemos verificar la instalación de git y sus opciones de trabajo utilizando\ngit --version\ngit --help",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Instalación de Git.</span>"
     ]
   },
   {
-    "objectID": "11_Github.html#paso-7-documentación",
-    "href": "11_Github.html#paso-7-documentación",
-    "title": "11  Git y Github",
-    "section": "11.2 Paso 7: Documentación",
-    "text": "11.2 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
+    "objectID": "13_Configuración y trabajo en Git..html",
+    "href": "13_Configuración y trabajo en Git..html",
+    "title": "13  Configuración y trabajo en Git.",
+    "section": "",
+    "text": "Para comenzar con los trabajos necesitamos contar con un nombre de usuario y una dirección de correo electrónico, los cuales podemos crear utilizando:\ngit config --global user.name \"tu usuario\"\ngit config --global user.email \"tu correo\"\nPodemos verificar los usuarios creados usando:\ngit config --list\nUna vez teniendo creado y verificado el usuario podemos comenzar a trabajar en Git.\nIniciaremos creando un directorio de trabajo.\nmkdir git && cd git\nEn el cual debemos generar un archivo (proyecto), que nos ayudara explorar todas funciones que ofrece git.\nejemplo:\nnano proyecto.py\nUna vez que contamos con un directorio de trabajo y proyectos en el mismo, debemos indicar a git donde queremos trabajar\ngit init\nls -a\nverificación de entorno Git nos perite mantenernos al tanto de las modificaciones en el lugar de trabajo, sin embargo para observar estas, debemos agregar nuestros ficheros o archivos a git.\ngit add \"nombre de tu fichero\"\ngit status\n\n14 ¿Que es un commit?\nUn commit es un registro de cambios en el repositorio. Actúa como una “foto” del estado del proyecto en un momento específico, permitiendo hacer un seguimiento del historial de modificaciones.\n\npara agregar nuestro primer commit en git, realizamos lo siguiente:\ngit commit -m \"agregar un mensaje\"\n\ngit status",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Configuración y trabajo en Git.</span>"
     ]
   },
   {
-    "objectID": "11_Github.html#puntos-claves-para-buenas-practicas-en-bioinfo",
-    "href": "11_Github.html#puntos-claves-para-buenas-practicas-en-bioinfo",
-    "title": "11  Git y Github",
-    "section": "11.3 Puntos claves para buenas practicas en bioinfo ⭐",
-    "text": "11.3 Puntos claves para buenas practicas en bioinfo ⭐\n\nEscriba programas para personas, no para computadoras (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.\nDivide los programas en funciones cortas de un solo propósito. 💻 📚\nNo repitas tu código. Crea pasos reproducibles o que se repitan por si solas. ➰\nPlanifique los errores (Programacion defensiva) 🚩\nOptimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.\nColaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥\n\n\n\n\n\n\n\nEjemplo de como puedes realizar tus documentos💜\n\n\n\nAqui les dejo el script que les doy a mis alumnos VisualizacionDatos.R del curso de Análisis de datos de RNA-Seq.",
+    "objectID": "14_Ramas en Git.html",
+    "href": "14_Ramas en Git.html",
+    "title": "14  Ramas en Git",
+    "section": "",
+    "text": "Las ramas (branches) en Git son versiones independientes de tu código que permiten trabajar en paralelo sin afectar la versión principal del proyecto.\n\n\n15 ¿Por qué usar ramas en Git?\n\nFacilitan el trabajo en equipo.\nPermiten desarrollar nuevas funciones sin afectar el código principal.\nFacilitan la corrección de errores sin interrumpir el desarrollo.\n\nPara trabajar con ramas tenemos las siguientes opciones.\ngit branch    #Para visualizar todas las ramas existentes\ngit branch nueva-rama     #Crear una rama nueva\ngit switch nombre_de_la_rama     #Cambiarse a una rama\ngit merge nueva-rama   # Fusiona los cambios de `nueva-rama`",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Ramas en Git</span>"
     ]
   },
   {
-    "objectID": "11_Github.html#referencias",
-    "href": "11_Github.html#referencias",
-    "title": "11  Git y Github",
-    "section": "11.4 Referencias",
-    "text": "11.4 Referencias\n\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial",
+    "objectID": "15_Intro_GitHub.html",
+    "href": "15_Intro_GitHub.html",
+    "title": "15  ¿Que es GitHub?",
+    "section": "",
+    "text": "GitHub es una plataforma de alojamiento de código basada en la nube que permite el almacenamiento, gestión y colaboración en proyectos de software mediante Git.\nPara conocer sus aplicaciones mas a detalle, sugerimos consultar el sitio oficial.\n\n\n\n\n\n\nNote\n\n\n\nhttps://github.com/\nhttps://docs.github.com/es\n\n\n\n16 Creación de cuenta.\nPara crear una cuenta en el portal de GitHub, te recomendamos seguir los siguientes pasos:\n\n\nHaz clic en Sign up (Registrarse).\nLlena los campos con:\n\nUsername (Nombre de usuario único).\nEmail (Correo electrónico válido).\nPassword (Contraseña segura).\n\nHaz clic en Continue.\n\n\n\nRevisa tu bandeja de entrada y busca un correo de GitHub.\nHaz clic en el enlace para verificar tu cuenta.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>¿Que es GitHub?</span>"
+    ]
+  },
+  {
+    "objectID": "16_Manejo_de_repositorios.html",
+    "href": "16_Manejo_de_repositorios.html",
+    "title": "16  Creación de un nuevo repositorio",
+    "section": "",
+    "text": "16.1 Actividad guiada.",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Creación de un nuevo repositorio</span>"
     ]
   }
 ]

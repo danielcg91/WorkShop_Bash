@@ -232,8 +232,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11_Github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Git y Github</span></span></a>
+  <a href="./11_intro_git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Instalación.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Instalación de Git.</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Configuración y trabajo en Git..html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Configuración y trabajo en Git.</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14_Ramas en Git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ramas en Git</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15_Intro_GitHub.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16_Manejo_de_repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Creación de un nuevo repositorio</span></span></a>
   </div>
 </li>
     </ul>
@@ -316,8 +346,8 @@ Note
 </section>
 <section id="conocer-mi-dirección-ubicación" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="conocer-mi-dirección-ubicación"><span class="header-section-number">3.3</span> Conocer mi dirección / ubicación</h2>
-<p>Averiguemos dónde estamos, ejecutando el comando&nbsp;<code>pwd</code>&nbsp;(que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro&nbsp;<strong>directorio actual</strong>&nbsp;es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es&nbsp;<code>/Users/nelle</code>, el cual es el directorio de inicio de Nelle, también conocido como su directorio&nbsp;<strong>home</strong>:</p>
-<div class="sourceCode" id="cb3" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># /c/Users/ecoss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Averiguemos dónde estamos, ejecutando el comando&nbsp;<code>pwd</code>&nbsp;(que significa “imprime directorio de trabajo” - “print working directory”). En cualquier momento, nuestro&nbsp;<strong>directorio actual</strong>&nbsp;es nuestro directorio predeterminado, es decir, el directorio que la computadora supone queremos ejecutar comandos a menos que especifiquemos explícitamente otra cosa. En este caso la respuesta de la computadora es&nbsp;<code>/Users/danielchavez</code>, el cual es el directorio de inicio de Daniel, también conocido como su directorio&nbsp;<strong>home</strong>:</p>
+<div class="sourceCode" id="cb3" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># /Users/danielchavez</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>En la computadora de Daniel, el sistema de archivos se ve así:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -326,6 +356,76 @@ Note
 </div>
 <p>En la parte superior está el <strong>directorio raíz</strong> o <strong>root</strong> que contiene todo lo demás. Nos referimos a este directorio usando un caracter de barra <code>/</code> por si solo; esta es la barra al inicio de <code>/Users/daniel_chavez</code>.</p>
 <p>Dentro de ese directorio hay otros directorios: <code>bin</code> (que es donde se almacenan algunos programas preinstalados), <code>data</code> (para archivos de datos diversos), <code>Users</code> (donde se encuentran los directorios personales de los usuarios), <code>tmp</code> (para archivos temporales que no necesitan ser almacenados a largo plazo), etcétera.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Comando de navegación</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pwd</td>
+<td>Muestra el directorio actual</td>
+</tr>
+<tr class="even">
+<td>ls</td>
+<td>Lista archivos y carpetas</td>
+</tr>
+<tr class="odd">
+<td>ls -l</td>
+<td>Muestra detalles de los archivos</td>
+</tr>
+<tr class="even">
+<td>cd &lt;directorio&gt;</td>
+<td>Cambia de directorio</td>
+</tr>
+<tr class="odd">
+<td>cd ..</td>
+<td>Retrocede un nivel</td>
+</tr>
+<tr class="even">
+<td>mkdir &lt;nombre&gt;</td>
+<td>Crea un directorio</td>
+</tr>
+<tr class="odd">
+<td>rmdir &lt;nombre&gt;</td>
+<td>Elimina un directorio vacío</td>
+</tr>
+<tr class="even">
+<td>rm -r &lt;directorio&gt;</td>
+<td>Borra un directorio y su contenido</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Comandos manejo de archivos</strong></td>
+<td><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td>touch &lt;archivo&gt;</td>
+<td>Crea un archivo vacío</td>
+</tr>
+<tr class="odd">
+<td>cp &lt;origen&gt; &lt;destino&gt;</td>
+<td>Copia un archivo o carpeta</td>
+</tr>
+<tr class="even">
+<td>mv &lt;origen&gt; &lt;destino&gt;</td>
+<td>Mueve o renombra archivos</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>rm &lt;archivo&gt;</td>
+<td>Borra un archivo</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -336,7 +436,7 @@ Ejercicio 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A partir de&nbsp;<code>/Users/daniel_chavez/data/</code>, ¿Cuál de los siguientes comandos podría Amanda usar para navegar a su directorio de inicio, que es&nbsp;<code>/Users/daniel_chavez</code>?</p>
+<p>A partir de&nbsp;<code>/Users/daniel_chavez/Documents/</code>, ¿Cuál de los siguientes comandos debo usar para navegar a su directorio de inicio, que es&nbsp;<code>/Users/daniel_chavez</code>?</p>
 <ol type="1">
 <li><p><code>cd .</code></p></li>
 <li><p><code>cd /</code></p></li>
@@ -724,7 +824,7 @@ Ejercicio
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Descarga todo el repositorio comprimido <a href="https://github.com/RSG-Ecuador/unix.bioinfo.rsgecuador/tree/gh-pages">unix.bioinfo.rsgecuador</a> en tu computadora. El archivo se almacenara con la extension (.ZIP).</li>
-<li>Colocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora: <code>cd "C:/Users/ecoss/Documents/Respaldos/Github_notes/Workshop_Bash2024/data"</code></li>
+<li>Colocate en la carpeta donde se encuentra el archivo. Ejemplo en mi computadora:<code>cd/Users/danielchavez/Downloads</code></li>
 <li>Descomprime el archivo ZIP. <code>unzip unix.bioinfo.rsgecuador-gh-pages.zip</code></li>
 </ol>
 </div>
