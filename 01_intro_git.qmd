@@ -10,6 +10,6 @@ Es un sistema de control de versiones gratuito y de código abierto diseñado p
 
 # Un poco de historia...
 
-![]()
-
 ![](images/clipboard-936771067.png)
+
+# 
