@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Introducción a Git y GitHub. – Workshop Bash 2025</title>
+<title>14&nbsp; Ramas en Git – Workshop Bash 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02_Instalación.html" rel="next">
-<link href="./10_Buenaspracticas.html" rel="prev">
+<link href="./15_Intro_GitHub.html" rel="next">
+<link href="./13_Configuración y trabajo en Git.html" rel="prev">
 <link href="./ViernesBioinfo_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -84,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_intro_git.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./14_Ramas en Git.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ramas en Git</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -198,37 +232,37 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_intro_git.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></span></a>
+  <a href="./11_intro_git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Instalación.html" class="sidebar-item-text sidebar-link">
+  <a href="./12_Instalación.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Instalación de Git</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_Configuración y trabajo en Git.html" class="sidebar-item-text sidebar-link">
+  <a href="./13_Configuración y trabajo en Git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Configuración y trabajo en Git</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Ramas en Git.html" class="sidebar-item-text sidebar-link">
+  <a href="./14_Ramas en Git.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ramas en Git</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Intro_GitHub.html" class="sidebar-item-text sidebar-link">
+  <a href="./15_Intro_GitHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Manejo_de_repositorios.html" class="sidebar-item-text sidebar-link">
+  <a href="./16_Manejo_de_repositorios.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Creación de un nuevo repositorio</span></span></a>
   </div>
 </li>
@@ -242,8 +276,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#que-es-git" id="toc-que-es-git" class="nav-link active" data-scroll-target="#que-es-git"><span class="header-section-number">12</span> ¿Que es Git?</a></li>
-  <li><a href="#un-poco-de-historia" id="toc-un-poco-de-historia" class="nav-link" data-scroll-target="#un-poco-de-historia"><span class="header-section-number">13</span> Un poco de historia…</a></li>
+  <li><a href="#por-qué-usar-ramas-en-git" id="toc-por-qué-usar-ramas-en-git" class="nav-link active" data-scroll-target="#por-qué-usar-ramas-en-git"><span class="header-section-number">15</span> <strong>¿Por qué usar ramas en Git?</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -252,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ramas en Git</span></h1>
 </div>
 
 
@@ -269,15 +302,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="images/clipboard-803379517.png" class="img-fluid"></p>
-<section id="que-es-git" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> ¿Que es Git?</h1>
-<p>Es un sistema de control de versiones gratuito y de código abierto&nbsp;diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.</p>
-<p><img src="images/clipboard-4156264243.png" class="img-fluid" width="582"></p>
-</section>
-<section id="un-poco-de-historia" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Un poco de historia…</h1>
-<p><img src="images/clipboard-936771067.png" class="img-fluid"></p>
+<p>Las <strong>ramas (branches)</strong> en Git son versiones independientes de tu código que permiten trabajar en paralelo sin afectar la versión principal del proyecto.</p>
+<p><img src="images/clipboard-3462346199.png" class="img-fluid"></p>
+<section id="por-qué-usar-ramas-en-git" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> <strong>¿Por qué usar ramas en Git?</strong></h1>
+<ul>
+<li><p>Facilitan el trabajo en equipo.</p></li>
+<li><p>Permiten desarrollar nuevas funciones sin afectar el código principal.</p></li>
+<li><p>Facilitan la corrección de errores sin interrumpir el desarrollo.</p></li>
+</ul>
+<p><strong>Para trabajar con ramas tenemos las siguientes opciones.</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch    <span class="co">#Para visualizar todas las ramas existentes</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch nueva-rama     <span class="co">#Crear una rama nueva</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch nombre_de_la_rama     <span class="co">#Cambiarse a una rama</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge nueva-rama   <span class="co"># Fusiona los cambios de `nueva-rama`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -849,13 +887,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./10_Buenaspracticas.html" class="pagination-link" aria-label="Buenas practicas en Programación">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Buenas practicas en Programación</span></span>
+      <a href="./13_Configuración y trabajo en Git.html" class="pagination-link" aria-label="Configuración y trabajo en Git">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Configuración y trabajo en Git</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02_Instalación.html" class="pagination-link" aria-label="Instalación de Git">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Instalación de Git</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./15_Intro_GitHub.html" class="pagination-link" aria-label="¿Que es GitHub?">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

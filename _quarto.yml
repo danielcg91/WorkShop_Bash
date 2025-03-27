@@ -19,12 +19,12 @@ book:
     - 8_FuncionesBasicas_pt2.qmd
     - 9_EjerciciosFinales.qmd
     - 10_Buenaspracticas.qmd
-    - 01_intro_git.qmd
-    - 02_Instalación.qmd
-    - 03_Configuración y trabajo en Git.qmd
-    - 04_Ramas en Git.qmd
-    - 05_Intro_GitHub.qmd
-    - 06_Manejo_de_repositorios.qmd
+    - 11_intro_git.qmd
+    - 12_Instalación.qmd
+    - 13_Configuración y trabajo en Git.qmd
+    - 14_Ramas en Git.qmd
+    - 15_Intro_GitHub.qmd
+    - 16_Manejo_de_repositorios.qmd
     
   # Information
   repo-url: https://github.com/danielcg91/WorkShop2025 # link de Github
