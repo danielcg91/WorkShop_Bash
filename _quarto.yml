@@ -19,6 +19,7 @@ book:
     - 8_FuncionesBasicas_pt2.qmd
     - 9_EjerciciosFinales.qmd
     - 10_Buenaspracticas.qmd
+    - 11_Github.qmd
   # Information
   repo-url: https://github.com/danielcg91/WorkShop2025 # link de Github
   sharing: [facebook, linkedin]

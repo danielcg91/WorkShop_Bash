@@ -2,7 +2,9 @@
 
 Es un sistema de control de versiones gratuito y de código abierto diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.
 
-![](images/Screenshot 2025-03-26 at 19.24.22.png){fig-align="center"}
+![](images/Screenshot%202025-03-26%20at%2019.24.22.png){fig-align="center"}
+
+![](images/Screenshot 2025-03-26 at 19.28.30.png){fig-align="center"}
 
 **Un algoritmo nos permite resolver un problema ⭐**
 
