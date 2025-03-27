@@ -21,7 +21,7 @@ book:
     - 10_Buenaspracticas.qmd
     - 11_intro_git.qmd
     - 12_Instalación.qmd
-    - 13_Configuración y trabajo en Git.qmd
+    - 13_Configuración y trabajo en Git.qmd
     - 14_Ramas en Git.qmd
     - 15_Intro_GitHub.qmd
     - 16_Manejo_de_repositorios.qmd
