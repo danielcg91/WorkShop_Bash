@@ -624,7 +624,7 @@
     "href": "01_intro_git.html",
     "title": "11  Introducción a Git y GitHub.",
     "section": "",
-    "text": "12 ¿Que es Git?\nEs un sistema de control de versiones gratuito y de código abierto diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.\n\n\n\n13 Un poco de historia…\n\n\n\n14",
+    "text": "12 ¿Que es Git?\nEs un sistema de control de versiones gratuito y de código abierto diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.\n\n\n\n13 Un poco de historia…",
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Introducción a Git y GitHub.</span>"
     ]
@@ -632,21 +632,21 @@
   {
     "objectID": "02_Instalación.html",
     "href": "02_Instalación.html",
-    "title": "12  Instalación de Git.",
+    "title": "12  Instalación de Git",
     "section": "",
     "text": "Podemos consultar la documentación de Git.\nhttps://git-scm.com/\n\nPara instalar Git en un sistema operativo con base linux, utilizaremos las siguientes instrucciones\nsudo apt update\nsudo apt install git\nAhora podemos verificar la instalación de git y sus opciones de trabajo utilizando\ngit --version\ngit --help",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Instalación de Git.</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Instalación de Git</span>"
     ]
   },
   {
     "objectID": "03_Configuración y trabajo en Git.html",
     "href": "03_Configuración y trabajo en Git.html",
-    "title": "13  Configuración y trabajo en Git.",
+    "title": "13  Configuración y trabajo en Git",
     "section": "",
     "text": "Para comenzar con los trabajos necesitamos contar con un nombre de usuario y una dirección de correo electrónico, los cuales podemos crear utilizando:\ngit config --global user.name \"tu usuario\"\ngit config --global user.email \"tu correo\"\nPodemos verificar los usuarios creados usando:\ngit config --list\nUna vez teniendo creado y verificado el usuario podemos comenzar a trabajar en Git.\nIniciaremos creando un directorio de trabajo.\nmkdir git && cd git\nEn el cual debemos generar un archivo (proyecto), que nos ayudara explorar todas funciones que ofrece git.\nejemplo:\nnano proyecto.py\nUna vez que contamos con un directorio de trabajo y proyectos en el mismo, debemos indicar a git donde queremos trabajar\ngit init\nls -a\nverificación de entorno Git nos perite mantenernos al tanto de las modificaciones en el lugar de trabajo, sin embargo para observar estas, debemos agregar nuestros ficheros o archivos a git.\ngit add \"nombre de tu fichero\"\ngit status\n\n14 ¿Que es un commit?\nUn commit es un registro de cambios en el repositorio. Actúa como una “foto” del estado del proyecto en un momento específico, permitiendo hacer un seguimiento del historial de modificaciones.\n\npara agregar nuestro primer commit en git, realizamos lo siguiente:\ngit commit -m \"agregar un mensaje\"\n\ngit status",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Configuración y trabajo en Git.</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Configuración y trabajo en Git</span>"
     ]
   },
   {

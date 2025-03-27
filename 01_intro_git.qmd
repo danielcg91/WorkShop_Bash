@@ -1,4 +1,4 @@
-# Introducción a Git y GitHub.
+# Introducción a Git y GitHub
 
 ![](images/clipboard-803379517.png)
 
