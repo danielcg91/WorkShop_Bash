@@ -618,5 +618,55 @@
     "crumbs": [
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Buenas practicas en Programación</span>"
     ]
+  },
+  {
+    "objectID": "11_Github.html",
+    "href": "11_Github.html",
+    "title": "11  Git y Github",
+    "section": "",
+    "text": "11.1 Para escribir un buen software necesitas:\nCon el fin de previnir retracciones.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+    ]
+  },
+  {
+    "objectID": "11_Github.html#para-escribir-un-buen-software-necesitas",
+    "href": "11_Github.html#para-escribir-un-buen-software-necesitas",
+    "title": "11  Git y Github",
+    "section": "",
+    "text": "Escribir código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation).\nWilson, et al. 2014. PLOS Biology\n\n\n\n\n\n\n\n\nPasos para escribir un buen software\n\n\n\n\nAnálisis del problema / Definir el problema\nDiseño del algoritmo / Diseño del programa\nCodificación / Escribir el código\nCompilación y ejecución del programa\nVerificación / Realizar pruebas\nDepuración / Detectar los errores y corregirlos\n\n\nProgramacion defensiva\n\n\nDocumentación",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+    ]
+  },
+  {
+    "objectID": "11_Github.html#paso-7-documentación",
+    "href": "11_Github.html#paso-7-documentación",
+    "title": "11  Git y Github",
+    "section": "11.2 Paso 7: Documentación",
+    "text": "11.2 Paso 7: Documentación\n\n\n\n\n\n\nNote\n\n\n\n\nAutor (author): Su nombre\nDia (date): Fecha de creación\nPaquetes (packages)\nDirectorio de trabajo (Working directory): En que carpeta se encuentra tu datos y programa.\nInformación descriptiva del programa (Description): ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.\nUsage ¿Cómo se utiliza?\nArgumentos (Arguments)\n\nInformación de entrada (Data Inputs): Ej: Solo numeros enteros (sin decimales).\nInformación de salida (Outpus): Graficas, figuras, tablas, etc.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+    ]
+  },
+  {
+    "objectID": "11_Github.html#puntos-claves-para-buenas-practicas-en-bioinfo",
+    "href": "11_Github.html#puntos-claves-para-buenas-practicas-en-bioinfo",
+    "title": "11  Git y Github",
+    "section": "11.3 Puntos claves para buenas practicas en bioinfo ⭐",
+    "text": "11.3 Puntos claves para buenas practicas en bioinfo ⭐\n\nEscriba programas para personas, no para computadoras (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.\nDivide los programas en funciones cortas de un solo propósito. 💻 📚\nNo repitas tu código. Crea pasos reproducibles o que se repitan por si solas. ➰\nPlanifique los errores (Programacion defensiva) 🚩\nOptimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.\nColaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥\n\n\n\n\n\n\n\nEjemplo de como puedes realizar tus documentos💜\n\n\n\nAqui les dejo el script que les doy a mis alumnos VisualizacionDatos.R del curso de Análisis de datos de RNA-Seq.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+    ]
+  },
+  {
+    "objectID": "11_Github.html#referencias",
+    "href": "11_Github.html#referencias",
+    "title": "11  Git y Github",
+    "section": "11.4 Referencias",
+    "text": "11.4 Referencias\n\nHaydee tutorial: Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos\nAlejandra Medina tutorial: Control de versiones con GitHub y RStudio\nWilson, et al. 2014. Best Practices for Scientific Computing. PLOS Biology\nEvelia Coss - tutorial Buenas practicas en R\nEvelia Coss - Make your CV tutorial",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Git y Github</span>"
+    ]
   }
 ]
