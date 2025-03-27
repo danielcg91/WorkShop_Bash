@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Condicionales – Workshop Bash 2025</title>
+<title>10&nbsp; Buenas practicas en Programación – Workshop Bash 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./9_EjerciciosFinales.html" rel="next">
-<link href="./8_FuncionesBasicas_pt1.html" rel="prev">
+<link href="./11_intro_git.html" rel="next">
+<link href="./9_EjerciciosFinales.html" rel="prev">
 <link href="./ViernesBioinfo_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -118,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./8_FuncionesBasicas_pt2.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Condicionales</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10_Buenaspracticas.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Buenas practicas en Programación</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -214,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./8_FuncionesBasicas_pt2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./8_FuncionesBasicas_pt2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Condicionales</span></span></a>
   </div>
 </li>
@@ -226,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10_Buenaspracticas.html" class="sidebar-item-text sidebar-link">
+  <a href="./10_Buenaspracticas.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Buenas practicas en Programación</span></span></a>
   </div>
 </li>
@@ -244,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./13_Configuración y trabajo en Git.html" class="sidebar-item-text sidebar-link">
+  <a href="./13_Configuración y trabajo en Git..html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Configuración y trabajo en Git.</span></span></a>
   </div>
 </li>
@@ -276,11 +242,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#bucles-for-loops" id="toc-bucles-for-loops" class="nav-link active" data-scroll-target="#bucles-for-loops"><span class="header-section-number">9</span> <strong>Bucles (for loops)</strong></a>
-  <ul>
-  <li><a href="#actividad-grupal" id="toc-actividad-grupal" class="nav-link" data-scroll-target="#actividad-grupal"><span class="header-section-number">9.1</span> <strong>Actividad grupal</strong></a></li>
-  </ul></li>
-  <li><a href="#crear-un-directorio-para-los-resultados-si-no-existe" id="toc-crear-un-directorio-para-los-resultados-si-no-existe" class="nav-link" data-scroll-target="#crear-un-directorio-para-los-resultados-si-no-existe"><span class="header-section-number">10</span> Crear un directorio para los resultados si no existe</a></li>
+  <li><a href="#materiales-informativos" id="toc-materiales-informativos" class="nav-link active" data-scroll-target="#materiales-informativos"><span class="header-section-number">10.1</span> Materiales informativos</a></li>
+  <li><a href="#un-algoritmo-nos-permite-resolver-un-problema" id="toc-un-algoritmo-nos-permite-resolver-un-problema" class="nav-link" data-scroll-target="#un-algoritmo-nos-permite-resolver-un-problema"><span class="header-section-number">10.2</span> <strong>Un algoritmo nos permite resolver un problema ⭐</strong></a></li>
+  <li><a href="#para-escribir-un-buen-software-necesitas" id="toc-para-escribir-un-buen-software-necesitas" class="nav-link" data-scroll-target="#para-escribir-un-buen-software-necesitas"><span class="header-section-number">10.3</span> <strong>Para escribir un buen software necesitas:</strong></a></li>
+  <li><a href="#paso-7-documentación" id="toc-paso-7-documentación" class="nav-link" data-scroll-target="#paso-7-documentación"><span class="header-section-number">10.4</span> <strong>Paso 7: Documentación</strong></a></li>
+  <li><a href="#puntos-claves-para-buenas-practicas-en-bioinfo" id="toc-puntos-claves-para-buenas-practicas-en-bioinfo" class="nav-link" data-scroll-target="#puntos-claves-para-buenas-practicas-en-bioinfo"><span class="header-section-number">10.5</span> Puntos claves para buenas practicas en bioinfo ⭐</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">10.6</span> Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -289,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Condicionales</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Buenas practicas en Programación</span></h1>
 </div>
 
 
@@ -306,157 +273,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Las condicionales son estructuras de programación que nos permiten tomar decisiones basadas en el resultado de una <strong>expresión</strong>. En otras palabras, nos permiten ejecutar diferentes bloques de código dependiendo de <strong>si una condición se cumple o no</strong>. Los condicionales son fundamentales para automatizar tareas y crear scripts fléxibles.</p>
-<p>La sintáxis básica de un condicional simple en formato de una línea es :</p>
-<pre><code>if [ condición ]; then orden1; orden2 …; fi</code></pre>
-<p>de igual manera pero en bloque identado:}</p>
-<p>if [ condición ]; then orden1 orden2 fi</p>
-<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Si queremos verificar si existe el archivo <strong>secuencias1.fastq</strong> antes de realizar alguna operación sobre él. Puedes usar el siguiente condicional:</p>
-</div>
-</div>
-<div class="sourceCode" id="cb2" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Ejemplo</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> secuencias1.fastq <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="bu">echo</span> <span class="st">"El archivo existe."</span> else echo <span class="st">"El archivo no existe."</span> fi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Explicación
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>Notas personales recabadas a partir de los tutoriales y ejemplos 😊. Espero que les funcione 💜</p>
+<section id="materiales-informativos" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="materiales-informativos"><span class="header-section-number">10.1</span> Materiales informativos</h2>
 <ul>
-<li><p><strong><code>if [ -f secuencias1.fastq ]</code>:</strong> Verifica si <strong>secuencias1.fastq</strong> es un archivo regular.</p></li>
-<li><p><strong><code>then</code>:</strong> Si la condición es verdadera, se ejecuta el código siguiente.</p></li>
-<li><p><strong><code>else</code>:</strong> Si la condición es falsa, se ejecuta el código siguiente.</p></li>
-<li><p><strong><code>fi</code>:</strong> Indica el final de la estructura <code>if</code>.</p></li>
+<li><p><a href="https://comunidadbioinfo.github.io/cdsb2023/creaci%C3%B3n-de-vi%C3%B1etas.html">Curso de Joselyn Cristina Chávez Fuentes</a></p></li>
+<li><p>Me ayudo mucho este <a href="https://www.youtube.com/watch?v=7ZgZ6qUKZvE&amp;ab_channel=DaniMedi">Video</a></p></li>
+<li><p><a href="https://comunidadbioinfo.github.io/cdsb2023/documentaci%C3%B3n-de-funciones.html">Documentación de funciones de Andrés Arredondo Cruz</a></p></li>
+<li></li>
 </ul>
-</div>
-</div>
-<p>Los condicionales pueden ser tan complejos como lo imagines. Por ejemplo:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Quiero saber cuantas secuencias tiene cada archivo que termina en .fastq
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-<div class="sourceCode" id="cb3" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> archivo <span class="kw">in</span> <span class="va">$file</span><span class="pp">*</span>.fastq<span class="kw">;</span> <span class="cf">do</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> <span class="st">"</span><span class="va">$archivo</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="bu">echo</span> <span class="st">"Procesando archivo: </span><span class="va">$archivo</span><span class="st">"</span> wc <span class="at">-l</span> <span class="st">"</span><span class="va">$archivo</span><span class="st">"</span> else echo <span class="st">"No tienes archivos fastq"</span> fi done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Explicación del código
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>En donde:</p>
-<pre><code>for archivo in $file*.fastq; do</code></pre>
-<ul>
-<li><p><strong><code>$file*.fastq</code></strong>: Expande a todos los archivos que comienzan con el valor de la variable <code>$file</code> y terminan con la extensión <code>.fastq</code>.</p></li>
-<li><p><strong><code>archivo</code></strong>: Variable que almacena el nombre de cada archivo encontrado.</p></li>
-</ul>
-<pre><code>echo "Procesando archivo: $archivo"
-wc -l "$archivo"</code></pre>
-<ul>
-<li><p><strong><code>echo</code></strong>: Imprime el mensaje indicando que se está procesando el archivo actual.</p></li>
-<li><p><strong><code>wc -l "$archivo"</code></strong>: Cuenta el número de líneas en el archivo usando <code>wc -l</code> y muestra el resultado en la terminal.</p></li>
-</ul>
-<pre><code>else
-  echo "No tienes archivos fastq"
-fi</code></pre>
-<ul>
-<li>Si el archivo no existe o no es un archivo regular, muestra un mensaje de error indicando el problema.</li>
-</ul>
-<pre><code>done</code></pre>
-<ul>
-<li>Fin del bucle</li>
-</ul>
-</div>
-</div>
-<section id="bucles-for-loops" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> <strong>Bucles (for loops)</strong></h1>
-<p>Imagina que quieres realizar una misma tarea para 3 archivos distintos, ¿no sería nada molesto escribir el mismo código 3 veces, cierto?</p>
-<p>¿Y qué pasa si tengo que analizar y procesar docenas o cientos de archivos? Para ello puedes escribir bucles. Un bucle es una <strong>estructura de control</strong> que permite ejecutar un bloque de código rápidamente mientras se cumpla una <strong>determinada condición</strong>. En bash los bucles más comunes son <code>for</code> y <code>while.</code></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-for
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>for</code> es ideal cuando sabes cuántas veces quieres que se repita ese bloque de código. Por ejemplo:</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>for variable in lista_de_valores; do # Comandos a ejecutar para cada valor en la lista done</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-while
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>while, por su parte, se utiliza cuando quieres que un bloque de código se ejecute mientras se cumpla una determinada condición. Por ejemplo:</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>while [ condición ]; do # Comandos a ejecutar mientras la condición sea verdadera done</p>
-</div>
-</div>
-<section id="actividad-grupal" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="actividad-grupal"><span class="header-section-number">9.1</span> <strong>Actividad grupal</strong></h2>
-<p>Retomando el ejercicio anterior, modifiquemos el código para crear un bucle para procesar los tres archivos fastq (<strong>secuencias1.fastq, secuencias2.fastq, secuencias3.fastq</strong> ) que tenemos.</p>
 </section>
+<section id="un-algoritmo-nos-permite-resolver-un-problema" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="un-algoritmo-nos-permite-resolver-un-problema"><span class="header-section-number">10.2</span> <strong>Un algoritmo nos permite resolver un problema ⭐</strong></h2>
+<p>Un algoritmo es un método para resolver un problema mediante una serie de pasos <strong>definidos, precisos</strong> y <strong>finitos</strong>.</p>
+<ul>
+<li><p><strong>Definido</strong>: si se sigue dos veces, se obtiene el mismo resultado. Es reproducible.</p></li>
+<li><p><strong>Preciso</strong>: implica el orden de realización de cada uno de los pasos.</p></li>
+<li><p><strong>Finito</strong>: Tiene un numero determinado de pasos, implica que tiene un fin.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>Un algoritmo podemos definirlo como un <strong>programa o software</strong>.</p>
+</blockquote>
 </section>
-<section id="crear-un-directorio-para-los-resultados-si-no-existe" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Crear un directorio para los resultados si no existe</h1>
+<section id="para-escribir-un-buen-software-necesitas" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="para-escribir-un-buen-software-necesitas"><span class="header-section-number">10.3</span> <strong>Para escribir un buen software necesitas:</strong></h2>
+<blockquote class="blockquote">
+<p>Escribir <strong>código mantenible (maintainable code), usar control de versiones (version control) y rastreadores de problemas (issue trackers), revisiones de código (code reviews), pruebas unitarias (unit testing) y automatización de tareas (task automation)</strong>.</p>
+<p>Wilson, et al.&nbsp;2014. PLOS Biology</p>
+</blockquote>
+<p>Con el fin de <em>previnir retracciones</em>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pasos para escribir un buen software
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Análisis del problema / Definir el problema</p></li>
+<li><p>Diseño del algoritmo / Diseño del programa</p></li>
+<li><p>Codificación / Escribir el código</p></li>
+<li><p>Compilación y ejecución del programa</p></li>
+<li><p>Verificación / Realizar pruebas</p></li>
+<li><p>Depuración / Detectar los errores y corregirlos</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>Programacion defensiva</p>
+</blockquote>
+<ol start="7" type="1">
+<li>Documentación</li>
+</ol>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://eveliacoss.github.io/Buenaspracticas_R_Mayo2024/BestPractices/figures/homersapien.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="paso-7-documentación" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="paso-7-documentación"><span class="header-section-number">10.4</span> <strong>Paso 7: Documentación</strong></h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -467,80 +346,60 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>mkdir -p resultados</p>
-<p>cd resultados</p>
-</div>
-</div>
-<p><strong>Paso 1.</strong> Crear un script en Bash con el nombre bucles.sh empleando nano.</p>
-<div class="sourceCode" id="cb8" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> bucles.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Paso 2.</strong> Copia el siguiente código dentro del script <code>bucle.sh</code> y guarda los cambios.</p>
-<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>#!/bin/bash # Script para analizar múltiples archivos FASTQ</p>
-<p>archivos=(“secuencias1.fastq” “secuencias2.fastq” “secuencias3.fastq”)</p>
-<p># Loop para analizar cada archivo for archivo in “${archivos[@]}”; do echo “Archivo a procesar: $archivo”</p>
-<p># Verifica si el archivo existe if [ ! -f “$archivo” ]; then echo “El archivo $archivo no existe. Saltando…” continue fi</p>
-<p># 1. Conteo de secuencias numero_secuencias=$(grep -c ‘^@SRR098026’ “$archivo”) echo “Número de secuencias en $archivo: $numero_secuencias”</p>
-<p># 2. Separación de malas lecturas grep -B1 -A2 ‘NNNNNNNNNN’ “$archivo” &gt; “malas_lecturas_$archivo” malas=$(wc -l &lt; “malas_lecturas_$archivo”) echo “Número de malas lecturas en $archivo: $malas”</p>
-<p># 3. Búsqueda de patrones echo “Desea buscar patrones en $archivo? (y/n):” read -r respuesta</p>
-<p>if [[ “$respuesta” == “y” ]]; then patrones_file=“patrones_$archivo.txt” busqueda_file=“busqueda_$archivo.txt”</p>
-<p>echo -e ‘ACTG\nCCCCC\nNNNCNNN\nNNNGNNN\nTTTT\nTATA\nAAA’ &gt; “$patrones_file” grep -f “$patrones_file” “$archivo” &gt; “$busqueda_file”</p>
-<p>echo “Búsqueda de patrones guardada en: $busqueda_file” else echo “Patrones no buscados en $archivo.” fi</p>
-<p>echo “Procesamiento de $archivo completado.” echo “—————————————” done</p>
-<p>Mensaje final</p>
-<p>echo “Metaanálisis finalizado para todos los archivos.”</p>
-</div>
-</div>
-<p><strong>Paso 3.</strong> Escribe bash bucle.sh</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Explicación del código
-</div>
-</div>
-<div class="callout-body-container callout-body">
 <ul>
-<li><p>1. <strong>Comentarios y declaración de archivo</strong></p></li>
-<li><p><code>#!/bin/bash</code>: Indica que el script se ejecutará usando el intérprete de Bash.</p></li>
-<li><p><code># File: demo.sh</code>: Un comentario que indica el nombre del archivo del script.</p></li>
-<li><p>2. <strong>Mostrar el archivo y número de argumentos</strong></p></li>
-<li><p><code>echo "Archivo a procesar &gt; $@"</code>: Muestra el nombre del archivo que se pasará como argumento al script. <code>$@</code> representa todos los argumentos pasados al script.</p></li>
-<li><p><code>echo "Numero de argumentos: $#"</code>: Muestra cuántos argumentos ha recibido el script. <code>$#</code> indica el número de argumentos.</p></li>
-<li><p>3. <strong>Contar secuencias y separar malas lecturas</strong></p></li>
-<li><p><code>numero_secuencias=$(grep -c '^@SRR098026' $@)</code>: Usa <code>grep</code> para contar cuántas secuencias empiezan con <code>@SRR098026</code> en el archivo (probablemente sea un prefijo en un archivo FASTQ que identifica secuencias de interés). <code>-c</code> cuenta las coincidencias.</p></li>
-<li><p><code>grep -B1 -A2 NNNNNNNNNN $@ &gt; malas_lecturas.fastq</code>: Busca secuencias de calidad baja o problemáticas (que contengan 10 nucleótidos seguidos de <code>N</code>, que representan bases no determinadas).</p>
+<li><p><em>Autor (author)</em>: Su nombre</p></li>
+<li><p><em>Dia (date)</em>: Fecha de creación</p></li>
+<li><p><em>Paquetes (packages)</em></p></li>
+<li><p><em>Directorio de trabajo (Working directory)</em>: En que carpeta se encuentra tu datos y programa.</p></li>
+<li><p><em>Información descriptiva del programa (Description)</em>: ¿Para qué sirve el programa? Ej: El siguiente programa realiza la suma de dos numeros enteros a partir de la entrada del usuario y posteriormente la imprime en pantalla.</p></li>
+<li><p><em>Usage</em> ¿Cómo se utiliza?</p></li>
+<li><p><em>Argumentos (Arguments)</em></p>
 <ul>
-<li><p><code>-B1</code>: Muestra 1 línea antes de cada coincidencia de <code>NNNNNNNNNN</code>.</p></li>
-<li><p><code>-A2</code>: Muestra 2 líneas después de la coincidencia.</p></li>
-<li><p>El resultado se guarda en un archivo llamado <code>malas_lecturas.fastq</code>.</p></li>
+<li><p><em>Información de entrada (Data Inputs)</em>: Ej: Solo numeros enteros (sin decimales).</p></li>
+<li><p><em>Información de salida (Outpus)</em>: Graficas, figuras, tablas, etc.</p></li>
 </ul></li>
-<li><p><code>malas=$(cat malas_lecturas.fastq | wc -l)</code>: Cuenta el número total de líneas en <code>malas_lecturas.fastq</code> (esto indica la cantidad de malas lecturas encontradas).</p></li>
-<li><p><code>echo "Número de malas lecturas: $malas"</code>: Muestra la cantidad de malas lecturas encontradas</p></li>
-<li><p><code>echo "Numero de argumentos: $#"</code>: Muestra cuántos argumentos ha recibido el script. <code>$#</code> indica el número de argumentos.</p></li>
-<li><p>4. <strong>Búsqueda de patrones</strong></p></li>
-<li><p><code>echo "Desea buscar patrones (y/n): "</code>: Pregunta al usuario si desea buscar patrones específicos en el archivo.</p></li>
-<li><p><code>read d</code>: Lee la respuesta del usuario y la guarda en la variable <code>d</code>.</p></li>
-<li><p><code>if [[ $d == "y" ]]; then</code>: Si la respuesta es “y” (sí), el script procede a buscar los patrones.</p>
-<ul>
-<li><p><code>echo -e 'ACTG\nCCCCC\nNNNCNNN\nNNNGNNN\nTTTT\nTATA\nAAA' &gt; patrones.txt</code>: Crea un archivo <code>patrones.txt</code> que contiene una lista de secuencias de interés (patrones a buscar).</p></li>
-<li><p><code>grep -f patrones.txt $@ &gt; busqueda.txt</code>: Busca los patrones contenidos en <code>patrones.txt</code> dentro del archivo de entrada. El resultado de la búsqueda se guarda en <code>busqueda.txt</code>.</p></li>
-<li><p><code>echo "Búsqueda de patrones guardada en: busqueda.txt"</code>: Informa al usuario que los resultados de la búsqueda se guardaron en el archivo <code>busqueda.txt</code>.</p></li>
-</ul></li>
-<li><p><code>else</code>: Si la respuesta es “n” (no), simplemente muestra un mensaje.</p></li>
 </ul>
 </div>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://eveliacoss.github.io/Buenaspracticas_R_Mayo2024/BestPractices/figures/meme_documentacion.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="puntos-claves-para-buenas-practicas-en-bioinfo" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="puntos-claves-para-buenas-practicas-en-bioinfo"><span class="header-section-number">10.5</span> Puntos claves para buenas practicas en bioinfo ⭐</h2>
+<ol type="1">
+<li><p>Escriba <strong>programas para personas, no para computadoras</strong> (Documenta qué hace y por qué). - Se coherente en la nomenclatura, indentación y otros aspectos del estilo.</p></li>
+<li><p>Divide los programas en <em>funciones cortas de un solo propósito.</em> 💻 📚</p></li>
+<li><p><strong>No repitas tu código</strong>. Crea pasos reproducibles o que se repitan por si solas. ➰</p></li>
+<li><p>Planifique los errores (<strong>Programacion defensiva</strong>) 🚩</p></li>
+<li><p>Optimice el software sólo después de que funcione correctamente. - Si funciona no lo modifiques, simplificalo.</p></li>
+<li><p>Colaborar - Busque siempre bibliotecas de software bien mantenidas que hagan lo que necesita. 👥</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejemplo de como puedes realizar tus documentos💜
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aqui les dejo el script que les doy a mis alumnos <a href="https://github.com/EveliaCoss/RNAseq_classFEB2024/blob/main/Practica_Dia3/scripts/VisualizacionDatos.R">VisualizacionDatos.R</a> del curso de <a href="https://github.com/EveliaCoss/RNAseq_classFEB2024">Análisis de datos de RNA-Seq</a>.</p>
+</div>
+</div>
+</section>
+<section id="referencias" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="referencias"><span class="header-section-number">10.6</span> Referencias</h2>
+<ul>
+<li>Haydee tutorial: <a href="https://haydeeperuyero.github.io/Computo_Cientifico/">Temas Selectos de Análisis Numérico y Computación Científica: Computo científico para el análisis de datos</a></li>
+<li>Alejandra Medina tutorial: <a href="https://comunidadbioinfo.github.io/cdsb2023/control-de-versiones-con-github-y-rstudio.html">Control de versiones con GitHub y RStudio</a></li>
+<li>Wilson, et al.&nbsp;2014. <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>. PLOS Biology</li>
+<li>Evelia Coss - tutorial <a href="https://github.com/EveliaCoss/Buenaspracticas_R_Mayo2024">Buenas practicas en R</a></li>
+<li>Evelia Coss - <a href="https://github.com/EveliaCoss/Make_yourCV">Make your CV tutorial</a></li>
+</ul>
 
 
 </section>
@@ -1112,13 +971,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./8_FuncionesBasicas_pt1.html" class="pagination-link" aria-label="Expresiones regulares">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Expresiones regulares</span></span>
+      <a href="./9_EjerciciosFinales.html" class="pagination-link" aria-label="Ejercicios finales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ejercicios finales</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./9_EjerciciosFinales.html" class="pagination-link" aria-label="Ejercicios finales">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ejercicios finales</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./11_intro_git.html" class="pagination-link" aria-label="Introducción a Git y GitHub.">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
