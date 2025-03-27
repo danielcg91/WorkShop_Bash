@@ -25,6 +25,7 @@ book:
     - 04_Ramas en Git.qmd
     - 05_Intro_GitHub.qmd
     - 06_Manejo_de_repositorios.qmd
+    
   # Information
   repo-url: https://github.com/danielcg91/WorkShop2025 # link de Github
   sharing: [facebook, linkedin]

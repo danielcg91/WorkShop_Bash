@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; ¿Que es GitHub? – Workshop Bash 2025</title>
+<title>11&nbsp; Introducción a Git y GitHub. – Workshop Bash 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./16_Manejo_de_repositorios.html" rel="next">
-<link href="./14_Ramas en Git.html" rel="prev">
+<link href="./02_Instalación.html" rel="next">
+<link href="./10_Buenaspracticas.html" rel="prev">
 <link href="./ViernesBioinfo_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./15_Intro_GitHub.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_intro_git.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -198,38 +198,38 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11_intro_git.html" class="sidebar-item-text sidebar-link">
+  <a href="./01_intro_git.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./12_Instalación.html" class="sidebar-item-text sidebar-link">
+  <a href="./02_Instalación.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Instalación de Git.</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./13_Configuración y trabajo en Git..html" class="sidebar-item-text sidebar-link">
+  <a href="./03_Configuración y trabajo en Git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Configuración y trabajo en Git.</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./14_Ramas en Git.html" class="sidebar-item-text sidebar-link">
+  <a href="./04_Ramas en Git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ramas en Git</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15_Intro_GitHub.html" class="sidebar-item-text sidebar-link active">
+  <a href="./05_Intro_GitHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./16_Manejo_de_repositorios.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Creación de un nuevo repositorio</span></span></a>
+  <a href="./06_Manejo_de_repositorios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">wCreación de un nuevo repositorio</span></span></a>
   </div>
 </li>
     </ul>
@@ -242,7 +242,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#creación-de-cuenta." id="toc-creación-de-cuenta." class="nav-link active" data-scroll-target="#creación-de-cuenta."><span class="header-section-number">16</span> Creación de cuenta.</a></li>
+  <li><a href="#que-es-git" id="toc-que-es-git" class="nav-link active" data-scroll-target="#que-es-git"><span class="header-section-number">12</span> ¿Que es Git?</a></li>
+  <li><a href="#un-poco-de-historia" id="toc-un-poco-de-historia" class="nav-link" data-scroll-target="#un-poco-de-historia"><span class="header-section-number">13</span> Un poco de historia…</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">14</span> </a></li>
   </ul>
 </nav>
     </div>
@@ -251,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">¿Que es GitHub?</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introducción a Git y GitHub.</span></h1>
 </div>
 
 
@@ -268,42 +270,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="images/clipboard-774740840.png" class="img-fluid"></p>
-<p>GitHub es una plataforma de alojamiento de código basada en la nube que permite el almacenamiento, gestión y colaboración en proyectos de software mediante Git.</p>
-<p>Para conocer sus aplicaciones mas a detalle, sugerimos consultar el sitio oficial.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="https://github.com/" class="uri">https://github.com/</a></p>
-<p><a href="https://docs.github.com/es" class="uri">https://docs.github.com/es</a></p>
-</div>
-</div>
-<section id="creación-de-cuenta." class="level1" data-number="16">
-<h1 data-number="16"><span class="header-section-number">16</span> Creación de cuenta.</h1>
-<p>Para crear una cuenta en el portal de GitHub, te recomendamos seguir los siguientes pasos:</p>
-<p><img src="images/clipboard-3908409118.png" class="img-fluid"></p>
-<ul>
-<li><p>Haz clic en <strong>Sign up</strong> (Registrarse).</p></li>
-<li><p>Llena los campos con:</p>
-<ul>
-<li><p><strong>Username</strong> (Nombre de usuario único).</p></li>
-<li><p><strong>Email</strong> (Correo electrónico válido).</p></li>
-<li><p><strong>Password</strong> (Contraseña segura).</p></li>
-</ul></li>
-<li><p>Haz clic en <strong>Continue</strong>.</p></li>
-</ul>
-<!-- -->
-<ul>
-<li><p>Revisa tu bandeja de entrada y busca un correo de GitHub.</p></li>
-<li><p>Haz clic en el enlace para verificar tu cuenta.</p></li>
-</ul>
+<p><img src="images/clipboard-803379517.png" class="img-fluid"></p>
+<section id="que-es-git" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> ¿Que es Git?</h1>
+<p>Es un sistema de control de versiones gratuito y de código abierto&nbsp;diseñado para gestionar todo, desde proyectos pequeños hasta muy grandes, con velocidad y eficiencia.</p>
+<p><img src="images/clipboard-4156264243.png" class="img-fluid" width="582"></p>
+</section>
+<section id="un-poco-de-historia" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Un poco de historia…</h1>
+<p><img src="images/clipboard-936771067.png" class="img-fluid"></p>
+</section>
+<section id="section" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> </h1>
 
 
 </section>
@@ -875,13 +853,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./14_Ramas en Git.html" class="pagination-link" aria-label="Ramas en Git">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ramas en Git</span></span>
+      <a href="./10_Buenaspracticas.html" class="pagination-link" aria-label="Buenas practicas en Programación">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Buenas practicas en Programación</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./16_Manejo_de_repositorios.html" class="pagination-link" aria-label="Creación de un nuevo repositorio">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Creación de un nuevo repositorio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02_Instalación.html" class="pagination-link" aria-label="Instalación de Git.">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Instalación de Git.</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
