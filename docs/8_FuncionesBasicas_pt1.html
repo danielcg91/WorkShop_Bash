@@ -676,6 +676,24 @@ Note
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+ejemplos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>echo -e “Hola mundo\nError en la línea\nEste es un ejemplo\nHola otra vez” &gt; texto.txt</p>
+<p>cat texto.txt</p>
+<p>1.- <strong>g → Reemplazar todas las apariciones en una línea</strong></p>
+<p>sed ‘s/Hola/Saludos/g’ texto.txt</p>
+<p>2.- <strong>Eliminar líneas que contengan una palabra (d)</strong></p>
+<p>sed -i ‘/Error/d’ texto.txt</p>
+</div>
+</div>
 <p>Además, el comando <code>s</code> permite realizar algunas operaciones para convertir texto a mayúsculas y minúsculas:</p>
 <table class="caption-top table">
 <colgroup>
@@ -758,6 +776,25 @@ Ejercicio
 <li><p>¿Cuántas proteínas tienen el identificador de taxonomía (<code>OX=443255</code>) específico?</p></li>
 <li><p>¿Cuántas variantes de secuencia (SV, sequence version) diferentes hay en el archivo FASTA?</p></li>
 </ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>grep “OX=443255” S_clavuligerus_proteome.fasta | wc -l</li>
+<li>grep “&gt;” S_clavuligerus_proteome.fasta | grep -o “SV=[0-9]*” | cut -d’=’ -f2 | sort | uniq -c</li>
+</ol>
+</div>
 </div>
 </div>
 

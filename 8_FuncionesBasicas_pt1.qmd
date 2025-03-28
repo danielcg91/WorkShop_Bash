@@ -309,7 +309,9 @@ Contesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.f
 2.  ¿Cuántas variantes de secuencia (SV, sequence version) diferentes hay en el archivo FASTA?
 :::
 
-::: {.callout-note code-copy="true" eval="false" collapse="true"}
+::: {.callout-tip code-copy="true" eval="false" collapse="true"}
+## solución
+
 1.  grep "OX=443255" S_clavuligerus_proteome.fasta \| wc -l
 2.  grep "\>" S_clavuligerus_proteome.fasta \| grep -o "SV=\[0-9\]\*" \| cut -d'=' -f2 \| sort \| uniq -c
 :::
