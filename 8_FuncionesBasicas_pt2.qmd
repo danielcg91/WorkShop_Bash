@@ -138,33 +138,55 @@ nano bucles.sh
 
 **Paso 2.** Copia el siguiente código dentro del script `bucle.sh` y guarda los cambios.
 
-::: {.callout-note code-copy="true" eval="false"}
-#!/bin/bash \# Script para analizar múltiples archivos FASTQ
+``` bash
+#!/bin/bash
+# Script para analizar múltiples archivos FASTA
 
+# Archivos a procesar
 archivos=("secuencias1.fastq" "secuencias2.fastq" "secuencias3.fastq")
 
-\# Loop para analizar cada archivo for archivo in "\${archivos\[\@\]}"; do echo "Archivo a procesar: \$archivo"
+# Loop para analizar cada archivo
+for archivo in "${archivos[@]}"; do
+  echo "Archivo a procesar: $archivo"
+  
+  # Verifica si el archivo existe
+  if [ ! -f "$archivo" ]; then
+    echo "El archivo $archivo no existe. Saltando..."
+    continue
+  fi
 
-\# Verifica si el archivo existe if \[ ! -f "\$archivo" \]; then echo "El archivo \$archivo no existe. Saltando..." continue fi
+  # 1. Conteo de secuencias
+  numero_secuencias=$(grep -c '^@SRR098026' "$archivo")
+  echo "Número de secuencias en $archivo: $numero_secuencias"
 
-\# 1. Conteo de secuencias numero_secuencias=\$(grep -c '\^\@SRR098026' "\$archivo") echo "Número de secuencias en \$archivo: \$numero_secuencias"
+  # 2. Separación de malas lecturas
+  grep -B1 -A2 'NNNNNNNNNN' "$archivo" > "malas_lecturas_$archivo"
+  malas=$(wc -l < "malas_lecturas_$archivo")
+  echo "Número de malas lecturas en $archivo: $malas"
 
-\# 2. Separación de malas lecturas grep -B1 -A2 'NNNNNNNNNN' "\$archivo" \> "malas_lecturas\_\$archivo" malas=\$(wc -l \< "malas_lecturas\_\$archivo") echo "Número de malas lecturas en \$archivo: \$malas"
+  # 3. Búsqueda de patrones
+  echo "Desea buscar patrones en $archivo? (y/n):"
+  read -r respuesta
 
-\# 3. Búsqueda de patrones echo "Desea buscar patrones en \$archivo? (y/n):" read -r respuesta
+  if [[ "$respuesta" == "y" ]]; then
+    patrones_file="patrones_$archivo.txt"
+    busqueda_file="busqueda_$archivo.txt"
 
-if \[\[ "\$respuesta" == "y" \]\]; then patrones_file="patrones\_\$archivo.txt" busqueda_file="busqueda\_\$archivo.txt"
+    echo -e 'ACTG\nCCCCC\nNNNCNNN\nNNNGNNN\nTTTT\nTATA\nAAA' > "$patrones_file"
+    grep -f "$patrones_file" "$archivo" > "$busqueda_file"
 
-echo -e 'ACTG\\nCCCCC\\nNNNCNNN\\nNNNGNNN\\nTTTT\\nTATA\\nAAA' \> "\$patrones_file" grep -f "\$patrones_file" "\$archivo" \> "\$busqueda_file"
+    echo "Búsqueda de patrones guardada en: $busqueda_file"
+  else
+    echo "Patrones no buscados en $archivo."
+  fi
 
-echo "Búsqueda de patrones guardada en: \$busqueda_file" else echo "Patrones no buscados en \$archivo." fi
+  echo "Procesamiento de $archivo completado."
+  echo "---------------------------------------"
+done
 
-echo "Procesamiento de \$archivo completado." echo "---------------------------------------" done
-
-Mensaje final
-
+# Mensaje final
 echo "Metaanálisis finalizado para todos los archivos."
-:::
+```
 
 **Paso 3.** Escribe bash bucle.sh
 
