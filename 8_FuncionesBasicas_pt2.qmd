@@ -19,7 +19,11 @@ Si queremos verificar si existe el archivo **secuencias1.fastq** antes de realiz
 ``` {.bash code-copy="true" eval="false"}
 Ejemplo
 
-if [ -f secuencias1.fastq ]; then echo "El archivo existe." else echo "El archivo no existe." fi
+if [ -f secuencias1.fastq ]; then
+  echo "El archivo existe."
+else
+  echo "El archivo no existe."
+fi
 ```
 
 ::: callout-note
@@ -41,7 +45,14 @@ Los condicionales pueden ser tan complejos como lo imagines. Por ejemplo:
 :::
 
 ``` {.bash code-copy="true" eval="false"}
-for archivo in $file*.fastq; do if [ -f "$archivo" ]; then echo "Procesando archivo: $archivo" wc -l "$archivo" else echo "No tienes archivos fastq" fi done
+for archivo in $file*.fastq; do 
+  if [ -f "$archivo" ]; then 
+    echo "Procesando archivo: $archivo"
+    wc -l "$archivo" 
+  else 
+    echo "No tienes archivos fastq"
+  fi 
+done
 ```
 
 ::: callout-note
