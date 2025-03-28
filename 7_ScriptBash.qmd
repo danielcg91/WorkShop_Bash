@@ -18,6 +18,20 @@ Nos ubicaremos en nuestro servidor Betterlab, y escribiremos
 git clone <https://github.com/RSG-Ecuador/unix.bioinfo.rsgecuador.git>
 :::
 
+::: callout-note
+## ejercicio
+
+1.  Ubicarte dentro de la carpeta descomprimida. `cd unix.bioinfo.rsgecuador-gh-pages`
+
+2.  Visualiza el contenido del archivo “\_files/secuencias_bash.fastq” empleando head. `head _files/secuencias_bash.fastq`
+
+3.  Calcula el numero de lineas contenidas en este archivo. `wc -l _files/secuencias_bash.fastq`
+
+4.  Imprime las lineas 4 a 8 del archivo. `sed -n '4,8p' _files/secuencias_bash.fastq`
+
+5.  Podemos utilizar la función `grep -c` para contar el número de secuencias de un archivo (de nuevo, sustituya archivo por el nombre de uno de los archivos): `grep -c "^@SRR" _files/secuencias_bash.fastq`
+:::
+
 ## Wildcards y Streams
 
 ``` {.bash code-copy="true" eval="false"}
@@ -49,7 +63,7 @@ echo $mi_primer_string
 Los `wildcards` o `wild characters` son símbolos utilizados para representar uno o más caracteres. Se pueden utilizar con otros comandos para facilitar el procesamiento o búsqueda de archivos, directorios y datos en general.
 
 | **Wildcard** | **Función** |
-|----|----|
+|------------------------------------|------------------------------------|
 | `*` | Asocia **uno o más** caracteres especificados por el usuario, con caracteres en un string con el que se opera. |
 | `?` | Asocia **solo un** caracter a la vez en un string. |
 | `[ ]` | Asocia **cuaquiera** de los caracteres dentro en un string. |
@@ -104,7 +118,7 @@ Puedes seguir repasando y aprendiendo de las expresiones regulares en la pagina 
 Usualmente cuando trabajamos con datos, es necesario pasar el resultado de un comando a otro para hacer un procesamiento de datos apilado, como en un algortimo. Un `stream` o `corriente` esta hecha de datos. Es una corriente de datos. Un ejemplo muy familiar es el teclado y la pantalla. El teclado tiene una interfaz en donde por cada tecla presionada, un caracter se guarda en un archivo. Se dice entonces que es una `corriente de entrada`. Cuando la pantalla nos muestra lo que estamos escribiendo entonces la data sale hacia nosotros y eso convierte a la pantalla en una `corriente de salida`. Los dispositivos que hacen este tipo de transmisión de datos se llaman dispositivos `I/O` (input y output). Los operadores que se encargan de esto se conocen como `operadores de redirección`. Tres importantes son:
 
 | **Comando** | **Función** |
-|----|----|
+|------------------------------------|------------------------------------|
 | `>` | Stream de **salida de datos**. Sobre escribre sobre un archivo. |
 | `>>` | Stream de salida de datos. Adjunta **nueva salida a datos preexistentes en un archivo.** |
 | `<` | Stream de **entrada de datos.** Recibe datos para procesamiento con algun comando. |
