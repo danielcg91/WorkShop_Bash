@@ -101,12 +101,17 @@ Pueden existir cero o más opciones y archivos. Si no se provee ningún archivo 
 
 En GNU grep existen cuatro versiones de la herramienta, que se eligen con diferentes opciones:
 
-| **Versión** | **Descripción** |
-|----|----|
-| `-G` o `--basic-regexp` | Interpreta los patrones como regex básicas (BREs). Es las versión estándar de la herramienta |
-| `-E` o `--extended-regexp` | Interpreta los patrones como regex extendidas (EREs) |
-| `-F` o `--fixed-strings` | Interpreta los patrones como string fijos, no como regex |
-| `-P` o `--perl-regexp` | Interpretar los patrones como expresiones regulares compatibles con Perl (PCREs) |
++-----------------------------------+----------------------------------------------------------------------------------------------+
+| **Versión**                       | **Descripción**                                                                              |
++===================================+==============================================================================================+
+| `-G` o `--basic-regexp`           | Interpreta los patrones como regex básicas (BREs). Es las versión estándar de la herramienta |
++-----------------------------------+----------------------------------------------------------------------------------------------+
+| `-E` o `--extended-regexp`        | Interpreta los patrones como regex extendidas (EREs)                                         |
++-----------------------------------+----------------------------------------------------------------------------------------------+
+| `-F` o `--fixed-strings`          | Interpreta los patrones como string fijos, no como regex                                     |
++-----------------------------------+----------------------------------------------------------------------------------------------+
+| `-P` o `--perl-regexp`            | Interpretar los patrones como expresiones regulares compatibles con Perl (PCREs)             |
++-----------------------------------+----------------------------------------------------------------------------------------------+
 
 Por ejemplo, usemos el siguiente comando para buscar las líneas que tengan los caracteres **a** o **e** usando el metacaracter de alternancia `|` con la versión estándar:
 
@@ -114,14 +119,21 @@ Por ejemplo, usemos el siguiente comando para buscar las líneas que tengan los 
 
 En GNU grep existen los siguientes modos para controlar las coincidencias:
 
-| **Flag** | **Descripción** |
-|----|----|
-| `-e "patron(es)"` o `--regexp="patron(es)"` | Busca los patrones especificados como argumento y los caracteres `\n` separan un patrón del siguiente |
-| `-f archivo` o `--file=archivo` | Busca los patrones de un archivo, uno por línea |
-| `-i` o `--ignore-case` | Hace que la regex no sea sensible a mayúsculas o minúsnuclas. La regex “abc” coincide con el patrón “AbC” |
-| `-v` o `--invert-match` | Invierte el sentido de coincidencia, para seleccionar líneas que no coinciden con el patrón |
-| `-w` o `--word-regexp` | Selecciona solo las líneas que contengan coincidencias que formen palabras completas |
-| `-x` o `--line-regexp` | Seleccione solo los patrones que coincidan exactamente con toda la línea |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| **Flag**                                    | **Descripción**                                                                                           |
++=============================================+===========================================================================================================+
+| `-e "patron(es)"` o `--regexp="patron(es)"` | Busca los patrones especificados como argumento y los caracteres `\n` separan un patrón del siguiente     |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| `-f archivo` o `--file=archivo`             | Busca los patrones de un archivo, uno por línea                                                           |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| `-i` o `--ignore-case`                      | Hace que la regex no sea sensible a mayúsculas o minúsnuclas. La regex “abc” coincide con el patrón “AbC” |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| `-v` o `--invert-match`                     | Invierte el sentido de coincidencia, para seleccionar líneas que no coinciden con el patrón               |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| `-w` o `--word-regexp`                      | Selecciona solo las líneas que contengan coincidencias que formen palabras completas                      |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| `-x` o `--line-regexp`                      | Seleccione solo los patrones que coincidan exactamente con toda la línea                                  |
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------+
 
 ## **Contar el número de secuencias en un archivo FASTA**
 
@@ -225,23 +237,51 @@ El comando de sustitución `s` es el más usado debido a que tiene muchas opcion
 
 Con este comando se pueden usar algunos `[FLAGS]`, y entre los más comunes se encuentran:
 
-| **Flag** | **Descripción** |
-|----|----|
-| `g` | Se aplica el reemplazo a todas las coincidencias con la regex, no solo a la primera |
-| `NUMBER` | Solo se reemplaza un el número especificado de coincidencias de la regex. Si `g` y `NUMBER` se combinan, se ignoran las coincidencias antes del `NUMBER`, y luego se reemplazan todas las coincidencias desde el número especificado en adelante |
-| `w FILENAME` | Si se realizó la sustitución, se escribe el resultado en el archivo `FILENAME` |
-| `i` o `I` | Hace que sed coincida con la regex de forma que no distinga entre mayúsculas y minúsculas |
-| `m` o `M` | Activa el modo multilínea de regex, con lo que los símbolos `^` y `s` coinciden con el inicio y fin de línea respectivamente |
++-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Flag**                          | **Descripción**                                                                                                                                                                                                                                  |
++===================================+==================================================================================================================================================================================================================================================+
+| `g`                               | Se aplica el reemplazo a todas las coincidencias con la regex, no solo a la primera                                                                                                                                                              |
++-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `NUMBER`                          | Solo se reemplaza un el número especificado de coincidencias de la regex. Si `g` y `NUMBER` se combinan, se ignoran las coincidencias antes del `NUMBER`, y luego se reemplazan todas las coincidencias desde el número especificado en adelante |
++-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `w FILENAME`                      | Si se realizó la sustitución, se escribe el resultado en el archivo `FILENAME`                                                                                                                                                                   |
++-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `i` o `I`                         | Hace que sed coincida con la regex de forma que no distinga entre mayúsculas y minúsculas                                                                                                                                                        |
++-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `m` o `M`                         | Activa el modo multilínea de regex, con lo que los símbolos `^` y `s` coinciden con el inicio y fin de línea respectivamente                                                                                                                     |
++-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+::: callout-note
+## ejemplos
+
+echo -e "Hola mundo\\nError en la línea\\nEste es un ejemplo\\nHola otra vez" \> texto.txt
+
+cat texto.txt
+
+1.- **g → Reemplazar todas las apariciones en una línea**
+
+sed 's/Hola/Saludos/g' texto.txt
+
+2.- **Eliminar líneas que contengan una palabra (d)**
+
+sed -i '/Error/d' texto.txt
+:::
 
 Además, el comando `s` permite realizar algunas operaciones para convertir texto a mayúsculas y minúsculas:
 
-| **Código** | **Descripción** |
-|----|----|
-| `\L` | Convertir el texto a minúsculas hasta que se encuentre una `\U` o `\E` |
-| `\l` | Convertir el siguiente caracter a minúscula |
-| `\U` | Convertir el texto a mayúsculas hasta que se encuentre una `\L` o `\E` |
-| `\u` | Convertir el siguiente caracter a mayúscula |
-| `\E` | Detener la conversión de minúsculas y mayúsculas iniciada por `\L` o `\U` |
++-----------------------------------+---------------------------------------------------------------------------+
+| **Código**                        | **Descripción**                                                           |
++===================================+===========================================================================+
+| `\L`                              | Convertir el texto a minúsculas hasta que se encuentre una `\U` o `\E`    |
++-----------------------------------+---------------------------------------------------------------------------+
+| `\l`                              | Convertir el siguiente caracter a minúscula                               |
++-----------------------------------+---------------------------------------------------------------------------+
+| `\U`                              | Convertir el texto a mayúsculas hasta que se encuentre una `\L` o `\E`    |
++-----------------------------------+---------------------------------------------------------------------------+
+| `\u`                              | Convertir el siguiente caracter a mayúscula                               |
++-----------------------------------+---------------------------------------------------------------------------+
+| `\E`                              | Detener la conversión de minúsculas y mayúsculas iniciada por `\L` o `\U` |
++-----------------------------------+---------------------------------------------------------------------------+
 
 # **Extraer solo los encabezados**
 
@@ -267,4 +307,9 @@ Contesta las siguientes preguntas empleando el archivo S_clavuligerus_proteome.f
 1.  ¿Cuántas proteínas tienen el identificador de taxonomía (`OX=443255`) específico?
 
 2.  ¿Cuántas variantes de secuencia (SV, sequence version) diferentes hay en el archivo FASTA?
+:::
+
+::: {.callout-note code-copy="true" eval="false" collapse="true"}
+1.  grep "OX=443255" S_clavuligerus_proteome.fasta \| wc -l
+2.  grep "\>" S_clavuligerus_proteome.fasta \| grep -o "SV=\[0-9\]\*" \| cut -d'=' -f2 \| sort \| uniq -c
 :::
