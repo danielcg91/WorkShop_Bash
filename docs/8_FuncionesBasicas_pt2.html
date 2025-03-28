@@ -485,31 +485,53 @@ Note
 <p><strong>Paso 1.</strong> Crear un script en Bash con el nombre bucles.sh empleando nano.</p>
 <div class="sourceCode" id="cb8" data-code-copy="true" data-eval="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> bucles.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Paso 2.</strong> Copia el siguiente código dentro del script <code>bucle.sh</code> y guarda los cambios.</p>
-<div class="callout callout-style-default callout-note callout-titled" data-code-copy="true" data-eval="false">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>#!/bin/bash # Script para analizar múltiples archivos FASTQ</p>
-<p>archivos=(“secuencias1.fastq” “secuencias2.fastq” “secuencias3.fastq”)</p>
-<p># Loop para analizar cada archivo for archivo in “${archivos[@]}”; do echo “Archivo a procesar: $archivo”</p>
-<p># Verifica si el archivo existe if [ ! -f “$archivo” ]; then echo “El archivo $archivo no existe. Saltando…” continue fi</p>
-<p># 1. Conteo de secuencias numero_secuencias=$(grep -c ‘^@SRR098026’ “$archivo”) echo “Número de secuencias en $archivo: $numero_secuencias”</p>
-<p># 2. Separación de malas lecturas grep -B1 -A2 ‘NNNNNNNNNN’ “$archivo” &gt; “malas_lecturas_$archivo” malas=$(wc -l &lt; “malas_lecturas_$archivo”) echo “Número de malas lecturas en $archivo: $malas”</p>
-<p># 3. Búsqueda de patrones echo “Desea buscar patrones en $archivo? (y/n):” read -r respuesta</p>
-<p>if [[ “$respuesta” == “y” ]]; then patrones_file=“patrones_$archivo.txt” busqueda_file=“busqueda_$archivo.txt”</p>
-<p>echo -e ‘ACTG\nCCCCC\nNNNCNNN\nNNNGNNN\nTTTT\nTATA\nAAA’ &gt; “$patrones_file” grep -f “$patrones_file” “$archivo” &gt; “$busqueda_file”</p>
-<p>echo “Búsqueda de patrones guardada en: $busqueda_file” else echo “Patrones no buscados en $archivo.” fi</p>
-<p>echo “Procesamiento de $archivo completado.” echo “—————————————” done</p>
-<p>Mensaje final</p>
-<p>echo “Metaanálisis finalizado para todos los archivos.”</p>
-</div>
-</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Script para analizar múltiples archivos FASTA</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Archivos a procesar</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="va">archivos</span><span class="op">=</span><span class="va">(</span><span class="st">"secuencias1.fastq"</span> <span class="st">"secuencias2.fastq"</span> <span class="st">"secuencias3.fastq"</span><span class="va">)</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop para analizar cada archivo</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> archivo <span class="kw">in</span> <span class="st">"</span><span class="va">${archivos</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Archivo a procesar: </span><span class="va">$archivo</span><span class="st">"</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Verifica si el archivo existe</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="ot">!</span> <span class="ot">-f</span> <span class="st">"</span><span class="va">$archivo</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"El archivo </span><span class="va">$archivo</span><span class="st"> no existe. Saltando..."</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">continue</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 1. Conteo de secuencias</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="va">numero_secuencias</span><span class="op">=</span><span class="va">$(</span><span class="fu">grep</span> <span class="at">-c</span> <span class="st">'^@SRR098026'</span> <span class="st">"</span><span class="va">$archivo</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Número de secuencias en </span><span class="va">$archivo</span><span class="st">: </span><span class="va">$numero_secuencias</span><span class="st">"</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 2. Separación de malas lecturas</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grep</span> <span class="at">-B1</span> <span class="at">-A2</span> <span class="st">'NNNNNNNNNN'</span> <span class="st">"</span><span class="va">$archivo</span><span class="st">"</span> <span class="op">&gt;</span> <span class="st">"malas_lecturas_</span><span class="va">$archivo</span><span class="st">"</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="va">malas</span><span class="op">=</span><span class="va">$(</span><span class="fu">wc</span> <span class="at">-l</span> <span class="op">&lt;</span> <span class="st">"malas_lecturas_</span><span class="va">$archivo</span><span class="st">"</span><span class="va">)</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Número de malas lecturas en </span><span class="va">$archivo</span><span class="st">: </span><span class="va">$malas</span><span class="st">"</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 3. Búsqueda de patrones</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Desea buscar patrones en </span><span class="va">$archivo</span><span class="st">? (y/n):"</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="bu">read</span> <span class="at">-r</span> <span class="va">respuesta</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">[[</span> <span class="st">"</span><span class="va">$respuesta</span><span class="st">"</span> <span class="ot">==</span> <span class="st">"y"</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="va">patrones_file</span><span class="op">=</span><span class="st">"patrones_</span><span class="va">$archivo</span><span class="st">.txt"</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="va">busqueda_file</span><span class="op">=</span><span class="st">"busqueda_</span><span class="va">$archivo</span><span class="st">.txt"</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-e</span> <span class="st">'ACTG\nCCCCC\nNNNCNNN\nNNNGNNN\nTTTT\nTATA\nAAA'</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">$patrones_file</span><span class="st">"</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">grep</span> <span class="at">-f</span> <span class="st">"</span><span class="va">$patrones_file</span><span class="st">"</span> <span class="st">"</span><span class="va">$archivo</span><span class="st">"</span> <span class="op">&gt;</span> <span class="st">"</span><span class="va">$busqueda_file</span><span class="st">"</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"Búsqueda de patrones guardada en: </span><span class="va">$busqueda_file</span><span class="st">"</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"Patrones no buscados en </span><span class="va">$archivo</span><span class="st">."</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"Procesamiento de </span><span class="va">$archivo</span><span class="st"> completado."</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"---------------------------------------"</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Mensaje final</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Metaanálisis finalizado para todos los archivos."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Paso 3.</strong> Escribe bash bucle.sh</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
