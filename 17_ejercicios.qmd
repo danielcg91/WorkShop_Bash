@@ -1,0 +1,103 @@
+# Ejercicios
+
+``` bash
+Clase 1.
+
+****instalación de git*****
+--Linux--
+
+1.-instalación
+$ sudo apt-get install git
+2.- verificación de instalación
+$ git --version
+3.- opciones de git
+$ git --help
+
+*****configuración de git******
+Requisitos
+Contar con cuenta de usuario
+contar con dirección email.com
+
+1.- añadir cuenta
+$ git config --global user.name "tu usuario"
+$ git config --global user.email "tu correo"
+2.- verificar cuenta
+$ git config --list
+
+******trabajo en git******
+1.- creación de directorio de trabajo
+$ mkdir git && cd git
+agregar un archivo, ya sea de texto o scrip ( $ nano ejemplo.py)
+2.- configuración de entorno de trabajo
+$ git init
+$ ls -a
+3.- verificación de entorno
+$ git status
+4.- añadir ficheros a git
+$ git add "nombre de tu fichero"
+5.- añadir un commit
+$ git commit
+$ git commit -m "agregar un mensaje"
+$ git status
+
+6.- generar mas archivos y agregarlos a git, realizar modificaciones y observar los cambios
+con $ git status y $ git log
+7. observar los cambios realizados en un fichero
+$ git diff
+
+8.- creación de un archivo para ignorar ficheros
+$ nano .gitignore -----> en este archivo se agregan todos los ficheros o rutas que deseamos
+que git ignore
+
+9.- movernos entre ficheros
+$ git checkout "numero del fichero dende nos queremos posicionar"
+$ git checkout master ----> Nos manda a la ultima rama del fichero
+
+10.- generar alias para facilitar la observación de los commit
+$ git config --global alias.tree "log --graph --decorate --all --oneline"
+$ git reflog ------> muestra el historial de los cambios realizados
+
+11.- renombrar master a main
+$ git branch -m master main
+
+
+******trabajo con ramas en git******
+1.- añadir una nueva rama
+Archivo: git.txt Página 2 de 2
+$ git branch "nombre de la rama"
+2.- moverse entre ramas
+$ git switch "nombre de la rama"
+3.- fusionar ramas
+$ git merge "nombre de la rama para fusionar"
+
+******GitHub******
+1.- Sitio oficial GitHUb
+2. Documentanción
+3.- Creación de cuenta
+*****Claves y Autentificación SSH******
+1.- Colocarse en el directorio de trabajo
+2.- Verificar claves ssh existentes e ingresar a la carpeta ssh
+$ ls -a && cd .ssh
+3.-generar clave
+& ssh-keygen -t ed25519 -C "your_email@example.com"
+4.- Agrega tu llave privada SSH al ssh-agent.
+$ ssh-add ~/.ssh/nombre_de_tu_clave
+
+*****Vinculación con GitHub******
+1.- ingresar al perfil de GitHub
+2.- Ingresar a configuraciones
+3.- ingresar a SSH and GPG keys
+4.- abrir la clave ssh generada anteriormente
+$ more nombre_de_la_clave.pub
+5.- copiar y pegar el contenido de la clave en la opción New SSH key
+
+****Vincular un proyecto local con GitHub****
+1.- establecer conexión con GitHub
+$ ssh -T git@github.com
+2.- Posicionarse en la carpeta local donde se encuentran tus proyectos de git
+3.- subir proyectos de git a GitHub
+$ git remote add origin git@GitHUb.com:tu_nombre_de_usuario/tu_repositorio.git
+$ git push --force origin main
+****clonar repositorios*****
+1.- clonar un repocitorio de GitHub a una maquina local
+```
