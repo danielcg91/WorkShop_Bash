@@ -3,6 +3,7 @@
 ## ¿Qué es UNIX?
 
 -   Sistema operativo (SO) creado por **Ken Thompson y Dennis Ritchie** de la empresa *Bell Laboratories* en 1969.
+
 -   SO multitarea y multiusuario.
 
 ![](images/Unix.webp){fig-align="center" width="480"}
